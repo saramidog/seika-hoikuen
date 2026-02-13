@@ -745,6 +745,25 @@ main {
 }
 
 /* ========================================
+   Googleフォーム埋め込み
+   ======================================== */
+.form-embed-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.form-embed-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 800px;
+  border: none;
+}
+
+/* ========================================
    採用ページ
    ======================================== */
 .recruit-card {
