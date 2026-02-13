@@ -18,8 +18,7 @@
   <header class="header">
     <div class="container">
       <a href="index.html" class="logo">
-        <span class="logo-icon">🌻</span>
-        清華保育園
+        <img src="ロゴ.png" alt="清華保育園" class="logo-img">
       </a>
       <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
@@ -41,7 +40,7 @@
 
   <main>
     <section class="page-hero">
-      <h1>🎉 年間行事</h1>
+      <h1><img src="images/icons/party-popper.svg" alt=""> 年間行事</h1>
       <p>四季を通じて、たくさんの思い出をつくります</p>
     </section>
 
@@ -53,139 +52,207 @@
 
     <section class="section">
       <div class="container">
-        <p class="section-subtitle">毎月のお誕生日会・避難訓練・身体測定のほか、季節ごとのイベントを行っています</p>
+        <p class="section-subtitle">毎月の誕生会・避難訓練・発育測定のほか、体育教室・英語・サッカー教室・リトミックなどを年間を通じて実施しています</p>
 
-        <div class="month-grid">
-          <!-- 4月 -->
-          <div class="month-card spring">
-            <span class="month-label">4月</span>
-            <h3>🌸 春のはじまり</h3>
-            <ul class="month-events">
-              <li>入園式・進級式</li>
-              <li>保護者会</li>
-              <li>お花見さんぽ</li>
-            </ul>
+        <div class="calendar-grid">
+          <!-- 春 -->
+          <div class="calendar-season-label spring"><img src="images/icons/flower-2.svg" alt=""> 春 — Spring</div>
+
+          <div class="calendar-cell spring">
+            <div class="calendar-header">
+              <span class="calendar-month">4</span>
+              <span class="calendar-month-label">April</span>
+              <span class="calendar-season-icon"><img src="images/icons/flower-2.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>一日入園</li>
+                <li>入園式</li>
+                <li>希望保育</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 5月 -->
-          <div class="month-card spring">
-            <span class="month-label">5月</span>
-            <h3>🎏 さわやかな季節</h3>
-            <ul class="month-events">
-              <li>こどもの日のつどい</li>
-              <li>春の遠足</li>
-              <li>内科健診</li>
-            </ul>
+          <div class="calendar-cell spring">
+            <div class="calendar-header">
+              <span class="calendar-month">5</span>
+              <span class="calendar-month-label">May</span>
+              <span class="calendar-season-icon"><img src="images/icons/waves.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>こどもの日の集い</li>
+                <li>春季健康診断</li>
+                <li>親子遠足</li>
+                <li>交通安全教室</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 6月 -->
-          <div class="month-card summer">
-            <span class="month-label">6月</span>
-            <h3>☔ 雨の季節</h3>
-            <ul class="month-events">
-              <li>歯科健診</li>
-              <li>保育参観</li>
-              <li>プール開き</li>
-            </ul>
+          <div class="calendar-cell spring">
+            <div class="calendar-header">
+              <span class="calendar-month">6</span>
+              <span class="calendar-month-label">June</span>
+              <span class="calendar-season-icon"><img src="images/icons/cloud-rain.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>虫歯予防の集い</li>
+                <li>歯科検診</li>
+                <li>時の記念日の集い</li>
+                <li>参観日</li>
+                <li>消火訓練</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 7月 -->
-          <div class="month-card summer">
-            <span class="month-label">7月</span>
-            <h3>🎋 夏本番</h3>
-            <ul class="month-events">
-              <li>七夕まつり</li>
-              <li>夏まつり（夕涼み会）</li>
-              <li>プール遊び</li>
-            </ul>
+          <!-- 夏 -->
+          <div class="calendar-season-label summer"><img src="images/icons/sun.svg" alt=""> 夏 — Summer</div>
+
+          <div class="calendar-cell summer">
+            <div class="calendar-header">
+              <span class="calendar-month">7</span>
+              <span class="calendar-month-label">July</span>
+              <span class="calendar-season-icon"><img src="images/icons/star.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>七夕会</li>
+                <li>緑風園・みどり荘七夕会</li>
+                <li>夕涼み会</li>
+                <li>施設訪問</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 8月 -->
-          <div class="month-card summer">
-            <span class="month-label">8月</span>
-            <h3>🌻 真夏の冒険</h3>
-            <ul class="month-events">
-              <li>水遊び・プール遊び</li>
-              <li>すいか割り</li>
-              <li>お泊まり保育（5歳児）</li>
-            </ul>
+          <div class="calendar-cell summer">
+            <div class="calendar-header">
+              <span class="calendar-month">8</span>
+              <span class="calendar-month-label">August</span>
+              <span class="calendar-season-icon"><img src="images/icons/sun.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>盆休み</li>
+                <li>希望保育</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 9月 -->
-          <div class="month-card autumn">
-            <span class="month-label">9月</span>
-            <h3>🌾 実りの秋</h3>
-            <ul class="month-events">
-              <li>お月見会</li>
-              <li>敬老の日のつどい</li>
-              <li>運動会の練習</li>
-            </ul>
+          <div class="calendar-cell summer">
+            <div class="calendar-header">
+              <span class="calendar-month">9</span>
+              <span class="calendar-month-label">September</span>
+              <span class="calendar-season-icon"><img src="images/icons/wheat.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>敬老の日</li>
+                <li>運動会の予行</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 10月 -->
-          <div class="month-card autumn">
-            <span class="month-label">10月</span>
-            <h3>🍂 スポーツの秋</h3>
-            <ul class="month-events">
-              <li>運動会</li>
-              <li>秋の遠足</li>
-              <li>ハロウィンパーティー</li>
-            </ul>
+          <!-- 秋 -->
+          <div class="calendar-season-label autumn"><img src="images/icons/leaf.svg" alt=""> 秋 — Autumn</div>
+
+          <div class="calendar-cell autumn">
+            <div class="calendar-header">
+              <span class="calendar-month">10</span>
+              <span class="calendar-month-label">October</span>
+              <span class="calendar-season-icon"><img src="images/icons/leaf.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>運動会</li>
+                <li>秋の遠足</li>
+                <li>秋季健康診断</li>
+                <li>交通安全教室</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 11月 -->
-          <div class="month-card autumn">
-            <span class="month-label">11月</span>
-            <h3>🍁 深まる秋</h3>
-            <ul class="month-events">
-              <li>七五三のおいわい</li>
-              <li>焼きいも大会</li>
-              <li>作品展</li>
-            </ul>
+          <div class="calendar-cell autumn">
+            <div class="calendar-header">
+              <span class="calendar-month">11</span>
+              <span class="calendar-month-label">November</span>
+              <span class="calendar-season-icon"><img src="images/icons/tree-pine.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>せいかまつり（マラソン大会、作品展）</li>
+                <li>いも掘り</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 12月 -->
-          <div class="month-card winter">
-            <span class="month-label">12月</span>
-            <h3>🎄 冬のおたのしみ</h3>
-            <ul class="month-events">
-              <li>クリスマス発表会</li>
-              <li>おもちつき</li>
-              <li>大掃除</li>
-            </ul>
+          <div class="calendar-cell autumn">
+            <div class="calendar-header">
+              <span class="calendar-month">12</span>
+              <span class="calendar-month-label">December</span>
+              <span class="calendar-season-icon"><img src="images/icons/sparkles.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>消防署避難訓練</li>
+                <li>やきいも大会</li>
+                <li>生活発表会予行</li>
+                <li>生活発表会</li>
+                <li>クリスマス会</li>
+                <li>希望保育</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 1月 -->
-          <div class="month-card winter">
-            <span class="month-label">1月</span>
-            <h3>🎍 新しい年</h3>
-            <ul class="month-events">
-              <li>お正月あそび</li>
-              <li>たこあげ大会</li>
-              <li>保育参観</li>
-            </ul>
+          <!-- 冬 -->
+          <div class="calendar-season-label winter"><img src="images/icons/snowflake.svg" alt=""> 冬 — Winter</div>
+
+          <div class="calendar-cell winter">
+            <div class="calendar-header">
+              <span class="calendar-month">1</span>
+              <span class="calendar-month-label">January</span>
+              <span class="calendar-season-icon"><img src="images/icons/sprout.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>お正月休み</li>
+                <li>希望保育</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 2月 -->
-          <div class="month-card winter">
-            <span class="month-label">2月</span>
-            <h3>👹 春を呼ぼう</h3>
-            <ul class="month-events">
-              <li>節分・豆まき会</li>
-              <li>生活発表会</li>
-              <li>内科健診</li>
-            </ul>
+          <div class="calendar-cell winter">
+            <div class="calendar-header">
+              <span class="calendar-month">2</span>
+              <span class="calendar-month-label">February</span>
+              <span class="calendar-season-icon"><img src="images/icons/drama.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>節分の日の集い</li>
+                <li>交通安全教室</li>
+                <li>卒園写真撮影</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 3月 -->
-          <div class="month-card spring">
-            <span class="month-label">3月</span>
-            <h3>🌸 旅立ちの季節</h3>
-            <ul class="month-events">
-              <li>ひなまつり</li>
-              <li>お別れ遠足</li>
-              <li>卒園式</li>
-            </ul>
+          <div class="calendar-cell winter">
+            <div class="calendar-header">
+              <span class="calendar-month">3</span>
+              <span class="calendar-month-label">March</span>
+              <span class="calendar-season-icon"><img src="images/icons/flower-2.svg" alt=""></span>
+            </div>
+            <div class="calendar-body">
+              <ul class="calendar-events">
+                <li>ひなまつりの集い</li>
+                <li>お別れ会</li>
+                <li>お別れ遠足</li>
+                <li>卒園式</li>
+                <li>不審者対策模擬訓練</li>
+                <li>修了式</li>
+                <li>希望保育</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -195,7 +262,7 @@
     <section class="section" style="padding-top: 0;">
       <div class="container">
         <div class="highlight-box">
-          <h3>📝 行事についてのお知らせ</h3>
+          <h3>行事についてのお知らせ</h3>
           <p>行事の日程は変更になる場合があります。詳細は毎月の園だよりでお知らせいたします。保護者参加の行事は、事前にご案内をお配りします。</p>
         </div>
         <div class="btn-group">
@@ -211,7 +278,8 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h3>🌻 清華保育園</h3>
+          <img src="ロゴ.png" alt="清華保育園" class="footer-logo-img">
+          <h3>清華保育園</h3>
           <p>〒740-1441<br>山口県岩国市由宇町千鳥ケ丘3丁目1-7<br>TEL: 0827-63-1222<br>FAX: 0827-63-3988</p>
         </div>
         <div>

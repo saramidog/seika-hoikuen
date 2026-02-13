@@ -18,8 +18,7 @@
   <header class="header">
     <div class="container">
       <a href="index.html" class="logo">
-        <span class="logo-icon">🌻</span>
-        清華保育園
+        <img src="ロゴ.png" alt="清華保育園" class="logo-img">
       </a>
       <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
@@ -41,7 +40,7 @@
 
   <main>
     <section class="page-hero">
-      <h1>⏰ 一日の流れ</h1>
+      <h1><img src="images/icons/clock.svg" alt=""> 一日の流れ</h1>
       <p>清華保育園の一日をご紹介します</p>
     </section>
 
@@ -51,136 +50,193 @@
       </nav>
     </div>
 
-    <!-- 0〜2歳児 -->
+    <!-- デイリープログラム比較表 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon">🍼</span>
-        <h2 class="section-title">0〜2歳児の一日</h2>
-        <p class="section-subtitle">一人ひとりのリズムに合わせた、ゆったりとした保育</p>
+        <span class="section-title-icon"><img src="images/icons/clipboard-list.svg" alt=""></span>
+        <h2 class="section-title">デイリープログラム</h2>
+        <p class="section-subtitle">3つの年齢グループごとの一日の流れを比較できます</p>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-icon">🌅</span>
-            <div class="timeline-time">7:00〜</div>
-            <div class="timeline-title">順次登園・自由あそび</div>
-            <div class="timeline-desc">おうちの方と一緒に「おはようございます！」。お気に入りのおもちゃで遊びながら、お友達が揃うのを待ちます。</div>
-          </div>
+        <p class="schedule-hint">← 横にスクロールできます →</p>
 
-          <div class="timeline-item">
-            <span class="timeline-icon">🎵</span>
-            <div class="timeline-time">9:00</div>
-            <div class="timeline-title">朝のおやつ・朝の会</div>
-            <div class="timeline-desc">手を洗って、朝のおやつをいただきます。みんなでお歌をうたって、元気にスタート。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">🎨</span>
-            <div class="timeline-time">9:30</div>
-            <div class="timeline-title">主活動</div>
-            <div class="timeline-desc">おさんぽ、お絵かき、ねんど遊び、水遊びなど。季節や天気に合わせた活動を楽しみます。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">🍚</span>
-            <div class="timeline-time">11:00</div>
-            <div class="timeline-title">給食</div>
-            <div class="timeline-desc">栄養たっぷりの手作り給食。離乳食にも対応しています。「おいしいね！」の笑顔がいっぱい。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">😴</span>
-            <div class="timeline-time">12:00</div>
-            <div class="timeline-title">おひるね</div>
-            <div class="timeline-desc">やさしい音楽のなかで、ぐっすりおひるね。保育士が一人ひとりの寝顔を見守ります。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">🍪</span>
-            <div class="timeline-time">15:00</div>
-            <div class="timeline-title">おやつ</div>
-            <div class="timeline-desc">手作りおやつの時間。おせんべい、フルーツ、蒸しパンなど、身体にやさしいおやつです。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">🧸</span>
-            <div class="timeline-time">15:30〜</div>
-            <div class="timeline-title">自由あそび・順次降園</div>
-            <div class="timeline-desc">お迎えが来るまで、お気に入りの遊びを楽しみます。「またあしたね！」</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">🌙</span>
-            <div class="timeline-time">〜19:00</div>
-            <div class="timeline-title">延長保育</div>
-            <div class="timeline-desc">少人数でゆったり過ごす延長保育。おうちの方のお迎えを待ちます。</div>
-          </div>
+        <div class="schedule-wrapper">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>時間</th>
+                <th class="col-baby"><img src="images/icons/baby.svg" alt=""> 乳児<br><small>0歳児</small></th>
+                <th class="col-toddler"><img src="images/icons/bird.svg" alt=""> 3歳未満児<br><small>1・2歳児</small></th>
+                <th class="col-child"><img src="images/icons/backpack.svg" alt=""> 幼児<br><small>3〜5歳児</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="time-cell">7:00</td>
+                <td>
+                  <span class="activity-name">早出登園</span>
+                </td>
+                <td>
+                  <span class="activity-name">早出登園</span>
+                </td>
+                <td>
+                  <span class="activity-name">早出登園</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="time-cell">8:30</td>
+                <td>
+                  <span class="activity-name">登園</span>
+                  <span class="activity-desc">視診・触診・検温<br>オムツ交換</span>
+                </td>
+                <td>
+                  <span class="activity-name">登園</span>
+                  <span class="activity-desc">視診・触診・検温<br>自由遊び</span>
+                </td>
+                <td>
+                  <span class="activity-name">登園・視診</span>
+                  <span class="activity-desc">園庭自由遊び</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="time-cell">9:30</td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/baby.svg" alt=""></span>
+                  <span class="activity-name">授乳・おやつ</span>
+                </td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/glass-water.svg" alt=""></span>
+                  <span class="activity-name">牛乳・おやつ</span>
+                </td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/music.svg" alt=""></span>
+                  <span class="activity-name">朝の集い</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="time-cell">10:00</td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/sun.svg" alt=""></span>
+                  <span class="activity-name">外気浴</span>
+                  <span class="activity-desc">抱っこでお話</span>
+                </td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/palette.svg" alt=""></span>
+                  <span class="activity-name">みんなで遊ぼう</span>
+                </td>
+                <td class="empty-cell">—</td>
+              </tr>
+              <tr>
+                <td class="time-cell">10:20</td>
+                <td class="empty-cell">—</td>
+                <td class="empty-cell">—</td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/book-open.svg" alt=""></span>
+                  <span class="activity-name">組別保育</span>
+                  <span class="activity-desc">リトミック・英語・<br>サッカー・体育教室など</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="time-cell">11:30</td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/utensils.svg" alt=""></span>
+                  <span class="activity-name">昼食</span>
+                  <span class="activity-desc">離乳食</span>
+                </td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/utensils.svg" alt=""></span>
+                  <span class="activity-name">昼食</span>
+                  <span class="activity-desc">完全給食</span>
+                </td>
+                <td class="empty-cell">—</td>
+              </tr>
+              <tr>
+                <td class="time-cell">12:00</td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/moon.svg" alt=""></span>
+                  <span class="activity-name">検温・午睡</span>
+                  <span class="activity-desc">起床後オムツ交換・着替え</span>
+                </td>
+                <td class="empty-cell">—</td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/utensils.svg" alt=""></span>
+                  <span class="activity-name">昼食</span>
+                  <span class="activity-desc">副食のみ<br>（主食は持参）</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="time-cell">13:00</td>
+                <td class="empty-cell">—</td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/moon.svg" alt=""></span>
+                  <span class="activity-name">午睡</span>
+                </td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/target.svg" alt=""></span>
+                  <span class="activity-name">自由保育</span>
+                  <span class="activity-desc">7〜8月は午睡・休息</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="time-cell">15:00</td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/cookie.svg" alt=""></span>
+                  <span class="activity-name">授乳・おやつ</span>
+                </td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/cookie.svg" alt=""></span>
+                  <span class="activity-name">牛乳・おやつ</span>
+                </td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/cookie.svg" alt=""></span>
+                  <span class="activity-name">牛乳・おやつ</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="time-cell">15:30</td>
+                <td>
+                  <span class="activity-name">もうすぐお迎え</span>
+                </td>
+                <td>
+                  <span class="activity-name">楽しかったね</span>
+                </td>
+                <td>
+                  <span class="activity-name">楽しかったね</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="time-cell">16:00</td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/home.svg" alt=""></span>
+                  <span class="activity-name">降園</span>
+                </td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/home.svg" alt=""></span>
+                  <span class="activity-name">降園</span>
+                </td>
+                <td>
+                  <span class="activity-icon"><img src="images/icons/home.svg" alt=""></span>
+                  <span class="activity-name">降園</span>
+                </td>
+              </tr>
+              <tr class="section-row">
+                <td>16:00<br>〜<br>18:00</td>
+                <td>居残り保育</td>
+                <td>居残り保育</td>
+                <td>居残り保育</td>
+              </tr>
+              <tr class="section-row">
+                <td>18:00<br>〜<br>19:00</td>
+                <td>延長保育</td>
+                <td>延長保育</td>
+                <td>延長保育</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-    </section>
 
-    <!-- 3〜5歳児 -->
-    <section class="section" style="background: rgba(255, 152, 0, 0.04);">
-      <div class="container">
-        <span class="section-title-icon">🎒</span>
-        <h2 class="section-title">3〜5歳児の一日</h2>
-        <p class="section-subtitle">友だちと一緒に、たくさんの「できた！」を体験</p>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-icon">🌅</span>
-            <div class="timeline-time">7:00〜</div>
-            <div class="timeline-title">順次登園・自由あそび</div>
-            <div class="timeline-desc">自分でお支度をしてから、好きな遊びへ。ブロック、お絵かき、なわとびなど。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">🎵</span>
-            <div class="timeline-time">9:00</div>
-            <div class="timeline-title">朝の会</div>
-            <div class="timeline-desc">みんなで朝のうたを歌い、当番さんが今日のお天気を発表。今日の活動を確認します。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">🏃</span>
-            <div class="timeline-time">9:30</div>
-            <div class="timeline-title">主活動</div>
-            <div class="timeline-desc">リズム遊び、製作活動、おさんぽ、運動あそび、食育活動など。年齢に合わせたプログラムを行います。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">🍚</span>
-            <div class="timeline-time">11:30</div>
-            <div class="timeline-title">給食</div>
-            <div class="timeline-desc">自分でお箸を使って、しっかり食べます。当番さんが配膳のお手伝いもします。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">😴</span>
-            <div class="timeline-time">13:00</div>
-            <div class="timeline-title">おひるね（5歳児は午睡なしの日も）</div>
-            <div class="timeline-desc">しっかり体を休めます。年長さんは就学に向けて、午睡なしの時間を少しずつ増やしていきます。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">🍪</span>
-            <div class="timeline-time">15:00</div>
-            <div class="timeline-title">おやつ・帰りの会</div>
-            <div class="timeline-desc">おやつを食べたあと、みんなで帰りの歌をうたいます。「今日たのしかったこと」を発表する子も。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">⚽</span>
-            <div class="timeline-time">15:30〜</div>
-            <div class="timeline-title">自由あそび・順次降園</div>
-            <div class="timeline-desc">園庭やお部屋で好きな遊びを楽しみます。お迎えの保護者に今日の様子をお伝えします。</div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-icon">🌙</span>
-            <div class="timeline-time">〜19:00</div>
-            <div class="timeline-title">延長保育</div>
-            <div class="timeline-desc">異年齢のお友達と一緒にゆったり過ごします。</div>
-          </div>
+        <div class="highlight-box" style="margin-top: 32px;">
+          <h3>給食について</h3>
+          <p>乳児は離乳食、3歳未満児は完全給食を提供しています。幼児は副食のみ園で提供し、主食（ごはんまたはパン）をご家庭からお持ちいただきます。月2回の米飯給食もあります。アレルギー除去食にも対応しています。</p>
         </div>
       </div>
     </section>
@@ -201,7 +257,8 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h3>🌻 清華保育園</h3>
+          <img src="ロゴ.png" alt="清華保育園" class="footer-logo-img">
+          <h3>清華保育園</h3>
           <p>〒740-1441<br>山口県岩国市由宇町千鳥ケ丘3丁目1-7<br>TEL: 0827-63-1222<br>FAX: 0827-63-3988</p>
         </div>
         <div>
