@@ -15,16 +15,16 @@
 <body>
 
   <!-- ヘッダー -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <a href="index.html" class="logo">
         <img src="ロゴ.png" alt="清華保育園" class="logo-img">
       </a>
-      <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
       <div class="nav-overlay" id="navOverlay"></div>
-      <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="メインナビゲーション">
         <ul class="nav-list">
           <li><a href="index.html">ホーム</a></li>
           <li><a href="features.html">園の特色</a></li>
@@ -45,7 +45,7 @@
     </section>
 
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb" aria-label="パンくずリスト">
         <a href="index.html">ホーム</a><span>›</span>職員募集
       </nav>
     </div>
@@ -53,32 +53,32 @@
     <!-- 働く魅力 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon"><img src="images/icons/sparkles.svg" alt=""></span>
-        <h2 class="section-title">清華保育園で働く魅力</h2>
-        <p class="section-subtitle">保育士が笑顔でいられる職場をめざしています</p>
+        <span class="section-title-icon fade-in"><img src="images/icons/sparkles.svg" alt=""></span>
+        <h2 class="section-title fade-in">清華保育園で働く魅力</h2>
+        <p class="section-subtitle fade-in">保育士が笑顔でいられる職場をめざしています</p>
 
         <div class="card-grid">
-          <div class="card">
+          <div class="card fade-in stagger-1">
             <div class="card-icon"><img src="images/icons/leaf.svg" alt=""></div>
             <h3>のびのび保育ができる</h3>
             <p>カリキュラムに縛られすぎない、子どもの「やりたい！」を大切にする保育。自然のなかで子どもと一緒に発見を楽しめます。</p>
           </div>
-          <div class="card">
+          <div class="card fade-in stagger-2">
             <div class="card-icon"><img src="images/icons/heart-handshake.svg" alt=""></div>
             <h3>チームワーク抜群</h3>
             <p>ベテランから若手まで、困ったときは助け合う風土があります。定期的な研修と面談で、保育の悩みも気軽に相談できます。</p>
           </div>
-          <div class="card">
+          <div class="card fade-in stagger-3">
             <div class="card-icon"><img src="images/icons/clock.svg" alt=""></div>
             <h3>働きやすい環境</h3>
             <p>残業は月平均5時間以下。書類業務のICT化を進め、子どもと向き合う時間を大切にしています。</p>
           </div>
-          <div class="card">
+          <div class="card fade-in stagger-4">
             <div class="card-icon"><img src="images/icons/bar-chart.svg" alt=""></div>
             <h3>KidsViewで業務効率化</h3>
             <p>保育ICTシステム「KidsView」を導入し、登降園管理・連絡帳・出欠確認などをデジタル化。手書き書類の負担を減らし、子どもと向き合う時間をしっかり確保できます。</p>
           </div>
-          <div class="card">
+          <div class="card fade-in stagger-5">
             <div class="card-icon"><img src="images/icons/palette.svg" alt=""></div>
             <h3>正職員にiPad貸与</h3>
             <p>正職員には一人一台iPadを貸与。保育記録の入力や写真撮影、KidsViewの操作など、日々の業務をスムーズに行える環境を整えています。</p>
@@ -87,14 +87,21 @@
       </div>
     </section>
 
+    <!-- ウェーブdivider -->
+    <div class="wave-divider flip">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(76, 175, 80, 0.04)">
+        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,30 L1440,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
     <!-- 募集職種 -->
     <section class="section" style="background: rgba(76, 175, 80, 0.04);">
       <div class="container">
-        <span class="section-title-icon"><img src="images/icons/clipboard-list.svg" alt=""></span>
-        <h2 class="section-title">募集職種</h2>
-        <p class="section-subtitle">現在募集中のポジション</p>
+        <span class="section-title-icon fade-in"><img src="images/icons/clipboard-list.svg" alt=""></span>
+        <h2 class="section-title fade-in">募集職種</h2>
+        <p class="section-subtitle fade-in">現在募集中のポジション</p>
 
-        <div class="recruit-card">
+        <div class="recruit-card fade-in">
           <span class="recruit-badge">正社員</span>
           <h3>保育士（正規職員）</h3>
           <table class="info-table">
@@ -108,7 +115,7 @@
           </table>
         </div>
 
-        <div class="recruit-card">
+        <div class="recruit-card fade-in">
           <span class="recruit-badge" style="background: var(--sub); color: var(--text);">パート</span>
           <h3>保育士（パートタイム）</h3>
           <table class="info-table">
@@ -122,17 +129,24 @@
       </div>
     </section>
 
+    <!-- ウェーブdivider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(76, 175, 80, 0.04)">
+        <path d="M0,20 C480,60 960,0 1440,40 L1440,0 L0,0 Z"></path>
+      </svg>
+    </div>
+
     <!-- 応募フォーム（Google Forms） -->
     <section class="section" style="background: rgba(255, 152, 0, 0.04);">
       <div class="container">
-        <span class="section-title-icon"><img src="images/icons/mail.svg" alt=""></span>
-        <h2 class="section-title">応募・お問い合わせ</h2>
-        <p class="section-subtitle">下記フォームまたはお電話でお気軽にご連絡ください</p>
+        <span class="section-title-icon fade-in"><img src="images/icons/mail.svg" alt=""></span>
+        <h2 class="section-title fade-in">応募・お問い合わせ</h2>
+        <p class="section-subtitle fade-in">下記フォームまたはお電話でお気軽にご連絡ください</p>
 
         <div style="max-width: 700px; margin: 0 auto;">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeIPloSIQ26Q8ebY3IDA3tIQ9dzXfE6fataBubZgWbgX_fAnQ/viewform?embedded=true&v=20260213" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 16px; background: #fff;">読み込んでいます…</iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeIPloSIQ26Q8ebY3IDA3tIQ9dzXfE6fataBubZgWbgX_fAnQ/viewform?embedded=true&v=20260213" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 16px; background: #fff;" loading="lazy" title="応募フォーム">読み込んでいます…</iframe>
 
-          <div class="highlight-box" style="margin-top: 40px;">
+          <div class="highlight-box fade-in" style="margin-top: 40px;">
             <p>お電話でのお問い合わせ<br><strong style="font-size: 1.3rem; color: var(--main-dark);">TEL: 0827-63-1222</strong><br>担当: 採用担当 山本<br>受付時間: 平日 9:00〜17:00</p>
           </div>
 
@@ -158,7 +172,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="ロゴ.png" alt="清華保育園" class="footer-logo-img">
+          <img src="ロゴ.png" alt="清華保育園" class="footer-logo-img" loading="lazy">
           <h3>清華保育園</h3>
           <p>〒740-1441<br>山口県岩国市由宇町千鳥ケ丘3丁目1-7<br>TEL: 0827-63-1222<br>FAX: 0827-63-3988</p>
         </div>
@@ -184,6 +198,14 @@
     </div>
   </footer>
 
+  <!-- 電話CTAフローティングバー -->
+  <a href="tel:0827-63-1222" class="phone-cta" aria-label="電話をかける: 0827-63-1222">
+    <span>📞</span> 0827-63-1222 に電話する
+  </a>
+
+  <!-- トップへ戻るボタン -->
+  <button class="scroll-top" id="scrollTop" aria-label="ページの先頭へ戻る">▲</button>
+
   <script>
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
@@ -197,6 +219,29 @@
       hamburger.classList.remove('active');
       nav.classList.remove('open');
       overlay.classList.remove('show');
+    });
+
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
+
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>

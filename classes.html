@@ -15,16 +15,16 @@
 <body>
 
   <!-- ヘッダー -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <a href="index.html" class="logo">
         <img src="ロゴ.png" alt="清華保育園" class="logo-img">
       </a>
-      <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
       <div class="nav-overlay" id="navOverlay"></div>
-      <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="メインナビゲーション">
         <ul class="nav-list">
           <li><a href="index.html">ホーム</a></li>
           <li><a href="features.html">園の特色</a></li>
@@ -45,21 +45,21 @@
     </section>
 
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb" aria-label="パンくずリスト">
         <a href="index.html">ホーム</a><span>›</span>クラス紹介
       </nav>
     </div>
 
     <section class="section">
       <div class="container">
-        <span class="section-title-icon"><img src="images/icons/baby.svg" alt=""></span>
-        <h2 class="section-title">各クラスの紹介</h2>
-        <p class="section-subtitle">子どもの生活は「遊び」であり、「遊び」は子どもにとって大切な仕事です</p>
+        <span class="section-title-icon fade-in"><img src="images/icons/baby.svg" alt=""></span>
+        <h2 class="section-title fade-in">各クラスの紹介</h2>
+        <p class="section-subtitle fade-in">子どもの生活は「遊び」であり、「遊び」は子どもにとって大切な仕事です</p>
 
         <div class="card-grid" style="grid-template-columns: 1fr; gap: 20px;">
 
           <!-- きい組下（0歳児） -->
-          <div class="class-card">
+          <div class="class-card fade-in">
             <div class="class-icon"><img src="images/icons/baby.svg" alt=""></div>
             <div class="class-info">
               <h3>きい組（下）</h3>
@@ -73,7 +73,7 @@
           </div>
 
           <!-- きい組下（1歳児） -->
-          <div class="class-card">
+          <div class="class-card fade-in">
             <div class="class-icon"><img src="images/icons/footprints.svg" alt=""></div>
             <div class="class-info">
               <h3>きい組（下）</h3>
@@ -87,7 +87,7 @@
           </div>
 
           <!-- きい組上（2歳児） -->
-          <div class="class-card">
+          <div class="class-card fade-in">
             <div class="class-icon"><img src="images/icons/star.svg" alt=""></div>
             <div class="class-info">
               <h3>きい組（上）— プーさんチーム</h3>
@@ -101,7 +101,7 @@
           </div>
 
           <!-- もも組（3歳児） -->
-          <div class="class-card">
+          <div class="class-card fade-in">
             <div class="class-icon"><img src="images/icons/flower-2.svg" alt=""></div>
             <div class="class-info">
               <h3>もも組</h3>
@@ -115,7 +115,7 @@
           </div>
 
           <!-- あお組（4歳児） -->
-          <div class="class-card">
+          <div class="class-card fade-in">
             <div class="class-icon"><img src="images/icons/heart.svg" alt=""></div>
             <div class="class-info">
               <h3>あお組</h3>
@@ -129,7 +129,7 @@
           </div>
 
           <!-- みどり組（5歳児） -->
-          <div class="class-card">
+          <div class="class-card fade-in">
             <div class="class-icon"><img src="images/icons/graduation-cap.svg" alt=""></div>
             <div class="class-info">
               <h3>みどり組</h3>
@@ -149,11 +149,11 @@
     <!-- 定員まとめ -->
     <section class="section" style="padding-top: 0;">
       <div class="container">
-        <div class="highlight-box">
+        <div class="highlight-box fade-in">
           <h3>園全体の定員</h3>
           <p>合計 60名</p>
         </div>
-        <div class="btn-group">
+        <div class="btn-group fade-in">
           <a href="admission.html" class="btn btn-primary">入園案内へ</a>
           <a href="daily.html" class="btn btn-secondary">一日の流れを見る</a>
         </div>
@@ -166,7 +166,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="ロゴ.png" alt="清華保育園" class="footer-logo-img">
+          <img src="ロゴ.png" alt="清華保育園" class="footer-logo-img" loading="lazy">
           <h3>清華保育園</h3>
           <p>〒740-1441<br>山口県岩国市由宇町千鳥ケ丘3丁目1-7<br>TEL: 0827-63-1222<br>FAX: 0827-63-3988</p>
         </div>
@@ -192,6 +192,14 @@
     </div>
   </footer>
 
+  <!-- 電話CTAフローティングバー -->
+  <a href="tel:0827-63-1222" class="phone-cta" aria-label="電話をかける: 0827-63-1222">
+    <span>📞</span> 0827-63-1222 に電話する
+  </a>
+
+  <!-- トップへ戻るボタン -->
+  <button class="scroll-top" id="scrollTop" aria-label="ページの先頭へ戻る">▲</button>
+
   <script>
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
@@ -205,6 +213,29 @@
       hamburger.classList.remove('active');
       nav.classList.remove('open');
       overlay.classList.remove('show');
+    });
+
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
+
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>

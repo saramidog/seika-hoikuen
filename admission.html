@@ -15,16 +15,16 @@
 <body>
 
   <!-- ヘッダー -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <a href="index.html" class="logo">
         <img src="ロゴ.png" alt="清華保育園" class="logo-img">
       </a>
-      <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
       <div class="nav-overlay" id="navOverlay"></div>
-      <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="メインナビゲーション">
         <ul class="nav-list">
           <li><a href="index.html">ホーム</a></li>
           <li><a href="features.html">園の特色</a></li>
@@ -45,7 +45,7 @@
     </section>
 
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb" aria-label="パンくずリスト">
         <a href="index.html">ホーム</a><span>›</span>入園案内
       </nav>
     </div>
@@ -53,71 +53,80 @@
     <!-- 募集要項 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon"><img src="images/icons/file-text.svg" alt=""></span>
-        <h2 class="section-title">募集要項</h2>
-        <p class="section-subtitle">令和8年度（2026年度）入園児を募集しています</p>
+        <span class="section-title-icon fade-in"><img src="images/icons/file-text.svg" alt=""></span>
+        <h2 class="section-title fade-in">募集要項</h2>
+        <p class="section-subtitle fade-in">令和8年度（2026年度）入園児を募集しています</p>
 
-        <table class="info-table">
-          <tr>
-            <th>施設名</th>
-            <td>清華保育園（認可保育所）</td>
-          </tr>
-          <tr>
-            <th>所在地</th>
-            <td>山口県岩国市由宇町千鳥ケ丘3丁目1-7</td>
-          </tr>
-          <tr>
-            <th>対象年齢</th>
-            <td>生後約半年〜就学前まで</td>
-          </tr>
-          <tr>
-            <th>定員</th>
-            <td>60名</td>
-          </tr>
-          <tr>
-            <th>開園時間</th>
-            <td>月〜金 7:00〜19:00 / 土 7:30〜18:00</td>
-          </tr>
-          <tr>
-            <th>延長保育</th>
-            <td>18:00〜19:00</td>
-          </tr>
-          <tr>
-            <th>休園日</th>
-            <td>日曜日・祝日・年末年始（12/29〜1/3）</td>
-          </tr>
-          <tr>
-            <th>給食</th>
-            <td>補食給食（自園調理、米飯給食あり）・おやつ2回（0〜2歳児）、おやつ1回（3〜5歳児）</td>
-          </tr>
-        </table>
+        <div class="fade-in">
+          <table class="info-table">
+            <tr>
+              <th>施設名</th>
+              <td>清華保育園（認可保育所）</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>山口県岩国市由宇町千鳥ケ丘3丁目1-7</td>
+            </tr>
+            <tr>
+              <th>対象年齢</th>
+              <td>生後約半年〜就学前まで</td>
+            </tr>
+            <tr>
+              <th>定員</th>
+              <td>60名</td>
+            </tr>
+            <tr>
+              <th>開園時間</th>
+              <td>月〜金 7:00〜19:00 / 土 7:30〜18:00</td>
+            </tr>
+            <tr>
+              <th>延長保育</th>
+              <td>18:00〜19:00</td>
+            </tr>
+            <tr>
+              <th>休園日</th>
+              <td>日曜日・祝日・年末年始（12/29〜1/3）</td>
+            </tr>
+            <tr>
+              <th>給食</th>
+              <td>補食給食（自園調理、米飯給食あり）・おやつ2回（0〜2歳児）、おやつ1回（3〜5歳児）</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </section>
+
+    <!-- ウェーブdivider -->
+    <div class="wave-divider flip">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(76, 175, 80, 0.04)">
+        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,30 L1440,60 L0,60 Z"></path>
+      </svg>
+    </div>
 
     <!-- 入園までの流れ -->
     <section class="section" style="background: rgba(76, 175, 80, 0.04);">
       <div class="container">
-        <span class="section-title-icon"><img src="images/icons/footprints.svg" alt=""></span>
-        <h2 class="section-title">入園までの流れ</h2>
-        <p class="section-subtitle">4つのステップで入園準備を進めます</p>
+        <span class="section-title-icon fade-in"><img src="images/icons/footprints.svg" alt=""></span>
+        <h2 class="section-title fade-in">入園までの流れ</h2>
+        <p class="section-subtitle fade-in">4つのステップで入園準備を進めます</p>
 
         <div class="steps">
-          <div class="step">
+          <div class="step fade-in stagger-1">
             <div class="step-number">1</div>
             <h3>園見学</h3>
             <p>まずはお気軽にお電話ください。園の雰囲気をご覧いただけます。</p>
           </div>
-          <div class="step">
+          <div class="step fade-in stagger-2">
             <div class="step-number">2</div>
             <h3>申込み</h3>
             <p>お住まいの区市町村の窓口へ入園申込書をご提出ください。</p>
           </div>
-          <div class="step">
+          <div class="step fade-in stagger-3">
             <div class="step-number">3</div>
             <h3>選考・内定</h3>
             <p>区市町村の利用調整により、入園の可否が通知されます。</p>
           </div>
-          <div class="step">
+          <div class="step fade-in stagger-4">
             <div class="step-number">4</div>
             <h3>入園面談</h3>
             <p>お子さまの様子やアレルギーなどを確認し、慣らし保育の計画を立てます。</p>
@@ -126,63 +135,72 @@
       </div>
     </section>
 
+    <!-- ウェーブdivider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(76, 175, 80, 0.04)">
+        <path d="M0,20 C480,60 960,0 1440,40 L1440,0 L0,0 Z"></path>
+      </svg>
+    </div>
+
     <!-- 費用 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon"><img src="images/icons/piggy-bank.svg" alt=""></span>
-        <h2 class="section-title">費用について</h2>
-        <p class="section-subtitle">保育料のご案内</p>
+        <span class="section-title-icon fade-in"><img src="images/icons/piggy-bank.svg" alt=""></span>
+        <h2 class="section-title fade-in">費用について</h2>
+        <p class="section-subtitle fade-in">保育料のご案内</p>
 
-        <table class="info-table">
-          <tr>
-            <th>保育料</th>
-            <td>世帯の所得に応じて区市町村が決定します。3〜5歳児は幼児教育・保育の無償化の対象です。</td>
-          </tr>
-          <tr>
-            <th>延長保育料</th>
-            <td>無料（18:00〜19:00の利用）</td>
-          </tr>
-          <tr>
-            <th>給食費（3〜5歳児）</th>
-            <td>副食費 4,900円/月</td>
-          </tr>
-          <tr>
-            <th>その他</th>
-            <td>父母会費 500円/月</td>
-          </tr>
-        </table>
+        <div class="fade-in">
+          <table class="info-table">
+            <tr>
+              <th>保育料</th>
+              <td>世帯の所得に応じて区市町村が決定します。3〜5歳児は幼児教育・保育の無償化の対象です。</td>
+            </tr>
+            <tr>
+              <th>延長保育料</th>
+              <td>無料（18:00〜19:00の利用）</td>
+            </tr>
+            <tr>
+              <th>給食費（3〜5歳児）</th>
+              <td>副食費 4,900円/月</td>
+            </tr>
+            <tr>
+              <th>その他</th>
+              <td>父母会費 500円/月</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </section>
 
     <!-- Q&A -->
     <section class="section" style="background: rgba(255, 182, 193, 0.08);">
       <div class="container">
-        <span class="section-title-icon"><img src="images/icons/circle-help.svg" alt=""></span>
-        <h2 class="section-title">よくあるご質問</h2>
-        <p class="section-subtitle">入園に関するQ&A</p>
+        <span class="section-title-icon fade-in"><img src="images/icons/circle-help.svg" alt=""></span>
+        <h2 class="section-title fade-in">よくあるご質問</h2>
+        <p class="section-subtitle fade-in">入園に関するQ&A</p>
 
         <div class="qa-list">
-          <div class="qa-item">
+          <div class="qa-item fade-in">
             <div class="qa-q">見学はいつでもできますか？</div>
             <div class="qa-a">はい、平日10:00〜16:00の間で随時受け付けています。事前にお電話（0827-63-1222）でご予約ください。また、本ページ下部のお問い合わせフォームからもお申し込みいただけます。お子さまとご一緒にお越しいただけます。</div>
           </div>
 
-          <div class="qa-item">
+          <div class="qa-item fade-in">
             <div class="qa-q">慣らし保育はありますか？</div>
             <div class="qa-a">入園後、1〜2週間程度の慣らし保育を行っています。お子さまの様子に合わせて、少しずつ保育時間を延ばしていきます。ご家庭のご事情に応じて柔軟に対応いたします。</div>
           </div>
 
-          <div class="qa-item">
+          <div class="qa-item fade-in">
             <div class="qa-q">アレルギー対応はしてもらえますか？</div>
             <div class="qa-a">医師の診断書（アレルギー指示書）に基づいて、除去食・代替食の提供を行っています。入園前の面談で詳しくご相談ください。</div>
           </div>
 
-          <div class="qa-item">
+          <div class="qa-item fade-in">
             <div class="qa-q">途中入園はできますか？</div>
             <div class="qa-a">空きがあれば年度途中の入園も可能です。お住まいの区市町村の窓口にお問い合わせください。空き状況は当園にお電話いただいてもお答えできます。</div>
           </div>
 
-          <div class="qa-item">
+          <div class="qa-item fade-in">
             <div class="qa-q">駐車場・駐輪場はありますか？</div>
             <div class="qa-a">駐車場は園から20m先にあります。登降園の際は園門前に停めていただけます。</div>
           </div>
@@ -193,12 +211,12 @@
     <!-- お問い合わせフォーム -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon"><img src="images/icons/mail.svg" alt=""></span>
-        <h2 class="section-title">お問い合わせ</h2>
-        <p class="section-subtitle">見学のお申し込みやご質問はこちらからどうぞ</p>
+        <span class="section-title-icon fade-in"><img src="images/icons/mail.svg" alt=""></span>
+        <h2 class="section-title fade-in">お問い合わせ</h2>
+        <p class="section-subtitle fade-in">見学のお申し込みやご質問はこちらからどうぞ</p>
 
         <div style="max-width: 700px; margin: 0 auto;">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeIPloSIQ26Q8ebY3IDA3tIQ9dzXfE6fataBubZgWbgX_fAnQ/viewform?embedded=true&v=20260213" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 12px;">読み込んでいます…</iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeIPloSIQ26Q8ebY3IDA3tIQ9dzXfE6fataBubZgWbgX_fAnQ/viewform?embedded=true&v=20260213" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 12px;" loading="lazy" title="お問い合わせフォーム">読み込んでいます…</iframe>
 
           <div class="privacy-policy" style="margin-top: 32px; padding: 24px; background: #f9f9f9; border-radius: 12px; font-size: 0.85rem; color: #666;">
             <h4 style="font-size: 0.95rem; color: #333; margin-bottom: 12px;">個人情報保護方針（プライバシーポリシー）</h4>
@@ -218,7 +236,7 @@
     <!-- CTA -->
     <section class="section">
       <div class="container">
-        <div class="highlight-box">
+        <div class="highlight-box fade-in">
           <h3>お電話でのお問い合わせ</h3>
           <p>お気軽にお電話ください<br><strong style="font-size: 1.3rem; color: var(--main-dark);">TEL: 0827-63-1222</strong><br>受付時間: 平日 9:00〜17:00</p>
         </div>
@@ -231,7 +249,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="ロゴ.png" alt="清華保育園" class="footer-logo-img">
+          <img src="ロゴ.png" alt="清華保育園" class="footer-logo-img" loading="lazy">
           <h3>清華保育園</h3>
           <p>〒740-1441<br>山口県岩国市由宇町千鳥ケ丘3丁目1-7<br>TEL: 0827-63-1222<br>FAX: 0827-63-3988</p>
         </div>
@@ -257,6 +275,14 @@
     </div>
   </footer>
 
+  <!-- 電話CTAフローティングバー -->
+  <a href="tel:0827-63-1222" class="phone-cta" aria-label="電話をかける: 0827-63-1222">
+    <span>📞</span> 0827-63-1222 に電話する
+  </a>
+
+  <!-- トップへ戻るボタン -->
+  <button class="scroll-top" id="scrollTop" aria-label="ページの先頭へ戻る">▲</button>
+
   <script>
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
@@ -270,6 +296,29 @@
       hamburger.classList.remove('active');
       nav.classList.remove('open');
       overlay.classList.remove('show');
+    });
+
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
+
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>

@@ -1316,3 +1316,437 @@ main {
     display: none;
   }
 }
+
+/* ========================================
+   スクロールアニメーション
+   ======================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+/* ========================================
+   ヒーロー強化
+   ======================================== */
+@keyframes heroZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+.hero {
+  animation: heroZoom 20s ease-in-out infinite alternate;
+  background-size: cover;
+}
+
+.hero-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+}
+
+.hero-particle:nth-child(1) {
+  width: 80px; height: 80px;
+  top: 15%; left: 10%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.hero-particle:nth-child(2) {
+  width: 50px; height: 50px;
+  top: 60%; right: 15%;
+  animation: float 6s ease-in-out infinite 1s;
+}
+
+.hero-particle:nth-child(3) {
+  width: 30px; height: 30px;
+  bottom: 20%; left: 30%;
+  animation: float 10s ease-in-out infinite 2s;
+}
+
+.hero-particle:nth-child(4) {
+  width: 60px; height: 60px;
+  top: 30%; right: 8%;
+  animation: float 7s ease-in-out infinite 0.5s;
+}
+
+.hero-particle:nth-child(5) {
+  width: 40px; height: 40px;
+  bottom: 30%; right: 30%;
+  animation: float 9s ease-in-out infinite 3s;
+}
+
+/* ヒーローテキストアニメーション */
+.hero-text-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroTextIn 0.8s ease-out forwards;
+}
+
+.hero-text-animate:nth-child(1) { animation-delay: 0.2s; }
+.hero-text-animate:nth-child(2) { animation-delay: 0.5s; }
+.hero-text-animate:nth-child(3) { animation-delay: 0.8s; }
+
+@keyframes heroTextIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   ウェーブdivider
+   ======================================== */
+.wave-divider {
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+.wave-divider svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.wave-divider.flip {
+  transform: rotate(180deg);
+  margin-top: 0;
+  margin-bottom: -1px;
+}
+
+/* ========================================
+   ヘッダー縮小 & blur
+   ======================================== */
+.header {
+  transition: padding 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px rgba(10, 186, 181, 0.1);
+}
+
+.header.scrolled .container {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.header.scrolled .logo-img {
+  height: 48px;
+  transition: height 0.3s ease;
+}
+
+.logo-img {
+  transition: height 0.3s ease;
+}
+
+/* アクティブナビリンクのアンダーライン */
+.nav-list a {
+  position: relative;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--main);
+  transition: width 0.3s ease, left 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+  width: 60%;
+  left: 20%;
+}
+
+.nav-list a.active {
+  background: var(--main);
+  color: var(--white);
+}
+
+.nav-list a.active::after {
+  background: var(--white);
+}
+
+/* モバイルメニュー スタッガードアニメーション */
+@media (max-width: 767px) {
+  .nav.open .nav-list li {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: navStagger 0.4s ease-out forwards;
+  }
+  .nav.open .nav-list li:nth-child(1) { animation-delay: 0.05s; }
+  .nav.open .nav-list li:nth-child(2) { animation-delay: 0.1s; }
+  .nav.open .nav-list li:nth-child(3) { animation-delay: 0.15s; }
+  .nav.open .nav-list li:nth-child(4) { animation-delay: 0.2s; }
+  .nav.open .nav-list li:nth-child(5) { animation-delay: 0.25s; }
+  .nav.open .nav-list li:nth-child(6) { animation-delay: 0.3s; }
+  .nav.open .nav-list li:nth-child(7) { animation-delay: 0.35s; }
+
+  .nav-list a::after {
+    display: none;
+  }
+}
+
+@keyframes navStagger {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========================================
+   カード グラデーションボーダー
+   ======================================== */
+.card {
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--radius) + 2px);
+  background: linear-gradient(135deg, var(--main-light), var(--accent-light));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* ========================================
+   ボタン シマーエフェクト
+   ======================================== */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.btn:hover::after {
+  left: 120%;
+}
+
+/* ========================================
+   フッター強化
+   ======================================== */
+.footer {
+  background: linear-gradient(135deg, var(--main-dark) 0%, #065c59 100%);
+}
+
+.footer a {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-light);
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::before {
+  width: 100%;
+}
+
+/* ========================================
+   電話CTAフローティングバー（モバイル）
+   ======================================== */
+.phone-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: linear-gradient(135deg, var(--accent), #e06080);
+  color: var(--white);
+  text-align: center;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.phone-cta:hover {
+  background: linear-gradient(135deg, #e06080, var(--accent));
+  color: var(--white);
+}
+
+.phone-cta span {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 767px) {
+  .phone-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  body {
+    padding-bottom: 56px;
+  }
+}
+
+/* ========================================
+   トップへ戻るボタン
+   ======================================== */
+.scroll-top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 998;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--main);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(10, 186, 181, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background: var(--main-dark);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .scroll-top {
+    bottom: 32px;
+    right: 32px;
+  }
+}
+
+/* ========================================
+   アクセシビリティ
+   ======================================== */
+/* prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in,
+  .slide-up {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero {
+    animation: none;
+  }
+
+  .hero-particle {
+    display: none;
+  }
+
+  .hero-text-animate {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* フォーカスリング強化 */
+*:focus-visible {
+  outline: 3px solid var(--main);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--main-dark);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   パフォーマンス
+   ======================================== */
+.hero,
+.hero-particle {
+  will-change: transform;
+}
+
+.fade-in,
+.slide-up {
+  will-change: opacity, transform;
+}
