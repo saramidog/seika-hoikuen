@@ -998,7 +998,6 @@ main {
   border-spacing: 0;
   background: var(--white);
   border-radius: var(--radius);
-  overflow: hidden;
   box-shadow: var(--shadow);
 }
 
@@ -1017,6 +1016,9 @@ main {
 .schedule-table thead th:first-child {
   background: var(--main-dark);
   width: 80px;
+  left: 0;
+  z-index: 12;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.12);
 }
 
 .schedule-table thead th:nth-child(2),
@@ -1053,7 +1055,11 @@ main {
   text-align: center;
   white-space: nowrap;
   font-size: 0.85rem;
-  background: rgba(255, 248, 240, 0.6);
+  background: #FFF8F0;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.08);
 }
 
 .schedule-table .activity-icon {
@@ -1092,6 +1098,14 @@ main {
   padding: 10px 16px;
   text-align: center;
   vertical-align: middle;
+}
+
+.schedule-table .section-row td:first-child {
+  background: #EDF7ED;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.08);
 }
 
 /* モバイル: 横スクロール */
