@@ -1,4 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="30" fill="#4CAF50"/>
-  <text x="32" y="44" text-anchor="middle" font-size="36" font-family="sans-serif" fill="white">清</text>
+  <!-- White circular background -->
+  <circle cx="32" cy="32" r="32" fill="white"/>
+
+  <!-- Sakura petals: 5 soft pink ellipses rotated around center (32, 32) -->
+  <g fill="#F4BED0">
+    <ellipse cx="32" cy="18" rx="9" ry="12"/>
+    <ellipse cx="32" cy="18" rx="9" ry="12" transform="rotate(72, 32, 32)"/>
+    <ellipse cx="32" cy="18" rx="9" ry="12" transform="rotate(144, 32, 32)"/>
+    <ellipse cx="32" cy="18" rx="9" ry="12" transform="rotate(216, 32, 32)"/>
+    <ellipse cx="32" cy="18" rx="9" ry="12" transform="rotate(288, 32, 32)"/>
+  </g>
+
+  <!-- Sakura center -->
+  <circle cx="32" cy="32" r="6" fill="#E48EAB"/>
+
+  <!-- Clock tower body -->
+  <rect x="28" y="32" width="8" height="13" fill="#6090B5" rx="1.5"/>
+
+  <!-- Pagoda roof (wide curved eave) -->
+  <path d="M17,32 C21,28 27,22 32,18 C37,22 43,28 47,32 C44,34 20,34 17,32 Z" fill="#4A7898"/>
+
+  <!-- Pagoda spire -->
+  <polygon points="32,13 35.5,21 28.5,21" fill="#3C6480"/>
+
+  <!-- Clock face -->
+  <circle cx="32" cy="38.5" r="3.5" fill="white" stroke="#4A7898" stroke-width="0.7"/>
+
+  <!-- Clock hands (~10:10) -->
+  <line x1="32" y1="38.5" x2="30.0" y2="36.8" stroke="#4A7898" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="32" y1="38.5" x2="34.2" y2="36.8" stroke="#4A7898" stroke-width="1.1" stroke-linecap="round"/>
+
+  <!-- Clock center dot -->
+  <circle cx="32" cy="38.5" r="0.7" fill="#4A7898"/>
 </svg>
