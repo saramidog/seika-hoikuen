@@ -201,7 +201,7 @@ main {
    ======================================== */
 .hero {
   background: linear-gradient(135deg, rgba(100,181,246,0.7) 0%, rgba(129,212,250,0.7) 100%),
-              url('清華保育園正面.jpg') center/cover no-repeat;
+              url('images/清華保育園正面.jpg') center/cover no-repeat;
   color: var(--white);
   text-align: center;
   padding: 80px 20px;
