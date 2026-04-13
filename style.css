@@ -19,7 +19,7 @@
   --accent-light: #F7ABBE;
   --sub: #FADCE5;
   --sub-light: #FFF0F4;
-  --bg: #F9FCFC;
+  --bg: #F8F6F3;
   --text: #3D4F5F;
   --text-light: #6B8299;
   --white: #FFFFFF;
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  font-family: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic Pro', 'BIZ UDGothic', sans-serif;
+  font-family: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic Pro', 'Noto Sans JP', 'BIZ UDGothic', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.8;
@@ -43,6 +43,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word;
 }
 
 img {
@@ -257,7 +260,8 @@ main {
   margin-bottom: 14px;
   line-height: 1.45;
   text-shadow: 0 2px 24px rgba(0,0,0,0.18), 0 1px 4px rgba(0,0,0,0.12);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  font-feature-settings: "palt";
 }
 
 .hero p {
@@ -308,6 +312,8 @@ main {
   font-size: 1.8rem;
   position: relative;
   z-index: 1;
+  letter-spacing: 0.04em;
+  font-feature-settings: "palt";
 }
 
 .page-hero h1 img {
@@ -338,7 +344,8 @@ main {
   margin-bottom: 8px;
   color: var(--main-dark);
   font-family: 'Kaisei Decol', 'M PLUS Rounded 1c', sans-serif;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  font-feature-settings: "palt";
 }
 
 .section-title::after {
@@ -382,7 +389,7 @@ main {
   background: var(--white);
   border-radius: var(--radius);
   padding: 32px 24px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
   transition: transform 0.3s, box-shadow 0.3s;
   border-top: 4px solid transparent;
 }
@@ -406,6 +413,8 @@ main {
   font-size: 1.15rem;
   margin-bottom: 8px;
   color: var(--main-dark);
+  letter-spacing: 0.04em;
+  font-feature-settings: "palt";
 }
 
 .card p {
@@ -1253,6 +1262,8 @@ main {
   color: var(--main-dark);
   margin-bottom: 10px;
   font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  font-feature-settings: "palt";
 }
 
 .highlight-box p {
@@ -1272,6 +1283,10 @@ main {
 
   .hero {
     padding: 110px 20px 120px;
+  }
+
+  .section {
+    padding: 80px 0;
   }
 
   .section-title {
@@ -1372,11 +1387,26 @@ main {
   }
 
   .hero h1 {
-    font-size: 1.75rem;
+    font-size: 1.9rem;
   }
 
   .hero {
     padding: 60px 16px 70px;
+  }
+
+  .news-item {
+    flex-wrap: wrap;
+    gap: 6px 12px;
+  }
+
+  .news-item > span:last-child {
+    flex: 1 1 100%;
+  }
+
+  .nav-list a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 
   .page-hero h1 {
@@ -1432,7 +1462,7 @@ main {
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
 }
 
 .fade-in.visible {
@@ -1443,7 +1473,7 @@ main {
 .slide-up {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
 }
 
 .slide-up.visible {
