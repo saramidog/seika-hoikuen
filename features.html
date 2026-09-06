@@ -18,42 +18,24 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <link rel="icon" href="logo.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="inner.css">
 </head>
-<body>
+<body class="inner-page page-features">
+<a class="skip-link" href="#main">本文へ移動</a>
 
   <!-- ヘッダー -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="images/ロゴ.png" alt="清華保育園" class="logo-img">
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-overlay" id="navOverlay"></div>
-      <nav class="nav" id="nav" aria-label="メインナビゲーション">
-        <ul class="nav-list">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="features.html" class="active">園の特色</a></li>
-          <li><a href="daily.html">一日の流れ</a></li>
-          <li><a href="events.html">年間行事</a></li>
-          <li><a href="classes.html">クラス紹介</a></li>
-          <li><a href="admission.html">入園案内</a></li>
-          <li><a href="recruit.html">職員募集（停止中）</a></li>
-          <li><a href="hoikushi-shien.html">保育士支援情報</a></li>
-          <li><a href="foodbank.html">フードバンク</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <header class="site-header">
+  <a class="brand" href="index.html"><img src="images/ロゴ.png" alt="" width="60" height="60"><span><small>社会福祉法人 清光会</small>清華保育園</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">メニュー <span aria-hidden="true">＋</span></button>
+  <nav id="main-nav" aria-label="メインナビゲーション">
+    <a href="features.html" aria-current="page">園について</a><a href="index.html#life">園での生活</a><a href="admission.html">入園案内</a><a href="index.html#community">地域の方へ</a><a class="button small" href="admission.html#contact">見学・相談 <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
 
-  <main>
+  <main id="main">
     <!-- ページヒーロー -->
-    <section class="page-hero" style="background: linear-gradient(135deg, rgba(0,95,92,0.72) 0%, rgba(10,186,181,0.60) 55%, rgba(80,210,206,0.50) 100%), url('images/midorigumi-asobi.png') center/cover no-repeat;">
-      <h1><img src="images/icons/leaf.svg" alt=""> 園の特色</h1>
-      <p>清華保育園がたいせつにしていること</p>
-    </section>
+    <section class="page-hero"><div class="wrap page-hero-layout"><div><p class="eyebrow">OUR HEART</p><h1>園の特色</h1><p class="hero-subtitle">清華保育園がたいせつにしていること</p></div><img class="page-art" src="images/illustrations/features-hero-v1.png" alt="" width="1254" height="1254"></div></section>
 
     <!-- パンくず -->
     <div class="container">
@@ -61,26 +43,27 @@
         <a href="index.html">ホーム</a><span>›</span>園の特色
       </nav>
     </div>
+<nav class="page-index wrap" aria-label="このページの内容"><span>このページの内容</span><div><a href="#section-1">基本方針 <span aria-hidden="true">↓</span></a><a href="#section-2">食育活動 <span aria-hidden="true">↓</span></a><a href="#section-3">生命のあるものと接する <span aria-hidden="true">↓</span></a><a href="#section-4">充実したプログラム <span aria-hidden="true">↓</span></a><a href="#section-5">保護者アプリ「KidsView」 <span aria-hidden="true">↓</span></a><a href="#section-6">園の雰囲気を見に来ませんか？ <span aria-hidden="true">↓</span></a></div></nav>
 
     <!-- 基本方針 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/lightbulb.svg" alt=""></span>
-        <h2 class="section-title fade-in">基本方針</h2>
-        <p class="section-subtitle fade-in">私たちの保育の根っこにあるもの</p>
+        <span class="section-title-icon"><img src="images/icons/lightbulb.svg" alt=""></span>
+        <h2 class="section-title" id="section-1">基本方針</h2>
+        <p class="section-subtitle">私たちの保育の根っこにあるもの</p>
 
-        <div class="highlight-box fade-in">
+        <div class="highlight-box">
           <h3>「ひとりひとりの心を大切にする保育」</h3>
           <p>保育を必要とする乳幼児を預かり、子どもの健全育成に力を注ぎます。養護と教育が一体となって豊かな人間性を持った子どもを育成し、家庭における子育てを支援するために全面的に協力できるよう配慮します。</p>
         </div>
 
         <div class="card-grid col-2" style="margin-top: 32px;">
-          <div class="card fade-in stagger-1">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/sprout.svg" alt=""></div>
             <h3>保育目標</h3>
             <p>・ひとりで生きる力を養う<br>・遊びを通じて社会性を持つ<br>・生命のあるものと接する<br>・食育活動を通じた学び<br>・自立をする</p>
           </div>
-          <div class="card fade-in stagger-2">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/handshake.svg" alt=""></div>
             <h3>育てたい子どもの姿</h3>
             <p>・元気でたくましい子ども<br>・進んで取り組む子ども<br>・思いやりのある子ども<br><br>「できた」という喜びが次の「やる気」を育てます</p>
@@ -90,31 +73,27 @@
     </section>
 
     <!-- ウェーブdivider -->
-    <div class="wave-divider flip">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(10, 186, 181, 0.04)">
-        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,30 L1440,60 L0,60 Z"></path>
-      </svg>
-    </div>
+
 
     <!-- 食育活動 -->
     <section class="section" style="background: rgba(10, 186, 181, 0.04);">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/utensils.svg" alt=""></span>
-        <h2 class="section-title fade-in">食育活動</h2>
-        <p class="section-subtitle fade-in">食べたい気持ちを育て、命の大切さを伝える</p>
+        <span class="section-title-icon"><img src="images/icons/utensils.svg" alt=""></span>
+        <h2 class="section-title" id="section-2">食育活動</h2>
+        <p class="section-subtitle">食べたい気持ちを育て、命の大切さを伝える</p>
 
         <div class="card-grid">
-          <div class="card fade-in stagger-1">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/wheat.svg" alt=""></div>
             <h3>菜園活動・農作業体験</h3>
             <p>体験菜園を所有しており、草花や野菜を育てます。収穫の歓び、食物の大切さを知り味わう体験を通じて、食への関心と感謝の心を育みます。</p>
           </div>
-          <div class="card fade-in stagger-2">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/chef-hat.svg" alt=""></div>
             <h3>クッキング</h3>
             <p>園児によるクッキング活動を行っています。自分たちで育てた食材を使って調理することで、「食べたい気持ち」と「自分でつくる喜び」を体験します。</p>
           </div>
-          <div class="card fade-in stagger-3">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/utensils-crossed.svg" alt=""></div>
             <h3>食事マナー・試食会</h3>
             <p>食事マナーの指導を日々の保育の中で行います。また、保護者と子どもが一緒に食べる試食会を開催し、園の給食を体験いただけます。</p>
@@ -124,21 +103,17 @@
     </section>
 
     <!-- ウェーブdivider -->
-    <div class="wave-divider">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(10, 186, 181, 0.04)">
-        <path d="M0,20 C480,60 960,0 1440,40 L1440,0 L0,0 Z"></path>
-      </svg>
-    </div>
+
 
     <!-- 生命体験 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/leaf.svg" alt=""></span>
-        <h2 class="section-title fade-in">生命のあるものと接する</h2>
-        <p class="section-subtitle fade-in">いのちの不思議さと尊さを体験する</p>
+        <span class="section-title-icon"><img src="images/icons/leaf.svg" alt=""></span>
+        <h2 class="section-title" id="section-3">生命のあるものと接する</h2>
+        <p class="section-subtitle">いのちの不思議さと尊さを体験する</p>
 
         <div class="card-grid">
-          <div class="card fade-in">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/flower-2.svg" alt=""></div>
             <h3>自然とのふれあい</h3>
             <p>いろいろな場所に出かけて、動植物に触れたり見たりして、生命の不思議さと尊さを体験します。草花のほかに食べられる植物を育て、命をいただくことで心が育ちます。</p>
@@ -148,36 +123,32 @@
     </section>
 
     <!-- ウェーブdivider -->
-    <div class="wave-divider flip">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(255, 152, 0, 0.04)">
-        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,30 L1440,60 L0,60 Z"></path>
-      </svg>
-    </div>
+
 
     <!-- 充実したプログラム -->
     <section class="section" style="background: rgba(255, 152, 0, 0.04);">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/graduation-cap.svg" alt=""></span>
-        <h2 class="section-title fade-in">充実したプログラム</h2>
-        <p class="section-subtitle fade-in">年間を通じて専門講師による指導を実施しています</p>
+        <span class="section-title-icon"><img src="images/icons/graduation-cap.svg" alt=""></span>
+        <h2 class="section-title" id="section-4">充実したプログラム</h2>
+        <p class="section-subtitle">年間を通じて専門講師による指導を実施しています</p>
 
         <div class="card-grid col-2">
-          <div class="card fade-in stagger-1">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/music.svg" alt=""></div>
             <h3>リトミック</h3>
             <p>月1回、全クラス対象。リズム感が身体に染み込んで集中力や記憶力、そして想像力を高めます。何よりも感じる心をはぐくみます。<br><strong>指導料：全額園負担</strong></p>
           </div>
-          <div class="card fade-in stagger-2">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/languages.svg" alt=""></div>
             <h3>魔法の English 365 days</h3>
             <p>4歳児は週1回、5歳児は週2回。毎日10分間のDVD視聴と単語カードを使ったゲームで、1年間で400以上の単語を耳にし、楽しく語彙力を身につけます。<br><strong>指導料：全額園負担</strong></p>
           </div>
-          <div class="card fade-in stagger-3">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/volleyball.svg" alt=""></div>
             <h3>サッカー教室</h3>
             <p>月2回、4・5歳児対象。チームワークを重視するゲームを通じて、協力・助け合いの精神が身につくと同時に体力もアップ。年1回対外試合も予定しています。<br><strong>指導料：全額園負担</strong></p>
           </div>
-          <div class="card fade-in stagger-4">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/dumbbell.svg" alt=""></div>
             <h3>体育教室</h3>
             <p>月1回、3〜5歳児対象。体を動かす楽しさ、協力する大切さ、ルールを守る大切さ、頑張ればできるという達成感を体験します。<br><strong>指導料：個人負担月300円</strong></p>
@@ -189,34 +160,34 @@
     <!-- ICT活用 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/bar-chart.svg" alt=""></span>
-        <h2 class="section-title fade-in">保護者アプリ「KidsView」</h2>
-        <p class="section-subtitle fade-in">スマホひとつで園との連絡がもっと便利に</p>
+        <span class="section-title-icon"><img src="images/icons/bar-chart.svg" alt=""></span>
+        <h2 class="section-title" id="section-5">保護者アプリ「KidsView」</h2>
+        <p class="section-subtitle">スマホひとつで園との連絡がもっと便利に</p>
 
-        <div class="highlight-box fade-in">
+        <div class="highlight-box">
           <h3>忙しい朝も、スマホでかんたん連絡</h3>
           <p>清華保育園では、保護者向けアプリ「KidsView（キッズビュー）」を導入しています。登降園の記録や連絡帳のやりとり、欠席・遅刻の連絡がすべてスマートフォンから行えます。朝の忙しい時間帯でも、電話をかける必要はありません。</p>
         </div>
 
         <div class="card-grid" style="margin-top: 24px;">
-          <div class="card fade-in stagger-1">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/clock.svg" alt=""></div>
             <h3>登降園の打刻</h3>
             <p>アプリで登園・降園の記録ができます。送迎時の手続きがスムーズになります。</p>
           </div>
-          <div class="card fade-in stagger-2">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/book-open.svg" alt=""></div>
             <h3>連絡帳</h3>
             <p>お子さまの体調や食事、睡眠の記録をアプリで確認。園での様子を写真付きでお届けすることもあります。</p>
           </div>
-          <div class="card fade-in stagger-3">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/mail.svg" alt=""></div>
             <h3>欠席・遅刻連絡</h3>
             <p>急なお休みや遅刻もアプリからワンタップで連絡OK。電話がつながりにくい朝の時間帯も安心です。</p>
           </div>
         </div>
 
-        <div class="btn-group fade-in" style="margin-top: 24px;">
+        <div class="btn-group" style="margin-top: 24px;">
           <a href="https://kids.nihonsoft.co.jp/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">KidsView 公式サイトはこちら →</a>
         </div>
       </div>
@@ -225,9 +196,9 @@
     <!-- CTA -->
     <section class="section">
       <div class="container text-center">
-        <h2 class="section-title fade-in">園の雰囲気を見に来ませんか？</h2>
-        <p class="section-subtitle fade-in">見学は随時受付中です</p>
-        <div class="btn-group fade-in">
+        <h2 class="section-title" id="section-6">園の雰囲気を見に来ませんか？</h2>
+        <p class="section-subtitle">見学は随時受付中です</p>
+        <div class="btn-group">
           <a href="admission.html" class="btn btn-primary">入園案内へ</a>
           <a href="daily.html" class="btn btn-secondary">一日の流れを見る</a>
         </div>
@@ -236,7 +207,7 @@
   </main>
 
   <!-- フッター -->
-  <footer class="footer">
+  <footer class="footer inner-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
@@ -250,14 +221,7 @@
         </div>
         <div>
           <h3>ページリンク</h3>
-          <ul class="footer-links">
-            <li><a href="features.html">園の特色</a></li>
-            <li><a href="daily.html">一日の流れ</a></li>
-            <li><a href="events.html">年間行事</a></li>
-            <li><a href="classes.html">クラス紹介</a></li>
-            <li><a href="admission.html">入園案内</a></li>
-            <li><a href="foodbank.html">フードバンク</a></li>
-          </ul>
+          <nav class="inner-footer-nav" aria-label="ページ一覧"><a href="index.html">ホーム</a><a href="features.html" aria-current="page">園の特色</a><a href="daily.html">一日の流れ</a><a href="events.html">年間行事</a><a href="classes.html">クラス紹介</a><a href="admission.html">入園案内</a><a href="recruit.html">職員募集（停止中）</a><a href="hoikushi-shien.html">保育士支援情報</a><a href="foodbank.html">フードバンク</a></nav>
         </div>
       </div>
     </div>
@@ -265,56 +229,7 @@
       <div class="container">&copy; 2026 清華保育園 All Rights Reserved.</div>
     </div>
   </footer>
-
-  <!-- 電話CTAフローティングバー -->
-  <a href="tel:0827-63-1222" class="phone-cta" aria-label="電話をかける: 0827-63-1222">
-    <span>📞</span> 0827-63-1222 に電話する
-  </a>
-
-  <!-- トップへ戻るボタン -->
-  <button class="scroll-top" id="scrollTop" aria-label="ページの先頭へ戻る">▲</button>
-
-  <script>
-    // ハンバーガーメニュー
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
-    const overlay = document.getElementById('navOverlay');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      nav.classList.toggle('open');
-      overlay.classList.toggle('show');
-    });
-    overlay.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      nav.classList.remove('open');
-      overlay.classList.remove('show');
-    });
-
-    // ヘッダー縮小
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
-
-    // スクロールアニメーション
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
-
-    // トップへ戻るボタン
-    const scrollTopBtn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.classList.toggle('show', window.scrollY > 400);
-    }, { passive: true });
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+<div class="mobile-actions"><a href="admission.html">見学案内 <span aria-hidden="true">↗</span></a><a href="tel:0827-63-1222">電話で相談 <span aria-hidden="true">↗</span></a></div>
+<script src="navigation.js" defer></script>
 </body>
 </html>

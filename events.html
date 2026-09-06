@@ -18,57 +18,40 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <link rel="icon" href="logo.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="inner.css">
 </head>
-<body>
+<body class="inner-page page-events">
+<a class="skip-link" href="#main">本文へ移動</a>
 
   <!-- ヘッダー -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="images/ロゴ.png" alt="清華保育園" class="logo-img">
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-overlay" id="navOverlay"></div>
-      <nav class="nav" id="nav" aria-label="メインナビゲーション">
-        <ul class="nav-list">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="features.html">園の特色</a></li>
-          <li><a href="daily.html">一日の流れ</a></li>
-          <li><a href="events.html" class="active">年間行事</a></li>
-          <li><a href="classes.html">クラス紹介</a></li>
-          <li><a href="admission.html">入園案内</a></li>
-          <li><a href="recruit.html">職員募集（停止中）</a></li>
-          <li><a href="hoikushi-shien.html">保育士支援情報</a></li>
-          <li><a href="foodbank.html">フードバンク</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <header class="site-header">
+  <a class="brand" href="index.html"><img src="images/ロゴ.png" alt="" width="60" height="60"><span><small>社会福祉法人 清光会</small>清華保育園</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">メニュー <span aria-hidden="true">＋</span></button>
+  <nav id="main-nav" aria-label="メインナビゲーション">
+    <a href="features.html">園について</a><a href="index.html#life">園での生活</a><a href="admission.html">入園案内</a><a href="index.html#community">地域の方へ</a><a class="button small" href="admission.html#contact">見学・相談 <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
 
-  <main>
-    <section class="page-hero">
-      <h1><img src="images/icons/party-popper.svg" alt=""> 年間行事</h1>
-      <p>四季を通じて、たくさんの思い出をつくります</p>
-    </section>
+  <main id="main">
+    <section class="page-hero"><div class="wrap page-hero-layout"><div><p class="eyebrow">SEASONS</p><h1>年間行事</h1><p class="hero-subtitle">四季を通じて、たくさんの思い出をつくります</p></div><img class="page-art" src="images/illustrations/events-hero-v1.png" alt="" width="1254" height="1254"></div></section>
 
     <div class="container">
       <nav class="breadcrumb" aria-label="パンくずリスト">
         <a href="index.html">ホーム</a><span>›</span>年間行事
       </nav>
     </div>
+<nav class="page-index wrap" aria-label="このページの内容"><span>このページの内容</span><div><a href="#spring">春 <span aria-hidden="true">↓</span></a><a href="#summer">夏 <span aria-hidden="true">↓</span></a><a href="#autumn">秋 <span aria-hidden="true">↓</span></a><a href="#winter">冬 <span aria-hidden="true">↓</span></a></div></nav>
 
     <section class="section">
       <div class="container">
-        <p class="section-subtitle fade-in">毎月の誕生会・避難訓練・発育測定のほか、体育教室・おはなしランド・リトミックなどを年間を通じて実施しています</p>
+        <p class="section-subtitle">毎月の誕生会・避難訓練・発育測定のほか、体育教室・おはなしランド・リトミックなどを年間を通じて実施しています</p>
 
         <div class="calendar-grid">
           <!-- 春 -->
-          <div class="calendar-season-label spring fade-in">春 — Spring</div>
+          <div class="calendar-season-label spring" id="spring">春 — Spring</div>
 
-          <div class="calendar-cell spring fade-in stagger-1">
+          <div class="calendar-cell spring">
             <div class="calendar-header">
               <span class="calendar-month">4</span>
               <span class="calendar-month-label">April</span>
@@ -82,7 +65,7 @@
             </div>
           </div>
 
-          <div class="calendar-cell spring fade-in stagger-2">
+          <div class="calendar-cell spring">
             <div class="calendar-header">
               <span class="calendar-month">5</span>
               <span class="calendar-month-label">May</span>
@@ -96,7 +79,7 @@
             </div>
           </div>
 
-          <div class="calendar-cell spring fade-in stagger-3">
+          <div class="calendar-cell spring">
             <div class="calendar-header">
               <span class="calendar-month">6</span>
               <span class="calendar-month-label">June</span>
@@ -115,9 +98,9 @@
           </div>
 
           <!-- 夏 -->
-          <div class="calendar-season-label summer fade-in">夏 — Summer</div>
+          <div class="calendar-season-label summer" id="summer">夏 — Summer</div>
 
-          <div class="calendar-cell summer fade-in stagger-1">
+          <div class="calendar-cell summer">
             <div class="calendar-header">
               <span class="calendar-month">7</span>
               <span class="calendar-month-label">July</span>
@@ -132,7 +115,7 @@
             </div>
           </div>
 
-          <div class="calendar-cell summer fade-in stagger-2">
+          <div class="calendar-cell summer">
             <div class="calendar-header">
               <span class="calendar-month">8</span>
               <span class="calendar-month-label">August</span>
@@ -147,7 +130,7 @@
             </div>
           </div>
 
-          <div class="calendar-cell summer fade-in stagger-3">
+          <div class="calendar-cell summer">
             <div class="calendar-header">
               <span class="calendar-month">9</span>
               <span class="calendar-month-label">September</span>
@@ -161,9 +144,9 @@
           </div>
 
           <!-- 秋 -->
-          <div class="calendar-season-label autumn fade-in">秋 — Autumn</div>
+          <div class="calendar-season-label autumn" id="autumn">秋 — Autumn</div>
 
-          <div class="calendar-cell autumn fade-in stagger-1">
+          <div class="calendar-cell autumn">
             <div class="calendar-header">
               <span class="calendar-month">10</span>
               <span class="calendar-month-label">October</span>
@@ -177,7 +160,7 @@
             </div>
           </div>
 
-          <div class="calendar-cell autumn fade-in stagger-2">
+          <div class="calendar-cell autumn">
             <div class="calendar-header">
               <span class="calendar-month">11</span>
               <span class="calendar-month-label">November</span>
@@ -191,7 +174,7 @@
             </div>
           </div>
 
-          <div class="calendar-cell autumn fade-in stagger-3">
+          <div class="calendar-cell autumn">
             <div class="calendar-header">
               <span class="calendar-month">12</span>
               <span class="calendar-month-label">December</span>
@@ -208,9 +191,9 @@
           </div>
 
           <!-- 冬 -->
-          <div class="calendar-season-label winter fade-in">冬 — Winter</div>
+          <div class="calendar-season-label winter" id="winter">冬 — Winter</div>
 
-          <div class="calendar-cell winter fade-in stagger-1">
+          <div class="calendar-cell winter">
             <div class="calendar-header">
               <span class="calendar-month">1</span>
               <span class="calendar-month-label">January</span>
@@ -223,7 +206,7 @@
             </div>
           </div>
 
-          <div class="calendar-cell winter fade-in stagger-2">
+          <div class="calendar-cell winter">
             <div class="calendar-header">
               <span class="calendar-month">2</span>
               <span class="calendar-month-label">February</span>
@@ -236,7 +219,7 @@
             </div>
           </div>
 
-          <div class="calendar-cell winter fade-in stagger-3">
+          <div class="calendar-cell winter">
             <div class="calendar-header">
               <span class="calendar-month">3</span>
               <span class="calendar-month-label">March</span>
@@ -261,11 +244,11 @@
     <!-- 補足 -->
     <section class="section" style="padding-top: 0;">
       <div class="container">
-        <div class="highlight-box fade-in">
+        <div class="highlight-box">
           <h3>行事についてのお知らせ</h3>
           <p>行事の日程は変更になる場合があります。詳細は毎月の園だよりでお知らせいたします。保護者参加の行事は、事前にご案内をお配りします。</p>
         </div>
-        <div class="btn-group fade-in">
+        <div class="btn-group">
           <a href="daily.html" class="btn btn-secondary">一日の流れを見る</a>
           <a href="admission.html" class="btn btn-primary">入園案内へ</a>
         </div>
@@ -274,7 +257,7 @@
   </main>
 
   <!-- フッター -->
-  <footer class="footer">
+  <footer class="footer inner-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
@@ -288,14 +271,7 @@
         </div>
         <div>
           <h3>ページリンク</h3>
-          <ul class="footer-links">
-            <li><a href="features.html">園の特色</a></li>
-            <li><a href="daily.html">一日の流れ</a></li>
-            <li><a href="events.html">年間行事</a></li>
-            <li><a href="classes.html">クラス紹介</a></li>
-            <li><a href="admission.html">入園案内</a></li>
-            <li><a href="foodbank.html">フードバンク</a></li>
-          </ul>
+          <nav class="inner-footer-nav" aria-label="ページ一覧"><a href="index.html">ホーム</a><a href="features.html">園の特色</a><a href="daily.html">一日の流れ</a><a href="events.html" aria-current="page">年間行事</a><a href="classes.html">クラス紹介</a><a href="admission.html">入園案内</a><a href="recruit.html">職員募集（停止中）</a><a href="hoikushi-shien.html">保育士支援情報</a><a href="foodbank.html">フードバンク</a></nav>
         </div>
       </div>
     </div>
@@ -303,52 +279,7 @@
       <div class="container">&copy; 2026 清華保育園 All Rights Reserved.</div>
     </div>
   </footer>
-
-  <!-- 電話CTAフローティングバー -->
-  <a href="tel:0827-63-1222" class="phone-cta" aria-label="電話をかける: 0827-63-1222">
-    <span>📞</span> 0827-63-1222 に電話する
-  </a>
-
-  <!-- トップへ戻るボタン -->
-  <button class="scroll-top" id="scrollTop" aria-label="ページの先頭へ戻る">▲</button>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
-    const overlay = document.getElementById('navOverlay');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      nav.classList.toggle('open');
-      overlay.classList.toggle('show');
-    });
-    overlay.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      nav.classList.remove('open');
-      overlay.classList.remove('show');
-    });
-
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
-
-    const scrollTopBtn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.classList.toggle('show', window.scrollY > 400);
-    }, { passive: true });
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+<div class="mobile-actions"><a href="admission.html">見学案内 <span aria-hidden="true">↗</span></a><a href="tel:0827-63-1222">電話で相談 <span aria-hidden="true">↗</span></a></div>
+<script src="navigation.js" defer></script>
 </body>
 </html>

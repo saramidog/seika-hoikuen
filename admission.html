@@ -18,54 +18,37 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <link rel="icon" href="logo.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="inner.css">
 </head>
-<body>
+<body class="inner-page page-admission">
+<a class="skip-link" href="#main">本文へ移動</a>
 
   <!-- ヘッダー -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="images/ロゴ.png" alt="清華保育園" class="logo-img">
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-overlay" id="navOverlay"></div>
-      <nav class="nav" id="nav" aria-label="メインナビゲーション">
-        <ul class="nav-list">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="features.html">園の特色</a></li>
-          <li><a href="daily.html">一日の流れ</a></li>
-          <li><a href="events.html">年間行事</a></li>
-          <li><a href="classes.html">クラス紹介</a></li>
-          <li><a href="admission.html" class="active">入園案内</a></li>
-          <li><a href="recruit.html">職員募集（停止中）</a></li>
-          <li><a href="hoikushi-shien.html">保育士支援情報</a></li>
-          <li><a href="foodbank.html">フードバンク</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <header class="site-header">
+  <a class="brand" href="index.html"><img src="images/ロゴ.png" alt="" width="60" height="60"><span><small>社会福祉法人 清光会</small>清華保育園</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">メニュー <span aria-hidden="true">＋</span></button>
+  <nav id="main-nav" aria-label="メインナビゲーション">
+    <a href="features.html">園について</a><a href="index.html#life">園での生活</a><a href="admission.html" aria-current="page">入園案内</a><a href="index.html#community">地域の方へ</a><a class="button small" href="admission.html#contact">見学・相談 <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
 
-  <main>
-    <section class="page-hero">
-      <h1><img src="images/icons/clipboard-list.svg" alt=""> 入園案内</h1>
-      <p>清華保育園への入園をお考えの方へ</p>
-    </section>
+  <main id="main">
+    <section class="page-hero"><div class="wrap page-hero-layout"><div><p class="eyebrow">WELCOME</p><h1>入園案内</h1><p class="hero-subtitle">清華保育園への入園をお考えの方へ</p></div><img class="page-art" src="images/illustrations/admission-hero-v1.png" alt="" width="1254" height="1254"></div></section>
 
     <div class="container">
       <nav class="breadcrumb" aria-label="パンくずリスト">
         <a href="index.html">ホーム</a><span>›</span>入園案内
       </nav>
     </div>
+<nav class="page-index wrap" aria-label="このページの内容"><span>このページの内容</span><div><a href="#section-1">まずは園見学へお越しください <span aria-hidden="true">↓</span></a><a href="#section-2">募集要項 <span aria-hidden="true">↓</span></a><a href="#section-3">入園までの流れ <span aria-hidden="true">↓</span></a><a href="#section-4">費用について <span aria-hidden="true">↓</span></a><a href="#section-5">よくあるご質問 <span aria-hidden="true">↓</span></a><a href="#contact">お問い合わせ <span aria-hidden="true">↓</span></a></div></nav>
 
     <!-- 見学案内 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/home.svg" alt=""></span>
-        <h2 class="section-title fade-in">まずは園見学へお越しください</h2>
-        <div class="highlight-box fade-in">
+        <span class="section-title-icon"><img src="images/icons/home.svg" alt=""></span>
+        <h2 class="section-title" id="section-1">まずは園見学へお越しください</h2>
+        <div class="highlight-box">
           <p>清華保育園では、入園をご検討中の方の園見学を随時受け付けています。<br>
           実際の保育の様子や園の雰囲気をご覧いただきながら、ご不明な点についてもご説明いたします。<br>
           お子さまと一緒のご見学も歓迎しております。<br>
@@ -81,9 +64,9 @@
     <!-- 募集要項 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/file-text.svg" alt=""></span>
-        <h2 class="section-title fade-in">募集要項</h2>
-        <p class="section-subtitle fade-in">令和8年度（2026年度）入園児を募集しています</p>
+        <span class="section-title-icon"><img src="images/icons/file-text.svg" alt=""></span>
+        <h2 class="section-title" id="section-2">募集要項</h2>
+        <p class="section-subtitle">令和8年度（2026年度）入園児を募集しています</p>
 
         <div class="fade-in">
           <table class="info-table">
@@ -125,36 +108,32 @@
     </section>
 
     <!-- ウェーブdivider -->
-    <div class="wave-divider flip">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(10, 186, 181, 0.04)">
-        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,30 L1440,60 L0,60 Z"></path>
-      </svg>
-    </div>
+
 
     <!-- 入園までの流れ -->
     <section class="section" style="background: rgba(10, 186, 181, 0.04);">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/footprints.svg" alt=""></span>
-        <h2 class="section-title fade-in">入園までの流れ</h2>
-        <p class="section-subtitle fade-in">4つのステップで入園準備を進めます</p>
+        <span class="section-title-icon"><img src="images/icons/footprints.svg" alt=""></span>
+        <h2 class="section-title" id="section-3">入園までの流れ</h2>
+        <p class="section-subtitle">4つのステップで入園準備を進めます</p>
 
         <div class="steps">
-          <div class="step fade-in stagger-1">
+          <div class="step">
             <div class="step-number">1</div>
             <h3>園見学</h3>
             <p>まずはお気軽にお電話ください。園の雰囲気をご覧いただけます。</p>
           </div>
-          <div class="step fade-in stagger-2">
+          <div class="step">
             <div class="step-number">2</div>
             <h3>申込み</h3>
             <p>お住まいの区市町村の窓口へ入園申込書をご提出ください。</p>
           </div>
-          <div class="step fade-in stagger-3">
+          <div class="step">
             <div class="step-number">3</div>
             <h3>選考・内定</h3>
             <p>区市町村の利用調整により、入園の可否が通知されます。</p>
           </div>
-          <div class="step fade-in stagger-4">
+          <div class="step">
             <div class="step-number">4</div>
             <h3>入園面談</h3>
             <p>お子さまの様子やアレルギーなどを確認し、慣らし保育の計画を立てます。</p>
@@ -164,18 +143,14 @@
     </section>
 
     <!-- ウェーブdivider -->
-    <div class="wave-divider">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(10, 186, 181, 0.04)">
-        <path d="M0,20 C480,60 960,0 1440,40 L1440,0 L0,0 Z"></path>
-      </svg>
-    </div>
+
 
     <!-- 費用 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/piggy-bank.svg" alt=""></span>
-        <h2 class="section-title fade-in">費用について</h2>
-        <p class="section-subtitle fade-in">保育料のご案内</p>
+        <span class="section-title-icon"><img src="images/icons/piggy-bank.svg" alt=""></span>
+        <h2 class="section-title" id="section-4">費用について</h2>
+        <p class="section-subtitle">保育料のご案内</p>
 
         <div class="fade-in">
           <table class="info-table">
@@ -203,32 +178,32 @@
     <!-- Q&A -->
     <section class="section" style="background: rgba(255, 182, 193, 0.08);">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/circle-help.svg" alt=""></span>
-        <h2 class="section-title fade-in">よくあるご質問</h2>
-        <p class="section-subtitle fade-in">入園に関するQ&A</p>
+        <span class="section-title-icon"><img src="images/icons/circle-help.svg" alt=""></span>
+        <h2 class="section-title" id="section-5">よくあるご質問</h2>
+        <p class="section-subtitle">入園に関するQ&A</p>
 
         <div class="qa-list">
-          <div class="qa-item fade-in">
+          <div class="qa-item">
             <div class="qa-q">見学はいつでもできますか？</div>
             <div class="qa-a">はい、平日に随時受け付けています。園の行事等によりご案内できない時間帯もありますので、事前にお電話（0827-63-1222）でご予約をお願いいたします。お子さまと一緒にお越しいただけます。</div>
           </div>
 
-          <div class="qa-item fade-in">
+          <div class="qa-item">
             <div class="qa-q">慣らし保育はありますか？</div>
             <div class="qa-a">はい、入園後はお子さまの様子に合わせて慣らし保育を行っています。無理のないよう、ご家庭と相談しながら少しずつ進めていきます。</div>
           </div>
 
-          <div class="qa-item fade-in">
+          <div class="qa-item">
             <div class="qa-q">アレルギー対応はしてもらえますか？</div>
             <div class="qa-a">医師の指示に基づき、除去食や代替食に対応しています。詳しくは入園前の面談でご相談ください。</div>
           </div>
 
-          <div class="qa-item fade-in">
+          <div class="qa-item">
             <div class="qa-q">途中入園はできますか？</div>
             <div class="qa-a">空きがあれば年度途中の入園も可能です。お住まいの区市町村の窓口にお問い合わせください。空き状況は当園にお電話いただいてもお答えできます。</div>
           </div>
 
-          <div class="qa-item fade-in">
+          <div class="qa-item">
             <div class="qa-q">駐車場・駐輪場はありますか？</div>
             <div class="qa-a">駐車場は園から20m先にあります。登降園の際は園門前に停めていただけます。</div>
           </div>
@@ -239,9 +214,9 @@
     <!-- お問い合わせフォーム -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/mail.svg" alt=""></span>
-        <h2 class="section-title fade-in" id="contact">お問い合わせ</h2>
-        <p class="section-subtitle fade-in">見学のお申し込みやご質問はこちらからどうぞ</p>
+        <span class="section-title-icon"><img src="images/icons/mail.svg" alt=""></span>
+        <h2 class="section-title" id="contact">お問い合わせ</h2>
+        <p class="section-subtitle">見学のお申し込みやご質問はこちらからどうぞ</p>
 
         <div style="max-width: 700px; margin: 0 auto;">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeIPloSIQ26Q8ebY3IDA3tIQ9dzXfE6fataBubZgWbgX_fAnQ/viewform?embedded=true&v=20260213" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 12px;" loading="lazy" title="お問い合わせフォーム">読み込んでいます…</iframe>
@@ -269,7 +244,7 @@
     <!-- CTA -->
     <section class="section">
       <div class="container">
-        <div class="highlight-box fade-in">
+        <div class="highlight-box">
           <h3>お電話でのお問い合わせ</h3>
           <p>お気軽にお電話ください<br><strong style="font-size: 1.3rem; color: var(--main-dark);">TEL: 0827-63-1222</strong><br>受付時間: 平日 9:00〜17:00</p>
         </div>
@@ -278,7 +253,7 @@
   </main>
 
   <!-- フッター -->
-  <footer class="footer">
+  <footer class="footer inner-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
@@ -292,14 +267,7 @@
         </div>
         <div>
           <h3>ページリンク</h3>
-          <ul class="footer-links">
-            <li><a href="features.html">園の特色</a></li>
-            <li><a href="daily.html">一日の流れ</a></li>
-            <li><a href="events.html">年間行事</a></li>
-            <li><a href="classes.html">クラス紹介</a></li>
-            <li><a href="admission.html">入園案内</a></li>
-            <li><a href="foodbank.html">フードバンク</a></li>
-          </ul>
+          <nav class="inner-footer-nav" aria-label="ページ一覧"><a href="index.html">ホーム</a><a href="features.html">園の特色</a><a href="daily.html">一日の流れ</a><a href="events.html">年間行事</a><a href="classes.html">クラス紹介</a><a href="admission.html" aria-current="page">入園案内</a><a href="recruit.html">職員募集（停止中）</a><a href="hoikushi-shien.html">保育士支援情報</a><a href="foodbank.html">フードバンク</a></nav>
         </div>
       </div>
     </div>
@@ -307,52 +275,7 @@
       <div class="container">&copy; 2026 清華保育園 All Rights Reserved.</div>
     </div>
   </footer>
-
-  <!-- 電話CTAフローティングバー -->
-  <a href="tel:0827-63-1222" class="phone-cta" aria-label="電話をかける: 0827-63-1222">
-    <span>📞</span> 0827-63-1222 に電話する
-  </a>
-
-  <!-- トップへ戻るボタン -->
-  <button class="scroll-top" id="scrollTop" aria-label="ページの先頭へ戻る">▲</button>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
-    const overlay = document.getElementById('navOverlay');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      nav.classList.toggle('open');
-      overlay.classList.toggle('show');
-    });
-    overlay.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      nav.classList.remove('open');
-      overlay.classList.remove('show');
-    });
-
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
-
-    const scrollTopBtn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.classList.toggle('show', window.scrollY > 400);
-    }, { passive: true });
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+<div class="mobile-actions"><a href="admission.html">見学案内 <span aria-hidden="true">↗</span></a><a href="tel:0827-63-1222">電話で相談 <span aria-hidden="true">↗</span></a></div>
+<script src="navigation.js" defer></script>
 </body>
 </html>

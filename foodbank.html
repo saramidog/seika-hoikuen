@@ -18,42 +18,24 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <link rel="icon" href="logo.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="inner.css">
 </head>
-<body>
+<body class="inner-page page-foodbank">
+<a class="skip-link" href="#main">本文へ移動</a>
 
   <!-- ヘッダー -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="images/ロゴ.png" alt="清華保育園" class="logo-img">
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-overlay" id="navOverlay"></div>
-      <nav class="nav" id="nav" aria-label="メインナビゲーション">
-        <ul class="nav-list">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="features.html">園の特色</a></li>
-          <li><a href="daily.html">一日の流れ</a></li>
-          <li><a href="events.html">年間行事</a></li>
-          <li><a href="classes.html">クラス紹介</a></li>
-          <li><a href="admission.html">入園案内</a></li>
-          <li><a href="recruit.html">職員募集（停止中）</a></li>
-          <li><a href="hoikushi-shien.html">保育士支援情報</a></li>
-          <li><a href="foodbank.html" class="active">フードバンク</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <header class="site-header">
+  <a class="brand" href="index.html"><img src="images/ロゴ.png" alt="" width="60" height="60"><span><small>社会福祉法人 清光会</small>清華保育園</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">メニュー <span aria-hidden="true">＋</span></button>
+  <nav id="main-nav" aria-label="メインナビゲーション">
+    <a href="features.html">園について</a><a href="index.html#life">園での生活</a><a href="admission.html">入園案内</a><a href="index.html#community">地域の方へ</a><a class="button small" href="admission.html#contact">見学・相談 <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
 
-  <main>
+  <main id="main">
     <!-- ページヒーロー -->
-    <section class="page-hero" style="background: linear-gradient(135deg, rgba(0,95,92,0.78) 0%, rgba(10,186,181,0.65) 55%, rgba(80,210,206,0.55) 100%), linear-gradient(135deg, #0ABAB5 0%, #4CAF50 100%);">
-      <h1><img src="images/icons/heart-handshake.svg" alt=""> フードバンクの取り組み</h1>
-      <p>地域のみなさまと一緒に、食べ物でつながるあたたかい輪を</p>
-    </section>
+    <section class="page-hero"><div class="wrap page-hero-layout"><div><p class="eyebrow">WITH OUR NEIGHBORS</p><h1>フードバンクの取り組み</h1><p class="hero-subtitle">地域のみなさまと一緒に、食べ物でつながるあたたかい輪を</p></div><img class="page-art" src="images/illustrations/foodbank-hero-v1.png" alt="" width="1254" height="1254"></div></section>
 
     <!-- パンくず -->
     <div class="container">
@@ -61,32 +43,33 @@
         <a href="index.html">ホーム</a><span>›</span>フードバンクの取り組み
       </nav>
     </div>
+<nav class="page-index wrap" aria-label="このページの内容"><span>このページの内容</span><div><a href="#section-1">フードバンクとは？ <span aria-hidden="true">↓</span></a><a href="#section-2">由宇町社会福祉協議会との連携 <span aria-hidden="true">↓</span></a><a href="#section-3">具体的な活動内容 <span aria-hidden="true">↓</span></a><a href="#section-4">ご協力のお願い <span aria-hidden="true">↓</span></a><a href="#section-5">保育園から地域へ、地域から保育園へ <span aria-hidden="true">↓</span></a></div></nav>
 
     <!-- フードバンクとは -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/wheat.svg" alt=""></span>
-        <h2 class="section-title fade-in">フードバンクとは？</h2>
-        <p class="section-subtitle fade-in">食べ物を「もったいない」から「必要な方のもとへ」</p>
+        <span class="section-title-icon"><img src="images/icons/wheat.svg" alt=""></span>
+        <h2 class="section-title" id="section-1">フードバンクとは？</h2>
+        <p class="section-subtitle">食べ物を「もったいない」から「必要な方のもとへ」</p>
 
-        <div class="highlight-box fade-in">
+        <div class="highlight-box">
           <h3>「食」でつながる地域の支え合い</h3>
           <p>フードバンクとは、家庭や企業で使われなくなった食品（賞味期限内で安全なもの）を集め、食べ物に困っている方々や支援を必要とするご家庭にお届けする活動です。</p>
           <p style="margin-top: 12px;">食料の廃棄を減らしながら、地域で助け合う仕組みを作ること。清華保育園は、この大切な活動に保育園として積極的に関わっています。</p>
         </div>
 
         <div class="card-grid" style="margin-top: 32px;">
-          <div class="card fade-in stagger-1">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/sprout.svg" alt=""></div>
             <h3>食品ロスの削減</h3>
             <p>まだ食べられるのに捨てられてしまう食品を有効活用します。地球にやさしく、もったいなくない社会を目指しています。</p>
           </div>
-          <div class="card fade-in stagger-2">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/heart.svg" alt=""></div>
             <h3>困っている方への支援</h3>
             <p>経済的に苦しいご家庭や、さまざまな事情で食べ物に困っている方々のもとへ、食品を届けます。</p>
           </div>
-          <div class="card fade-in stagger-3">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/handshake.svg" alt=""></div>
             <h3>地域のつながりを育む</h3>
             <p>「おたがいさま」の気持ちで助け合う地域づくり。保育園が地域のハブとなって、支え合いの輪を広げます。</p>
@@ -96,20 +79,16 @@
     </section>
 
     <!-- ウェーブdivider -->
-    <div class="wave-divider flip">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(10, 186, 181, 0.04)">
-        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,30 L1440,60 L0,60 Z"></path>
-      </svg>
-    </div>
+
 
     <!-- 由宇町社協との連携 -->
     <section class="section" style="background: rgba(10, 186, 181, 0.04);">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/heart-handshake.svg" alt=""></span>
-        <h2 class="section-title fade-in">由宇町社会福祉協議会との連携</h2>
-        <p class="section-subtitle fade-in">地域の福祉を支える頼もしいパートナー</p>
+        <span class="section-title-icon"><img src="images/icons/heart-handshake.svg" alt=""></span>
+        <h2 class="section-title" id="section-2">由宇町社会福祉協議会との連携</h2>
+        <p class="section-subtitle">地域の福祉を支える頼もしいパートナー</p>
 
-        <div class="highlight-box fade-in" style="text-align: center;">
+        <div class="highlight-box" style="text-align: center;">
           <h3>清華保育園 × 由宇町社会福祉協議会</h3>
           <p>由宇町社会福祉協議会（社協）は、地域のさまざまな福祉活動を支える公的な団体です。清華保育園は同じ由宇町の仲間として、社協と手を取り合い、地域のフードバンク活動を進めています。</p>
           <p style="margin-top: 12px; font-size: 0.95rem;">フードバンクの取り組みについて、より詳しくは連携先の公式サイトもご覧ください。</p>
@@ -122,12 +101,12 @@
         </div>
 
         <div class="card-grid col-2" style="margin-top: 32px;">
-          <div class="card fade-in stagger-1">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/school.svg" alt=""></div>
             <h3>保育園の役割</h3>
             <p>食品の受け取り場所（寄付窓口）として機能し、地域の方々が気軽に食品を持ち寄れる場所を提供します。集まった食品は社協を通じて必要な方へ届けられます。</p>
           </div>
-          <div class="card fade-in stagger-2">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/clipboard-list.svg" alt=""></div>
             <h3>社協の役割</h3>
             <p>集まった食品を必要としている方々へ安全に届けるための管理・配布を担います。地域のニーズをよく知る社協が中心となって運営しています。</p>
@@ -137,20 +116,16 @@
     </section>
 
     <!-- ウェーブdivider -->
-    <div class="wave-divider">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(10, 186, 181, 0.04)">
-        <path d="M0,20 C480,60 960,0 1440,40 L1440,0 L0,0 Z"></path>
-      </svg>
-    </div>
+
 
     <!-- 具体的な活動内容 -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/clipboard-list.svg" alt=""></span>
-        <h2 class="section-title fade-in">具体的な活動内容</h2>
-        <p class="section-subtitle fade-in">清華保育園でできること</p>
+        <span class="section-title-icon"><img src="images/icons/clipboard-list.svg" alt=""></span>
+        <h2 class="section-title" id="section-3">具体的な活動内容</h2>
+        <p class="section-subtitle">清華保育園でできること</p>
 
-        <div class="steps fade-in" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div class="steps" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 900px; margin-left: auto; margin-right: auto;">
           <div class="step">
             <div class="step-number">1</div>
             <h3>食品を寄付する</h3>
@@ -168,7 +143,7 @@
           </div>
         </div>
 
-        <div class="highlight-box fade-in" style="margin-top: 32px;">
+        <div class="highlight-box" style="margin-top: 32px;">
           <h3>受け付けている食品の例</h3>
           <ul style="list-style: none; padding: 0; margin: 12px auto 0; display: flex; flex-direction: column; gap: 10px; width: fit-content;">
             <li style="display: flex; align-items: center; gap: 10px;"><img src="images/icons/wheat.svg" alt="" style="width: 22px; height: 22px; flex-shrink: 0;">米・乾物（パスタ・乾麺など）</li>
@@ -187,34 +162,30 @@
     </section>
 
     <!-- ウェーブdivider -->
-    <div class="wave-divider flip">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(242, 139, 168, 0.05)">
-        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,30 L1440,60 L0,60 Z"></path>
-      </svg>
-    </div>
+
 
     <!-- ご協力のお願い -->
     <section class="section" style="background: rgba(242, 139, 168, 0.05);">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/megaphone.svg" alt=""></span>
-        <h2 class="section-title fade-in">ご協力のお願い</h2>
-        <p class="section-subtitle fade-in">あなたの「ちょっとした気持ち」が誰かの笑顔になります</p>
+        <span class="section-title-icon"><img src="images/icons/megaphone.svg" alt=""></span>
+        <h2 class="section-title" id="section-4">ご協力のお願い</h2>
+        <p class="section-subtitle">あなたの「ちょっとした気持ち」が誰かの笑顔になります</p>
 
         <div class="card-grid col-2" style="margin-top: 16px;">
-          <div class="card fade-in stagger-1">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/cookie.svg" alt=""></div>
             <h3>食品を寄付する</h3>
             <p>「買いすぎてしまった」「使い切れなかった」そんな食品がありましたら、ぜひ清華保育園の寄付ボックスへ。賞味期限内・未開封のものをお持ちください。</p>
             <p style="margin-top: 12px; font-weight: bold; color: var(--main);">受付時間：平日 7:00〜18:00 / 土曜 9:00〜17:00</p>
           </div>
-          <div class="card fade-in stagger-2">
+          <div class="card">
             <div class="card-icon"><img src="images/icons/megaphone.svg" alt=""></div>
             <h3>活動を広めてほしい</h3>
             <p>「こんな取り組みをしている保育園があるよ」と、ご家族やご近所の方にお伝えいただくだけでも大きな力になります。口コミで地域の輪を広げてください。</p>
           </div>
         </div>
 
-        <div class="highlight-box fade-in" style="margin-top: 32px; text-align: center;">
+        <div class="highlight-box" style="margin-top: 32px; text-align: center;">
           <h3>食品寄付の受け付け場所</h3>
           <p>
             <strong>清華保育園 玄関ホール（寄付ボックス設置）</strong><br>
@@ -229,20 +200,16 @@
     </section>
 
     <!-- ウェーブdivider -->
-    <div class="wave-divider">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="rgba(242, 139, 168, 0.05)">
-        <path d="M0,20 C480,60 960,0 1440,40 L1440,0 L0,0 Z"></path>
-      </svg>
-    </div>
+
 
     <!-- メッセージCTA -->
     <section class="section">
       <div class="container">
-        <span class="section-title-icon fade-in"><img src="images/icons/leaf.svg" alt=""></span>
-        <h2 class="section-title fade-in">保育園から地域へ、地域から保育園へ</h2>
-        <p class="section-subtitle fade-in">子どもたちが育つまちを、みんなで守りたい</p>
+        <span class="section-title-icon"><img src="images/icons/leaf.svg" alt=""></span>
+        <h2 class="section-title" id="section-5">保育園から地域へ、地域から保育園へ</h2>
+        <p class="section-subtitle">子どもたちが育つまちを、みんなで守りたい</p>
 
-        <div class="highlight-box fade-in">
+        <div class="highlight-box">
           <h3>清華保育園がこの活動に取り組む理由</h3>
           <p>保育園は、地域の子育て家庭にとって身近な場所です。子どもたちが毎日通うこの場所が、地域のあたたかい支え合いのハブになれたら——そんな思いでフードバンク活動を始めました。</p>
           <p style="margin-top: 12px;">「誰かの困りごとを、誰かが助ける」。この当たり前の助け合いが、子どもたちの目にも映ることで、やさしい心が育まれると信じています。</p>
@@ -260,7 +227,7 @@
   </main>
 
   <!-- フッター -->
-  <footer class="footer">
+  <footer class="footer inner-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
@@ -274,16 +241,7 @@
         </div>
         <div>
           <h3>ページリンク</h3>
-          <ul class="footer-links">
-            <li><a href="features.html">園の特色</a></li>
-            <li><a href="daily.html">一日の流れ</a></li>
-            <li><a href="events.html">年間行事</a></li>
-            <li><a href="classes.html">クラス紹介</a></li>
-            <li><a href="admission.html">入園案内</a></li>
-            <li><a href="recruit.html">職員募集（停止中）</a></li>
-            <li><a href="hoikushi-shien.html">保育士支援情報</a></li>
-            <li><a href="foodbank.html">フードバンク</a></li>
-          </ul>
+          <nav class="inner-footer-nav" aria-label="ページ一覧"><a href="index.html">ホーム</a><a href="features.html">園の特色</a><a href="daily.html">一日の流れ</a><a href="events.html">年間行事</a><a href="classes.html">クラス紹介</a><a href="admission.html">入園案内</a><a href="recruit.html">職員募集（停止中）</a><a href="hoikushi-shien.html">保育士支援情報</a><a href="foodbank.html" aria-current="page">フードバンク</a></nav>
         </div>
       </div>
     </div>
@@ -291,52 +249,7 @@
       <div class="container">&copy; 2026 清華保育園 All Rights Reserved.</div>
     </div>
   </footer>
-
-  <!-- 電話CTAフローティングバー -->
-  <a href="tel:0827-63-1222" class="phone-cta" aria-label="電話をかける: 0827-63-1222">
-    <span>📞</span> 0827-63-1222 に電話する
-  </a>
-
-  <!-- トップへ戻るボタン -->
-  <button class="scroll-top" id="scrollTop" aria-label="ページの先頭へ戻る">▲</button>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
-    const overlay = document.getElementById('navOverlay');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      nav.classList.toggle('open');
-      overlay.classList.toggle('show');
-    });
-    overlay.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      nav.classList.remove('open');
-      overlay.classList.remove('show');
-    });
-
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
-
-    const scrollTopBtn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.classList.toggle('show', window.scrollY > 400);
-    }, { passive: true });
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+<div class="mobile-actions"><a href="admission.html">見学案内 <span aria-hidden="true">↗</span></a><a href="tel:0827-63-1222">電話で相談 <span aria-hidden="true">↗</span></a></div>
+<script src="navigation.js" defer></script>
 </body>
 </html>

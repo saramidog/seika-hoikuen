@@ -18,41 +18,23 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <link rel="icon" href="logo.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="inner.css">
 </head>
-<body>
+<body class="inner-page page-recruit">
+<a class="skip-link" href="#main">本文へ移動</a>
 
   <!-- ヘッダー -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="images/ロゴ.png" alt="清華保育園" class="logo-img">
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-overlay" id="navOverlay"></div>
-      <nav class="nav" id="nav" aria-label="メインナビゲーション">
-        <ul class="nav-list">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="features.html">園の特色</a></li>
-          <li><a href="daily.html">一日の流れ</a></li>
-          <li><a href="events.html">年間行事</a></li>
-          <li><a href="classes.html">クラス紹介</a></li>
-          <li><a href="admission.html">入園案内</a></li>
-          <li><a href="recruit.html" class="active">職員募集（停止中）</a></li>
-          <li><a href="hoikushi-shien.html">保育士支援情報</a></li>
-          <li><a href="foodbank.html">フードバンク</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <header class="site-header">
+  <a class="brand" href="index.html"><img src="images/ロゴ.png" alt="" width="60" height="60"><span><small>社会福祉法人 清光会</small>清華保育園</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">メニュー <span aria-hidden="true">＋</span></button>
+  <nav id="main-nav" aria-label="メインナビゲーション">
+    <a href="features.html">園について</a><a href="index.html#life">園での生活</a><a href="admission.html">入園案内</a><a href="index.html#community">地域の方へ</a><a class="button small" href="admission.html#contact">見学・相談 <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
 
-  <main>
-    <section class="page-hero">
-      <h1><img src="images/icons/briefcase.svg" alt=""> 職員募集（停止中）</h1>
-      <p>現在、職員の募集は行っておりません</p>
-    </section>
+  <main id="main">
+    <section class="page-hero"><div class="wrap page-hero-layout"><div><p class="eyebrow">WORK WITH US</p><h1>職員募集（停止中）</h1><p class="hero-subtitle">現在、職員の募集は行っておりません</p></div><img class="page-art" src="images/illustrations/recruit-hero-v1.png" alt="" width="1254" height="1254"></div></section>
 
     <div class="container">
       <nav class="breadcrumb" aria-label="パンくずリスト">
@@ -62,8 +44,8 @@
 
     <section class="section">
       <div class="container">
-        <div class="highlight-box fade-in">
-          <h2>現在、職員の募集は行っておりません</h2>
+        <div class="highlight-box">
+          <h2 id="section-1">現在、職員の募集は行っておりません</h2>
           <p>現在、清華保育園では職員の募集を行っておりません。何卒ご了承ください。</p>
         </div>
       </div>
@@ -72,7 +54,7 @@
   </main>
 
   <!-- フッター -->
-  <footer class="footer">
+  <footer class="footer inner-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
@@ -86,15 +68,7 @@
         </div>
         <div>
           <h3>ページリンク</h3>
-          <ul class="footer-links">
-            <li><a href="features.html">園の特色</a></li>
-            <li><a href="daily.html">一日の流れ</a></li>
-            <li><a href="events.html">年間行事</a></li>
-            <li><a href="classes.html">クラス紹介</a></li>
-            <li><a href="admission.html">入園案内</a></li>
-            <li><a href="recruit.html">職員募集（停止中）</a></li>
-            <li><a href="foodbank.html">フードバンク</a></li>
-          </ul>
+          <nav class="inner-footer-nav" aria-label="ページ一覧"><a href="index.html">ホーム</a><a href="features.html">園の特色</a><a href="daily.html">一日の流れ</a><a href="events.html">年間行事</a><a href="classes.html">クラス紹介</a><a href="admission.html">入園案内</a><a href="recruit.html" aria-current="page">職員募集（停止中）</a><a href="hoikushi-shien.html">保育士支援情報</a><a href="foodbank.html">フードバンク</a></nav>
         </div>
       </div>
     </div>
@@ -102,52 +76,7 @@
       <div class="container">&copy; 2026 清華保育園 All Rights Reserved.</div>
     </div>
   </footer>
-
-  <!-- 電話CTAフローティングバー -->
-  <a href="tel:0827-63-1222" class="phone-cta" aria-label="電話をかける: 0827-63-1222">
-    <span>📞</span> 0827-63-1222 に電話する
-  </a>
-
-  <!-- トップへ戻るボタン -->
-  <button class="scroll-top" id="scrollTop" aria-label="ページの先頭へ戻る">▲</button>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
-    const overlay = document.getElementById('navOverlay');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      nav.classList.toggle('open');
-      overlay.classList.toggle('show');
-    });
-    overlay.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      nav.classList.remove('open');
-      overlay.classList.remove('show');
-    });
-
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
-
-    const scrollTopBtn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.classList.toggle('show', window.scrollY > 400);
-    }, { passive: true });
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+<div class="mobile-actions"><a href="admission.html">見学案内 <span aria-hidden="true">↗</span></a><a href="tel:0827-63-1222">電話で相談 <span aria-hidden="true">↗</span></a></div>
+<script src="navigation.js" defer></script>
 </body>
 </html>
