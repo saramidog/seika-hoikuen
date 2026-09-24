@@ -43,11 +43,13 @@
     </div>
 
     <!-- デイリープログラム比較表 -->
-    <section class="section">
-      <div class="container">
-        <span class="section-title-icon"><img src="images/icons/clipboard-list.svg" alt=""></span>
-        <h2 class="section-title" id="section-1">デイリープログラム</h2>
-        <p class="section-subtitle">3つの年齢グループごとの一日の流れを比較できます</p>
+    <section class="ip-block" id="program" aria-labelledby="program-title">
+      <div class="wrap ip-rule">
+        <div class="ip-heading">
+          <p class="eyebrow"><span></span>DAILY PROGRAM</p>
+          <h2 id="program-title">デイリープログラム</h2>
+          <p>3つの年齢グループごとの一日の流れを比較できます</p>
+        </div>
 
         <p class="schedule-hint">← 横にスクロールできます →</p>
 
@@ -214,20 +216,21 @@
           </table>
         </div>
 
-        <div class="highlight-box" style="margin-top: 32px;">
+        <div class="ip-panel">
           <h3>給食について</h3>
           <p>乳児は離乳食、3歳未満児は完全給食を提供しています。幼児は副食のみ園で提供し、主食（ごはんまたはパン）をご家庭からお持ちいただきます。月2回の米飯給食もあります。アレルギー除去食にも対応しています。</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section">
-      <div class="container text-center">
-        <div class="btn-group">
-          <a href="classes.html" class="btn btn-primary">クラス紹介を見る</a>
-          <a href="events.html" class="btn btn-secondary">年間行事を見る</a>
+    <!-- 関連ページ -->
+    <section class="ip-closing" aria-labelledby="next-title">
+      <div class="wrap">
+        <div class="ip-heading ip-center">
+          <p class="eyebrow"><span></span>NEXT</p>
+          <h2 id="next-title">あわせてご覧ください</h2>
         </div>
+        <nav class="ip-links" aria-label="関連ページ"><a href="classes.html">クラス紹介を見る <span aria-hidden="true">→</span></a><a href="events.html">年間行事を見る <span aria-hidden="true">→</span></a></nav>
       </div>
     </section>
   </main>
