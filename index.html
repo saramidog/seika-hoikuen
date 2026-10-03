@@ -18,13 +18,14 @@
   <meta property="og:description" content="山口県岩国市由宇町の認可保育所。昭和53年開園。食育・リトミック・英語・体育など充実したプログラムで子どもたちを育みます。">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
-  <link rel="icon" href="logo.png" type="image/png">
-  <link rel="stylesheet" href="home.css?v=building-1">
+  <link rel="icon" href="images/seika-favicon.png" type="image/png" sizes="64x64">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="refinement.css">
 </head>
-<body>
+<body class="home-page">
 <a class="skip-link" href="#main">本文へ移動</a>
 <header class="site-header">
-  <a class="brand" href="index.html"><img src="images/ロゴ.png" alt="" width="60" height="60"><span><small>社会福祉法人 清光会</small>清華保育園</span></a>
+  <a class="brand" href="index.html"><img src="images/seika-logo.webp" alt="" width="60" height="60"><span><small>社会福祉法人 清光会</small>清華保育園</span></a>
   <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">メニュー <span aria-hidden="true">＋</span></button>
   <nav id="main-nav" aria-label="メインナビゲーション">
     <a href="features.html">園について</a><a href="#life">園での生活</a><a href="admission.html">入園案内</a><a href="#community">地域の方へ</a><a class="button small" href="admission.html#contact">見学・相談 <span aria-hidden="true">↗</span></a>
@@ -33,16 +34,20 @@
 <main id="main">
 <section class="intro wrap" aria-labelledby="intro-title">
   <div class="intro-copy"><p class="eyebrow"><span></span> 山口県岩国市由宇町の保育園</p>
-    <h1 id="intro-title">ひとりひとりの心を、<br><em>大切にする</em>保育。</h1>
-    <p class="intro-description">小さな「やってみたい」も、<br>今日のうれしい気持ちも。<br>その子らしい育ちを、いっしょに。</p>
+    <h1 id="intro-title"><span>はじめての保育園を、</span><span>ご家庭と<em>いっしょに。</em></span></h1>
+    <p class="intro-description">離乳食も、慣らし保育も、毎日の様子の共有も。<br>お子さまのペースを大切に、ご家庭と相談しながら園生活を始めます。</p>
+    <p class="intro-age">0歳児（生後約半年）から就学前まで、お預かりしています。</p>
     <a class="button" href="admission.html">園見学について <span aria-hidden="true">↗</span></a>
     <p class="intro-note">お子さまと一緒のご見学も歓迎しています。</p>
   </div>
   <div class="garden">
-    <img class="garden-photo" src="images/清華保育園正面.jpg" alt="青緑の屋根と花壇のある清華保育園の園舎正面" width="1360" height="907" fetchpriority="high">
-    <span class="garden-label">清華保育園 — みなさまをお迎えする園舎</span>
+    <span class="garden-sun" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M60 8v12M60 100v12M8 60h12M100 60h12M23 23l9 9M88 88l9 9M23 97l9-9M88 32l9-9"/><circle cx="60" cy="60" r="28"/><path d="M49 62c6 8 16 8 22 0"/></g></svg></span>
+    <img class="garden-photo" src="images/seika-building.webp" srcset="images/seika-building-small.webp 720w, images/seika-building.webp 1280w" sizes="(max-width: 600px) 90vw, (max-width: 900px) 45vw, 50vw" alt="青緑の屋根と花壇のある清華保育園の園舎正面" width="1360" height="907" fetchpriority="high">
+    <span class="garden-label"><small>WELCOME TO SEIKA</small>ここから、育つ毎日。</span>
+    <img class="garden-flower" src="images/seika-flower.svg" alt="" width="160" height="200">
+    <p class="garden-place">清華保育園の園舎 / 岩国市由宇町</p>
   </div>
-</section>
+<div class="intro-bottom"><a class="scroll-invitation" href="#values"><span aria-hidden="true">↓</span> 小さな毎日をのぞく</a><p>SEIKA HOIKUEN <span>—</span> A PLACE TO GROW</p></div></section>
 <section class="news wrap" aria-labelledby="news-title"><div><p class="eyebrow">NEWS</p><h2 id="news-title">園からのお知らせ</h2></div><ul class="news-list">
           <li class="news-item">
             <span class="news-date">2026.08.03</span>
@@ -65,17 +70,30 @@
             <span>七夕の日の集いを行いました</span>
           </li>
         </ul></section>
-<section class="values wrap" aria-labelledby="values-title"><div class="section-heading"><p class="eyebrow">OUR HEART</p><h2 id="values-title">小さな毎日に、<br>大切な育ちがある。</h2><p>清華保育園が大切にしている、３つのこと。</p></div>
+<section class="values wrap" id="values" aria-labelledby="values-title"><div class="section-heading"><p class="eyebrow">OUR HEART</p><h2 id="values-title">小さな毎日に、<br>大切な育ちがある。</h2><p>清華保育園が大切にしている、３つのこと。</p></div>
 <div class="value-grid">
-<article><div class="value-icon mint"><img src="images/icons/heart.svg" alt=""></div><span class="number">01</span><h3>その子の歩幅で。</h3><p>子どもの思いや育ちのペースを大切にしながら、安心して過ごせる環境を整えています。</p></article>
-<article><div class="value-icon butter"><img src="images/icons/sprout.svg" alt=""></div><span class="number">02</span><h3>五感で、みつける。</h3><p>菜園活動やクッキング、戸外での活動などを通して、五感を使った豊かな体験を大切にしています。</p></article>
-<article><div class="value-icon rose"><img src="images/icons/heart-handshake.svg" alt=""></div><span class="number">03</span><h3>いっしょに、育つ。</h3><p>子ども、保護者、職員、地域とのつながりを大切にし、笑顔あふれる園づくりを目指しています。</p></article>
+<article><div class="value-icon mint"><img src="images/icons/heart.svg" alt="" width="60" height="60"></div><span class="number">01</span><h3>その子の歩幅で。</h3><p>子どもの思いや育ちのペースを大切にしながら、安心して過ごせる環境を整えています。</p></article>
+<article><div class="value-icon butter"><img src="images/seika-sprout.svg" alt="" width="200" height="180"></div><span class="number">02</span><h3>五感で、みつける。</h3><p>菜園活動やクッキング、戸外での活動などを通して、五感を使った豊かな体験を大切にしています。</p></article>
+<article><div class="value-icon rose"><img src="images/seika-flower.svg" alt="" width="160" height="200"></div><span class="number">03</span><h3>いっしょに、育つ。</h3><p>子ども、保護者、職員、地域とのつながりを大切にし、笑顔あふれる園づくりを目指しています。</p></article>
 </div><a class="text-link" href="features.html">保育の方針・特色を知る <span aria-hidden="true">→</span></a></section>
 <section class="life-section" id="life"><div class="wrap"><div class="section-heading"><p class="eyebrow">LIFE AT SEIKA</p><h2>あそびも、ごはんも。<br>毎日が育ちの時間。</h2><p>友達との関わりや、自然とのふれあい。<br>いつもの一日の中に、たくさんの発見があります。</p></div>
-<ol class="day-path"><li><img src="images/icons/sun.svg" alt=""><small>朝</small><h3>おはよう</h3></li><li><img src="images/icons/footprints.svg" alt=""><small>あそび</small><h3>やってみよう</h3></li><li><img src="images/icons/utensils.svg" alt=""><small>給食</small><h3>いただきます</h3></li><li><img src="images/icons/moon.svg" alt=""><small>午後</small><h3>ひとやすみ</h3></li></ol>
+<div class="day-explorer" data-day="morning">
+  <p class="day-instruction">気になる時間を選んで、園の一日をたどってみてください。</p>
+  <ol class="day-path" aria-label="園の一日の時間を選ぶ">
+    <li><button type="button" data-day-choice="morning" aria-pressed="true" aria-controls="day-story"><img src="images/icons/sun.svg" alt="" width="85" height="85"><small>朝</small><span>おはよう</span></button></li>
+    <li><button type="button" data-day-choice="play" aria-pressed="false" aria-controls="day-story"><img src="images/icons/footprints.svg" alt="" width="85" height="85"><small>あそび</small><span>やってみよう</span></button></li>
+    <li><button type="button" data-day-choice="lunch" aria-pressed="false" aria-controls="day-story"><img src="images/icons/utensils.svg" alt="" width="85" height="85"><small>給食</small><span>いただきます</span></button></li>
+    <li><button type="button" data-day-choice="rest" aria-pressed="false" aria-controls="day-story"><img src="images/icons/moon.svg" alt="" width="85" height="85"><small>午後</small><span>ひとやすみ</span></button></li>
+  </ol>
+  <div class="day-story" id="day-story" aria-live="polite" aria-atomic="true">
+    <div class="day-story-art" aria-hidden="true"><span class="day-orbit"></span><img src="images/icons/sun.svg" alt="" width="96" height="96"></div>
+    <div><p class="eyebrow" id="day-kicker">01 / おはよう</p><h3 id="day-title">「おはよう」から、はじまる一日。</h3><p id="day-description">朝の登園時は、園門の前で保育士が直接お子さまをお迎えします。園内まで入らずに、お子さまをお預けいただけます。いつもの一日を、子どもたちの歩幅で過ごします。</p><a class="text-link" href="daily.html#program">年齢別の一日の流れを見る <span aria-hidden="true">→</span></a></div>
+  </div>
+  <noscript><p class="day-fallback">年齢別の詳しい時間・活動は、<a href="daily.html#program">一日の流れ</a>でご覧いただけます。</p></noscript>
+</div>
 <div class="page-links"><a href="daily.html">一日の流れ <span>↗</span></a><a href="classes.html">クラス紹介 <span>↗</span></a><a href="events.html">年間行事 <span>↗</span></a></div></div></section>
 <section class="admission wrap"><div><p class="eyebrow">WELCOME</p><h2>はじめまして。<br>まずは、園を<br class="desktop-break">見に来ませんか。</h2><p>入園をお考えのご家庭へ。<br>気になること、どうぞお気軽にご相談ください。</p><a class="button" href="admission.html">入園のご案内 <span>↗</span></a></div>
-<div class="welcome-panel"><p class="panel-label">入園までの４つのステップ</p><ol class="entry-steps"><li><span>01</span>園見学</li><li><span>02</span>申込み</li><li><span>03</span>選考・内定</li><li><span>04</span>入園面談</li></ol><details><summary>見学はいつでもできますか？</summary><p>平日に随時受け付けています。園の行事等によりご案内できない時間帯もありますので、事前にお電話でご予約ください。お子さまと一緒にお越しいただけます。</p></details><details><summary>慣らし保育はありますか？</summary><p>入園後はお子さまの様子に合わせて、ご家庭と相談しながら少しずつ進めていきます。</p></details></div></section>
+<div class="welcome-panel"><img class="welcome-sprout" src="images/seika-sprout.svg" alt="" width="200" height="180"><p class="panel-label">入園までの４つのステップ</p><ol class="entry-steps"><li><span>01</span>園見学</li><li><span>02</span>申込み</li><li><span>03</span>選考・内定</li><li><span>04</span>入園面談</li></ol><nav class="admission-shortcuts" aria-label="入園に関する情報"><a href="admission.html#fees">費用について <span aria-hidden="true">↗</span></a><a href="admission.html#requirements">申込みの手続き <span aria-hidden="true">↗</span></a><a href="admission.html#preparation">入園準備 <span aria-hidden="true">↗</span></a></nav><details><summary>見学はいつでもできますか？</summary><p>平日に随時受け付けています。園の行事等によりご案内できない時間帯もありますので、事前にお電話でご予約ください。お子さまと一緒にお越しいただけます。</p></details><details><summary>慣らし保育はありますか？</summary><p>入園後はお子さまの様子に合わせて、ご家庭と相談しながら少しずつ進めていきます。</p></details></div></section>
 <section class="community wrap" id="community"><div class="section-heading"><p class="eyebrow">WITH OUR NEIGHBORS</p><h2>地域とつながる、<br>もうひとつの居場所。</h2></div><div id="niwa-kaiho" class="open-garden"><div class="community-title"><h3>園庭開放</h3><p>地域のみなさまのご参加をお待ちしています。</p></div><p>10〜12月の園庭開放予定です。ご参加を希望される方は、前日までにお電話でご連絡ください。</p><div class="schedule-wrapper"><table class="schedule-table">
             <thead>
               <tr>
@@ -120,16 +138,8 @@
 <section class="access wrap"><div><p class="eyebrow">ACCESS</p><h2>清華保育園</h2><p>昭和53年開園の認可保育所<br>〒740-1441<br>山口県岩国市由宇町千鳥ケ丘3丁目1-7</p><a class="text-link" href="https://www.google.com/maps?q=山口県岩国市由宇町千鳥ケ丘3丁目1-7" target="_blank" rel="noopener noreferrer">地図を開く（別タブ） <span aria-hidden="true">↗</span></a></div><dl class="hours"><div><dt>月〜金曜日</dt><dd>7:00〜19:00</dd></div><div><dt>土曜日</dt><dd>7:00〜18:00</dd></div><div><dt>休園日</dt><dd>日曜・祝日・年末年始</dd></div><div><dt>電話 / FAX</dt><dd><a href="tel:0827-63-1222">0827-63-1222</a><br>0827-63-3988</dd></div></dl></section>
 <section class="contact-band"><div class="wrap"><div><p class="eyebrow">LET’S MEET</p><h2>お会いできる日を、<br>楽しみにしています。</h2></div><div><a class="button light" href="admission.html#contact">見学・お問い合わせ <span aria-hidden="true">↗</span></a><a class="contact-phone" href="tel:0827-63-1222">0827-63-1222</a><p>電話受付：平日 9:00〜17:00</p></div></div></section>
 </main>
-<footer class="site-footer wrap"><a class="brand" href="index.html"><img src="images/ロゴ.png" alt="" width="60" height="60" loading="lazy"><span><small>社会福祉法人 清光会</small>清華保育園</span></a><nav aria-label="補助ナビゲーション"><a href="recruit.html">職員募集（停止中）</a><a href="hoikushi-shien.html">保育士支援情報</a><a href="foodbank.html">フードバンク</a></nav><small class="copyright">© 2026 清華保育園</small></footer>
+<footer class="site-footer wrap"><a class="brand" href="index.html"><img src="images/seika-logo.webp" alt="" width="60" height="60" loading="lazy"><span><small>社会福祉法人 清光会</small>清華保育園</span></a><nav aria-label="補助ナビゲーション"><a href="recruit.html">職員募集（停止中）</a><a href="hoikushi-shien.html">保育士支援情報</a><a href="foodbank.html">フードバンク</a></nav><small class="copyright">© 2026 清華保育園</small></footer>
 <div class="mobile-actions"><a href="admission.html">見学案内 <span aria-hidden="true">↗</span></a><a href="tel:0827-63-1222">電話で相談 <span aria-hidden="true">↗</span></a></div>
-<script>
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('#main-nav');
-function closeMenu() { toggle.setAttribute('aria-expanded', 'false'); nav.classList.remove('is-open'); }
-toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); nav.classList.toggle('is-open', open); });
-nav.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
-document.addEventListener('keydown', event => { if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); } });
-document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
-window.matchMedia('(min-width: 901px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
-</script>
+<script src="navigation.js" defer></script>
+<script src="home.js" defer></script>
 </body></html>
