@@ -1,0 +1,33 @@
+/* iroha 048「モーニングプール」— 背景は白に近い水色へ調整。 */
+:root {
+  --color-background: #FAFDFD;
+  --color-surface: #C6EBEA;
+  --color-primary: #85D1D6;
+  --color-accent: #48A6BF;
+  --color-text: #2B627E;
+  --color-on-primary: #202520;
+  --color-on-surface: var(--color-text);
+  --color-on-accent: #202520;
+
+  /* 現行ページとブログの既存トークンを、同じ色の役割につなぐ。 */
+  --paper: var(--color-background);
+  --ink: var(--color-text);
+  --green: var(--color-text);
+  --muted: var(--color-text);
+  --line: var(--color-primary);
+  --pink: var(--color-accent);
+  --terracotta: var(--color-accent);
+  --main: var(--color-primary);
+  --main-light: var(--color-surface);
+  --main-dark: var(--color-text);
+  --accent: var(--color-accent);
+  --accent-light: var(--color-primary);
+  --sub: var(--color-surface);
+  --sub-light: var(--color-background);
+  --bg: var(--color-background);
+  --text: var(--color-text);
+  --text-light: var(--color-text);
+  --white: var(--color-background);
+  --shadow: 0 4px 16px rgba(43, 98, 126, 0.08);
+  --shadow-hover: 0 8px 24px rgba(43, 98, 126, 0.14);
+}
