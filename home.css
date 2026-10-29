@@ -598,6 +598,11 @@ details p {
   margin-top:23px;
   font-size:14px
 }
+.open-garden .schedule-table caption {
+  text-align:left;
+  padding-bottom:12px;
+  font-weight:500
+}
 .schedule-table th {
   text-align:left;
   font-size:12px;
