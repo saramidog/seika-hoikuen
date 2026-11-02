@@ -26,32 +26,4 @@
     });
     window.matchMedia('(min-width: 901px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
   }
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if ('IntersectionObserver' in window && !reducedMotion.matches) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
-      });
-    }, { threshold: 0.06 });
-    document.querySelectorAll('.value-grid article,.section-heading,.ip-heading,.day-story,.welcome-panel,.open-garden').forEach(element => {
-      element.classList.add('reveal-ready');
-      observer.observe(element);
-    });
-    reducedMotion.addEventListener('change', event => {
-      if (event.matches) { observer.disconnect(); document.querySelectorAll('.reveal-ready').forEach(element => element.classList.add('is-visible')); }
-    });
-  }
-  const progress = document.createElement('div');
-  progress.className = 'page-progress';
-  progress.setAttribute('aria-hidden', 'true');
-  document.body.append(progress);
-  let queued = false;
-  function updateProgress() {
-    const range = document.documentElement.scrollHeight - window.innerHeight;
-    progress.style.transform = `scaleX(${range > 0 ? Math.min(1, Math.max(0, window.scrollY / range)) : 0})`;
-    queued = false;
-  }
-  window.addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(updateProgress); } }, { passive: true });
-  window.addEventListener('resize', updateProgress);
-  updateProgress();
 })();

@@ -1,318 +1,266 @@
 /* Interior pages share typography, navigation and palette with the home page. */
-.inner-page {
-  --main: var(--color-primary);
-  --main-dark: var(--green);
-  --text: var(--ink);
-  --text-light: var(--muted);
-  --accent: var(--color-accent);
-  --white: var(--color-background);
-  overflow-wrap: anywhere;
-}
-.inner-page .container { width: min(1120px, calc(100% - 96px)); margin-inline: auto; }
-.inner-page .site-header a[aria-current="page"] { text-decoration: underline; text-underline-offset: 7px; }
-.page-hero { background: var(--color-surface); border-radius: 0 0 50px 50px; }
-.page-hero-layout { display: grid; grid-template-columns: 1fr 260px; align-items: center; gap: 35px; padding-block: 35px; min-height: 280px; }
-.inner-page h1 { font-size: clamp(30px, 3.3vw, 44px); white-space: normal; line-height: 1.6; }
-.page-hero .hero-subtitle { font-size: 14px; margin-top: 18px; color: var(--muted); max-width: 660px; }
-.page-art { width: 260px; height: auto; mix-blend-mode: normal; border-radius: 45% 45% 8% 8%; }
-.breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 22px 0; font-size: 11px; color: var(--muted); }
-.breadcrumb a { color: var(--green); }
-.page-index { display: grid; grid-template-columns: 135px 1fr; gap: 20px; padding-block: 20px; border-block: 1px solid var(--line); font-size: 12px; }
-.page-index>span { color: var(--muted); padding-top: 7px; }
-.page-index>div { display: flex; flex-wrap: wrap; gap: 8px 22px; }
-.page-index a { display: inline-flex; align-items: center; gap: 12px; padding: 7px 0; }
-.page-index a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.inner-page { overflow-wrap: anywhere; }
+.inner-page .container { width: min(1240px, calc(100% - 112px)); margin-inline: auto; }
 
-.inner-page .card-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 25px; }
+/* ページの冒頭 */
+.page-hero { background: var(--color-band); }
+.page-hero-layout { padding-block: 56px; }
+.inner-page h1 { font-size: clamp(28px,3vw,40px); line-height: 1.4; white-space: normal; }
+.page-hero .hero-subtitle { margin-top: 8px; max-width: 40em; color: var(--color-text); }
+.breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-block: 16px; font-size: 13px; color: var(--muted); }
+.breadcrumb a { color: var(--color-text); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.page-index { display: grid; grid-template-columns: 136px minmax(0,1fr); gap: 16px; padding-block: 16px; border-block: 1px solid var(--line); font-size: 14px; }
+.page-index>span { padding-top: 8px; color: var(--muted); }
+.page-index>div { display: flex; flex-wrap: wrap; gap: 0 24px; }
+.page-index a { display: inline-flex; align-items: center; min-height: 40px; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.page-index a:hover { text-decoration-color: currentColor; }
+
+/* カード */
+.inner-page .card-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
 .inner-page .card-grid.col-2 { grid-template-columns: repeat(2,minmax(0,1fr)); }
-.card { min-width: 0; background: var(--color-surface); border: 1px solid var(--line); border-radius: 8px; padding: 28px; }
-.card-icon { display: grid; place-items: center; width: 65px; height: 65px; border-radius: 48% 52% 42% 58%; background: var(--paper); margin-bottom: 20px; }
-.card:nth-child(3n+2) .card-icon { background: var(--color-primary); }
-.card:nth-child(3n+3) .card-icon { background: var(--paper); }
-.card-icon img { width: 31px; height: 31px; }
-.card h3 { font-size: 18px; margin-bottom: 12px; line-height: 1.7; }
-.card p { font-size: 14px; color: var(--muted); }
+.inner-page .card { display: flex; flex-direction: column; min-width: 0; padding: 24px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; }
+.card-icon { margin-bottom: 12px; }
+.card-icon img { width: 24px; height: 24px; }
+.card h3 { margin-bottom: 8px; font-size: 18px; }
+.card p { font-size: 15px; color: var(--color-text); }
+.card .ip-checks { margin-top: 0; }
+.card .ip-card-tag,.card .ip-card-foot { margin-top: auto; padding-top: 16px; }
+.ip-card-tag>span,.ip-card-foot>span { display: block; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink); }
+.inner-page .card.ip-card-row { display: grid; grid-template-columns: 24px minmax(0,1fr); column-gap: 16px; align-content: start; }
+.ip-card-row .card-icon { grid-row: 1 / 3; margin: 2px 0 0; }
+.ip-card-row h3 { margin-bottom: 4px; }
 
-.inner-page iframe { max-width: 100%; background: var(--color-surface); }
-.inner-page .schedule-wrapper { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
-.inner-page .schedule-wrapper:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+/* 一日の流れの表 */
+.inner-page iframe { max-width: 100%; background: var(--color-band); }
+.inner-page .schedule-wrapper { overflow-x: auto; border: 1px solid var(--line); border-radius: 16px; }
+.inner-page .schedule-wrapper:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 .inner-page .schedule-table { min-width: 740px; margin: 0; table-layout: fixed; }
-.inner-page .schedule-table th { background: var(--color-primary); color: var(--color-on-primary); text-align: center; padding: 18px 15px; }
+.inner-page .schedule-table th { padding: 12px 16px; background: var(--color-band); color: var(--ink); font-size: 14px; font-weight: 700; line-height: 1.5; }
+.inner-page .schedule-table th small { font-weight: 400; }
 .inner-page .schedule-table th:first-child { width: 80px; }
-.inner-page .schedule-table th img { width: 26px; height: 26px; margin: 0 auto 6px; }
-.inner-page .schedule-table .col-baby { background: var(--color-surface); color: var(--color-on-surface); }
-.inner-page .schedule-table .col-toddler { background: var(--color-primary); }
-.inner-page .schedule-table .col-child { background: var(--color-surface); color: var(--color-on-surface); }
-.inner-page .schedule-table td { vertical-align: top; white-space: normal; padding: 18px 15px; background: var(--paper); font-size: 13px; }
-.inner-page .schedule-table .time-cell { position: sticky; left: 0; background: var(--color-surface); color: var(--green); font-weight: 700; text-align: center; white-space: nowrap; z-index: 1; }
-.activity-icon img { width: 23px; height: 23px; margin-bottom: 6px; }
+.inner-page .schedule-table td { padding: 12px 16px; background: var(--paper); vertical-align: top; white-space: normal; font-size: 14px; line-height: 1.7; }
+.inner-page .schedule-table .time-cell { position: sticky; left: 0; z-index: 1; background: var(--color-band); font-weight: 700; white-space: nowrap; }
+.inner-page .schedule-table tbody tr:last-child td { border-bottom: 0; }
 .activity-name { display: block; font-weight: 700; }
-.activity-desc { font-size: 12px; color: var(--muted); }
-.inner-page .schedule-table .section-row td { background: var(--color-surface); text-align: center; }
-.empty-cell { color: var(--muted); text-align: center; }
-.schedule-hint { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
-.calendar-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 25px; }
+.activity-desc { display: block; font-size: 13px; color: var(--color-text); }
+.inner-page .schedule-table .section-row td { background: var(--color-band); }
+.empty-cell { color: var(--muted); }
+.schedule-hint { display: none; margin-bottom: 8px; font-size: 13px; color: var(--muted); }
 
-.calendar-cell { border: 1px solid var(--line); border-radius: 8px; background: var(--color-surface); overflow: hidden; }
-.calendar-header { display: flex; align-items: baseline; gap: 12px; padding: 18px 22px; background: var(--color-primary); }
+/* 年間行事 */
+.calendar-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.calendar-cell { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.calendar-header { display: flex; align-items: baseline; gap: 4px; padding: 8px 20px; background: var(--color-band); }
 .calendar-cell.spring .calendar-header { background: #f1deda; }
 .calendar-cell.summer .calendar-header { background: #e1eadb; }
 .calendar-cell.autumn .calendar-header { background: #eee2c4; }
 .calendar-cell.winter .calendar-header { background: #dde8e9; }
-.calendar-month { font-family: var(--serif); font-size: 38px; line-height: 1.4; }
-.calendar-month-label { font-size: 11px; color: var(--muted); }
-.calendar-season-icon { margin-left: auto; align-self: center; }
-.calendar-season-icon img { width: 29px; height: 29px; }
-.calendar-body { padding: 22px; }
-.calendar-events li { font-size: 14px; padding-left: 15px; margin-bottom: 9px; position: relative; }
-.calendar-events li:before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--color-accent); position: absolute; top: 11px; left: 0; }
-.class-card { display: grid; grid-template-columns: 95px 1fr; gap: 30px; padding: 34px; background: var(--color-surface); border: 1px solid var(--line); border-left: 5px solid #e5cb7f; border-radius: 8px; }
-.class-icon { width: 85px; height: 85px; display: grid; place-items: center; background: #f3eaca; border-radius: 45% 55% 45% 55%; }
-.class-icon img { width: 38px; height: 38px; }
-.class-card:nth-child(3) { border-left-color: #d6a29d; }.class-card:nth-child(3) .class-icon { background: #f1deda; }
-.class-card:nth-child(4) { border-left-color: #8faebd; }.class-card:nth-child(4) .class-icon { background: #dee8eb; }
-.class-card:nth-child(5) { border-left-color: #96b18b; }.class-card:nth-child(5) .class-icon { background: #e1eadb; }
-.class-info h3 { font-family: var(--serif); font-size: 25px; margin-bottom: 5px; }
-.class-age { display: inline-block; background: var(--color-surface); border-radius: 4px; padding: 3px 10px; font-size: 12px; margin: 6px 0 16px; }
-.class-info p { font-size: 14px; color: var(--muted); }
-.class-details { display: grid; grid-template-columns: 105px 1fr; gap: 8px 15px; font-size: 13px; border-top: 1px solid var(--line); padding-top: 18px; margin-bottom: 0; }
-.class-details dt { color: var(--green); }.class-details dd { margin: 0; }
+.calendar-month { font-family: var(--serif); font-size: 32px; line-height: 1.4; }
+.calendar-month-label { font-size: 14px; }
+.calendar-body { padding: 16px 20px; }
+.calendar-events li { position: relative; margin-bottom: 4px; padding-left: 12px; font-size: 15px; line-height: 1.7; }
+.calendar-events li::before { content: ''; position: absolute; top: .75em; left: 0; width: 4px; height: 4px; background: var(--color-accent); border-radius: 50%; }
+.ip-season { display: grid; grid-template-columns: 136px minmax(0,1fr); gap: 32px; padding-block: 40px; border-top: 1px solid var(--line); }
+.ip-season:first-child { padding-top: 0; border-top: 0; }
+.ip-season-label h2 { font-size: 40px; line-height: 1.3; }
 
-.inner-footer { background: var(--color-surface); color: var(--ink); padding-top: 45px; }
-.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 45px; }
-.footer-logo-img { width: 55px; height: auto; margin-bottom: 15px; border-radius: 4px; }
-.inner-footer h3 { font-size: 17px; margin-bottom: 15px; }
-.inner-footer p { font-size: 12px; line-height: 2; }
-.inner-footer a:hover { color: var(--ink); text-decoration: underline; }
-.inner-footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; font-size: 12px; }
-.inner-footer-nav [aria-current] { text-decoration: underline; text-underline-offset: 5px; }
-.footer-bottom { border-top: 1px solid var(--line); margin-top: 30px; padding: 20px 0; font-size: 10px; }
+/* クラス紹介：組の色は名前の印として小さく残す */
+.class-card { padding: 32px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; }
+.class-info h3 { margin-bottom: 4px; font-size: 24px; }
+.class-info h3::before { content: ''; display: inline-block; width: 12px; height: 12px; margin-right: 8px; background: #e5cb7f; border-radius: 50%; vertical-align: .1em; }
+.class-card:nth-child(3) h3::before { background: #d6a29d; }
+.class-card:nth-child(4) h3::before { background: #8faebd; }
+.class-card:nth-child(5) h3::before { background: #96b18b; }
+.class-age { margin-bottom: 12px; font-size: 14px; color: var(--muted); }
+.class-info p { font-size: 15px; color: var(--color-text); }
+.class-details { display: grid; grid-template-columns: 96px minmax(0,1fr); gap: 8px 16px; margin: 16px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; }
+.class-details dt { color: var(--color-text); }
+.class-details dd { margin: 0; }
 
+/* フッター */
+.inner-footer { padding-top: 48px; border-top: 1px solid var(--line); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 48px; }
+.footer-logo-img { width: 48px; height: auto; margin-bottom: 12px; border-radius: 8px; }
+.inner-footer h3 { margin-bottom: 8px; font-size: 18px; }
+.inner-footer p { font-size: 14px; line-height: 2; color: var(--color-text); }
+.inner-footer a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.inner-footer-nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 16px; font-size: 14px; }
+.inner-footer-nav a { display: flex; align-items: center; min-height: 36px; }
+.inner-footer-nav [aria-current] { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.footer-bottom { margin-top: 32px; padding-block: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+
+@media(max-width: 1100px) {
+  .inner-page .container { width: calc(100% - 80px); }
+}
 @media(max-width: 1000px) {
-  .inner-page .container { width: calc(100% - 64px); }
-  .page-hero-layout { grid-template-columns: 1fr 180px; }.page-art { width: 180px; }
   .inner-page .card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }.footer-grid>div:last-child { grid-column: 1/-1; }
+  .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; }
+  .footer-grid>div:last-child { grid-column: 1 / -1; }
 }
 @media(max-width: 600px) {
   .inner-page .container { width: calc(100% - 40px); }
-  .page-hero { border-radius: 0 0 28px 28px; }
-  .page-hero-layout { position: relative; display: block; min-height: 0; padding-block: 35px; }
-  .page-hero-layout>div { position: relative; z-index: 1; }
-  .page-art { position: static; width: 170px; height: auto; margin: 22px auto 0; opacity: 1; }
-  .inner-page h1 { font-size: 29px; max-width: 310px; }
-  .page-hero .hero-subtitle { font-size: 12px; margin-top: 15px; }
-  .breadcrumb { font-size: 10px; padding-block: 18px; }
-  .page-index { display: block; padding-block: 16px; }
-  .page-index>span { display: block; margin-bottom: 7px; font-size: 10px; }
-  .page-index>div { gap: 3px 17px; }.page-index a { font-size: 11px; min-height: 40px; }
-  .inner-page .card-grid,.inner-page .card-grid.col-2 { grid-template-columns: 1fr; gap: 18px; }
-  .card { padding: 23px; }.card h3 { font-size: 17px; }.card p { font-size: 13px; }
-  .card-icon { width: 55px; height: 55px; margin-bottom: 16px; }
-
-  .inner-page .schedule-table th:first-child { width: 75px !important; }.inner-page .schedule-table th:last-child { width: auto !important; }
-  .inner-page .schedule-table td:first-child { font-size: 12px; }.inner-page .schedule-table .time-cell { font-size: 12px; }
-  .calendar-grid { grid-template-columns: 1fr; gap: 16px; }
-  .calendar-cell { display: grid; grid-template-columns: 100px 1fr; }.calendar-header { flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 15px 10px; }
-  .calendar-season-icon { margin: 6px 0 0; }.calendar-month { font-size: 32px; }.calendar-body { padding: 20px 16px; }.calendar-events li { font-size: 13px; }
-  .class-card { grid-template-columns: 1fr; gap: 18px; padding: 24px 20px; }.class-icon { width: 65px; height: 65px; }.class-icon img { width: 31px; height: 31px; }
-  .class-info h3 { font-size: 23px; }.class-info p { font-size: 13px; }.class-details { grid-template-columns: 1fr; gap: 5px; font-size: 12px; }.class-details dd { margin-bottom: 9px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 30px; }.inner-footer-nav { gap: 10px 15px; font-size: 11px; }
+  .page-hero-layout { padding-block: 40px; }
+  .page-hero .hero-subtitle { font-size: 14px; }
+  .page-index { display: block; }
+  .page-index>span { display: block; padding: 0; font-size: 13px; }
+  .page-index>div { gap: 0 16px; }
+  .page-index a { min-height: 44px; }
+  .inner-page .card-grid,.inner-page .card-grid.col-2 { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .inner-page .card { padding: 20px; }
+  .card h3 { font-size: 17px; }
+  .card p { font-size: 14px; }
+  .inner-page .schedule-table th:first-child { width: 72px; }
+  .inner-page .schedule-table td { font-size: 13px; }
+  .calendar-grid { grid-template-columns: minmax(0,1fr); }
+  .calendar-cell { display: grid; grid-template-columns: 88px minmax(0,1fr); }
+  .calendar-header { justify-content: center; padding: 12px 8px; }
+  .calendar-body { padding: 12px 16px; }
+  .calendar-events li { font-size: 14px; }
+  .class-card { padding: 20px; }
+  .class-info h3 { font-size: 20px; }
+  .class-age { font-size: 13px; }
+  .class-info p { font-size: 14px; }
+  .class-details { grid-template-columns: minmax(0,1fr); gap: 4px; font-size: 13px; }
+  .class-details dd { margin-bottom: 8px; }
+  .footer-grid { grid-template-columns: minmax(0,1fr); gap: 24px; }
+  .inner-footer-nav { font-size: 13px; }
+  .inner-footer-nav a { min-height: 44px; }
 }
 
 /* ===== 内側ページ共通の部品（ip- = inner page） =====
    入園案内で作ったデザインを各ページで使い回す。
-   ページの骨組み：section.ip-block / .ip-band（ミントの帯）/ .ip-closing（ページ末尾の生成りの帯）> .wrap
-   見出し：.ip-heading（p.eyebrow + h2 + 説明文）。左右分割は .ip-split、本文＋パネルは .ip-duo。 */
+   ページの骨組み：section.ip-block / .ip-band（淡い帯）/ .ip-closing（ページ末尾の淡い帯）> .wrap
+   見出し：.ip-heading（h2 + 説明文）。左右分割は .ip-split、本文＋パネルは .ip-duo。 */
 
 /* 区切りと帯 */
 .ip-block>.wrap { padding-block: 80px; }
 .ip-rule { border-top: 1px solid var(--line); }
-.ip-band { --step-bg: var(--paper); background: var(--color-surface); border-radius: 50px; padding-block: 80px 90px; }
-.ip-closing { --step-bg: var(--paper); background: var(--color-surface); border-radius: 50px 50px 0 0; padding-block: 80px 90px; margin-top: 20px; }
-.ip-nowrap { display: inline-block; }
+.ip-band,.ip-closing { padding-block: 80px; background: var(--color-band); }
 
 /* 見出し */
-.ip-heading>.eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 17px; font-size: 11px; color: var(--green); }
-.ip-heading h2 { font-size: 32px; line-height: 1.6; }
-.ip-heading>p { margin-top: 14px; font-size: 14px; color: var(--muted); }
-.ip-heading>.ip-lead { margin: 24px 0 20px; font-size: 15px; line-height: 2.1; color: var(--ink); }
-.ip-heading>.ip-badge { display: inline-block; margin-top: 20px; padding: 9px 14px; background: var(--color-primary); border-radius: 4px; color: var(--color-on-primary); font-size: 13px; line-height: 1.7; }
-.ip-heading>.ip-heading-link { margin-top: 26px; }
+.ip-heading>p { margin-top: 12px; font-size: 15px; color: var(--color-text); }
+.ip-heading>.ip-lead { margin-block: 16px; font-size: 16px; line-height: 2; color: var(--ink); }
+.ip-heading>.ip-badge { display: inline-block; margin-top: 16px; padding: 8px 12px; background: var(--color-surface); border-radius: 8px; font-size: 14px; line-height: 1.6; color: var(--ink); }
+.ip-heading>.ip-heading-link { margin-top: 24px; }
 .ip-heading:not(:last-child) { margin-bottom: 40px; }
 .ip-split>.ip-heading,.ip-duo>.ip-heading { margin-bottom: 0; }
-.ip-center { text-align: center; }
-.ip-center>.eyebrow { justify-content: center; }
-.ip-center>p { margin-inline: auto; max-width: 720px; }
-.ip-intro { max-width: 820px; font-size: 15px; line-height: 2.1; }
+.ip-intro { max-width: 48em; margin-bottom: 40px; line-height: 2; }
 
 /* レイアウト */
-.ip-split { display: grid; grid-template-columns: 290px minmax(0,1fr); gap: 70px; align-items: start; }
-.ip-split>.ip-heading { position: sticky; top: 130px; }
-.ip-duo { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); gap: 70px; align-items: center; }
+.ip-split { display: grid; grid-template-columns: 280px minmax(0,1fr); gap: 64px; align-items: start; }
+.ip-split>.ip-heading { position: sticky; top: 104px; }
+.ip-duo { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); gap: 64px; align-items: center; }
 .ip-stack { display: grid; gap: 24px; min-width: 0; }
 .ip-stack>.card-grid { margin: 0; }
 .ip-duo>.ip-statement { align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
 
-/* パネル・カード */
-.ip-panel { display: grid; gap: 4px; align-content: start; background: var(--color-surface); border-radius: 8px; padding: 36px; }
+/* パネル */
+.ip-panel { display: grid; gap: 4px; align-content: start; padding: 32px; background: var(--color-band); border-radius: 16px; }
 .ip-band .ip-panel,.ip-closing .ip-panel { background: var(--paper); }
-.ip-panel .button { margin-top: 20px; }
-.ip-panel h3 { font-size: 18px; margin-bottom: 8px; }
-.ip-panel>p:not([class]) { font-size: 14px; line-height: 2; }
-.ip-notice { max-width: 820px; margin-inline: auto; text-align: center; }
-.ip-contact-card { display: grid; gap: 4px; align-content: start; background: var(--color-primary); color: var(--color-on-primary); border-radius: 8px; padding: 30px; min-width: 0; }
-.ip-contact-card .ip-tel { color: var(--color-on-primary); font-size: 30px; }
-.ip-contact-card .ip-tel:hover { color: var(--color-on-primary); text-decoration: underline; text-underline-offset: 5px; }
-.ip-contact-card .ip-card-note { color: var(--color-on-primary); }
-.ip-contact-card .button { margin-top: 18px; background: var(--paper); color: var(--green); }
-.ip-contact-card .button:hover { background: var(--color-surface); color: var(--green); }
-.ip-contact-wide { grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 16px 50px; padding: 36px 44px; margin-top: 50px; }
+.ip-panel .button { margin-top: 16px; }
+.ip-panel h3 { margin-bottom: 8px; font-size: 18px; }
+.ip-panel>p:not([class]) { font-size: 15px; line-height: 2; }
+.ip-notice { max-width: 48em; }
+.ip-contact-card { display: grid; gap: 4px; align-content: start; min-width: 0; padding: 32px; background: var(--color-surface); border-radius: 16px; color: var(--ink); }
+.ip-contact-card .ip-tel,.ip-contact-card .ip-card-note { color: var(--ink); }
+.ip-contact-card .ip-tel:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.ip-contact-card .button { margin-top: 16px; background: var(--paper); color: var(--ink); }
+.ip-contact-card .button:hover { background: var(--color-band); color: var(--ink); }
+.ip-contact-wide { grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 16px 48px; margin-top: 48px; padding: 32px 40px; }
 .ip-contact-wide>div { display: grid; gap: 4px; min-width: 0; }
 .ip-contact-wide .button { margin-top: 8px; }
-.ip-card-label { font-size: 13px; font-weight: 700; }
+.ip-card-label { font-size: 14px; font-weight: 700; }
 .ip-card-place { margin-top: 4px; font-size: 18px; font-weight: 700; line-height: 1.7; }
-.ip-tel { display: flex; align-items: baseline; gap: 12px; white-space: nowrap; font-family: var(--serif); font-size: 34px; line-height: 1.5; letter-spacing: .05em; color: var(--green); }
-.ip-tel span { font-family: var(--round); font-size: 12px; font-weight: 700; letter-spacing: .12em; }
-.ip-card-note { font-size: 12px; color: var(--muted); }
-.ip-card-text { margin-top: 12px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 13px; }
-.inner-page .card { display: flex; flex-direction: column; }
-.card .ip-checks { margin-top: 2px; }
-.card .ip-card-tag { margin-top: auto; padding-top: 18px; }
-.ip-card-tag>span { display: inline-block; padding: 6px 12px; background: var(--color-primary); border-radius: 4px; color: var(--color-on-primary); font-size: 12px; font-weight: 700; line-height: 1.7; }
-.card .ip-card-foot { margin-top: auto; padding-top: 16px; }
-.ip-card-foot>span { display: block; padding-top: 14px; border-top: 1px dashed var(--line); color: var(--green); font-size: 13px; font-weight: 700; }
-.inner-page .card.ip-card-row { display: grid; grid-template-columns: 65px minmax(0,1fr); column-gap: 22px; align-content: start; }
-.ip-card-row .card-icon { grid-row: 1/3; margin: 0; }
-.ip-card-row h3 { margin: 4px 0 6px; }
-.ip-statement { padding: 38px 42px; background: var(--color-surface); border-radius: 8px; }
+.ip-tel { display: flex; align-items: baseline; gap: 8px; font-size: 28px; font-variant-numeric: tabular-nums; line-height: 1.5; letter-spacing: .02em; white-space: nowrap; color: var(--ink); }
+.ip-tel span { font-size: 13px; letter-spacing: 0; }
+.ip-card-note { font-size: 13px; color: var(--muted); }
+.ip-card-text { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; }
+.ip-statement { padding: 32px; background: var(--color-band); border-radius: 16px; }
 .ip-band .ip-statement,.ip-closing .ip-statement { background: var(--paper); }
-.ip-statement h3 { margin-bottom: 16px; font-family: var(--serif); font-size: 25px; font-weight: 400; line-height: 1.7; color: var(--green); }
-.ip-statement p { font-size: 15px; line-height: 2.1; }
+.ip-statement h3 { margin-bottom: 12px; font-size: 22px; }
+.ip-statement p { font-size: 15px; line-height: 2; }
 .ip-statement p+p { margin-top: 12px; }
-.ip-closing .ip-statement { max-width: 860px; margin-inline: auto; }
-.ip-stat { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 24px 56px; padding: 40px 48px; background: var(--color-surface); border-radius: 8px; }
-.ip-stat-figure { font-size: 17px; font-weight: 700; line-height: 1.5; }
-.ip-stat-figure strong { display: block; font-family: var(--serif); font-size: 64px; font-weight: 400; line-height: 1.25; letter-spacing: .02em; color: var(--green); }
+.ip-closing .ip-statement { max-width: 860px; }
+.ip-stat { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 24px 48px; padding: 32px 40px; background: var(--color-band); border-radius: 16px; }
+.ip-band .ip-stat { background: var(--paper); }
+.ip-stat-figure { font-size: 16px; font-family: var(--round); font-weight: 700; line-height: 1.5; letter-spacing: 0; }
+.ip-stat-figure strong { display: block; font-family: var(--serif); font-size: 56px; font-weight: 400; line-height: 1.25; letter-spacing: .02em; color: var(--ink); }
 .ip-stat-figure strong span { margin-left: 4px; font-family: var(--round); font-size: 20px; font-weight: 700; letter-spacing: 0; }
-.ip-stat p { font-size: 15px; line-height: 2.1; }
-.ip-logo-card { display: grid; justify-items: center; gap: 18px; padding: 34px; background: var(--color-surface); border: 1px solid var(--line); border-radius: 8px; text-align: center; }
+.ip-stat p { font-size: 15px; line-height: 2; }
+.ip-logo-card { display: grid; justify-items: center; gap: 16px; padding: 32px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; text-align: center; }
 .ip-logo-card img { width: 200px; height: auto; }
+.ip-logo-card p { font-size: 14px; color: var(--color-text); }
 .ip-logo-card .button { width: 100%; }
-/* ボタン内の改行位置を指定するときの文字ラッパー（home.css の .button span / .text-link span の矢印サイズを打ち消す） */
+/* ボタン内の改行位置を指定するときの文字ラッパー */
 .button .ip-btn-label,.button .ip-btn-label span,.text-link .ip-btn-label,.text-link .ip-btn-label span { font-size: inherit; }
 
-/* リスト */
-.ip-list { margin: 0; border-top: 2px solid var(--green); }
-.ip-list>div { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 20px; padding: 20px 4px; border-bottom: 1px solid var(--line); }
-.ip-list dt { color: var(--green); font-size: 14px; font-weight: 500; }
-.ip-list dd { margin: 0; font-size: 15px; }
-.ip-list dd small { display: block; margin-top: 4px; font-size: 12px; color: var(--muted); }
-.ip-checks li { position: relative; padding-left: 30px; margin-top: 8px; font-size: 14px; }
-.ip-checks li::before { content: ''; position: absolute; left: 3px; top: 8px; width: 13px; height: 7px; border-left: 2px solid var(--green); border-bottom: 2px solid var(--green); transform: rotate(-45deg); }
-.ip-numbered { display: grid; gap: 10px; margin-top: 8px; }
-.ip-numbered li { display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 6px; padding-bottom: 10px; border-bottom: 1px dashed var(--line); font-size: 14px; }
+/* リスト：連絡帳の罫線（項目名を左列にそろえる） */
+.ip-list { margin: 0; border-top: 1px solid var(--line); }
+.ip-list>div { display: grid; grid-template-columns: 136px minmax(0,1fr); gap: 16px; padding-block: 16px; border-bottom: 1px solid var(--line); line-height: 1.7; }
+.ip-list dt { font-size: 14px; color: var(--color-text); }
+.ip-list dd { margin: 0; font-size: 15px; font-variant-numeric: tabular-nums; }
+.ip-list dd small { display: block; margin-top: 4px; font-size: 13px; color: var(--color-text); }
+.ip-checks li { position: relative; margin-top: 8px; padding-left: 24px; font-size: 15px; line-height: 1.7; }
+.ip-checks li::before { content: ''; position: absolute; left: 2px; top: 7px; width: 12px; height: 6px; border-left: 1.5px solid var(--color-text); border-bottom: 1.5px solid var(--color-text); transform: rotate(-45deg); }
+.ip-numbered { display: grid; gap: 8px; margin-top: 8px; }
+.ip-numbered li { display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 4px; padding-bottom: 8px; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.7; }
 .ip-numbered li:last-child { padding-bottom: 0; border-bottom: 0; }
-.ip-numbered li>span:first-child { color: var(--green); font-weight: 700; }
-.ip-icon-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px 30px; margin-top: 12px; }
-.ip-icon-list li { display: flex; align-items: center; gap: 14px; font-size: 14px; }
-.ip-icon-list img { flex-shrink: 0; width: 42px; height: 42px; padding: 10px; background: var(--paper); border-radius: 50%; }
-.ip-notes { display: grid; gap: 2px; margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+.ip-numbered li>span:first-child { font-variant-numeric: tabular-nums; color: var(--color-text); }
+.ip-notes { display: grid; gap: 4px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--color-text); }
 
 /* ステップ（件数に関係なく横並び。狭い画面では縦の流れ） */
-.ip-steps { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0,1fr); gap: 28px; }
-.ip-steps li { position: relative; min-width: 0; text-align: center; }
-.ip-steps li:not(:last-child)::after { content: ''; position: absolute; top: 44px; left: calc(50% + 52px); width: calc(100% + 28px - 104px); border-top: 1px dashed var(--line); }
-.ip-step-num { display: grid; place-content: center; width: 88px; height: 88px; margin: 0 auto 20px; background: var(--step-bg, var(--color-surface)); border-radius: 50%; font-family: var(--serif); font-size: 32px; line-height: 1; color: var(--green); }
-.ip-step-num small { margin-bottom: 5px; font-family: var(--round); font-size: 10px; font-weight: 700; letter-spacing: .14em; }
-.ip-steps h3 { font-size: 18px; margin-bottom: 10px; }
-.ip-steps p { font-size: 13px; color: var(--muted); text-align: left; }
+.ip-steps { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0,1fr); gap: 24px; }
+.ip-steps li { min-width: 0; padding-top: 16px; border-top: 1px solid var(--line); }
+.ip-step-num { display: block; margin-bottom: 8px; font-family: var(--serif); font-size: 28px; line-height: 1.3; color: var(--color-text); }
+.ip-steps h3 { margin-bottom: 8px; font-size: 18px; }
+.ip-steps p { font-size: 15px; color: var(--color-text); }
+.ip-stack>.ip-steps+* { margin-top: 24px; }
+.schedule-wrapper+.ip-panel { margin-top: 32px; }
 
 /* よくあるご質問（home.css の details 既定値を上書き） */
 .ip-faq details { border-top: 0; border-bottom: 1px solid var(--line); }
-.ip-faq details:first-child { border-top: 2px solid var(--green); }
-.ip-faq summary { display: grid; grid-template-columns: 34px minmax(0,1fr) 16px; align-items: center; gap: 12px; padding: 22px 4px; font-size: 16px; font-weight: 700; list-style: none; }
+.ip-faq details:first-child { border-top: 1px solid var(--line); }
+.ip-faq summary { display: grid; grid-template-columns: 24px minmax(0,1fr) 16px; align-items: center; gap: 12px; padding-block: 16px; font-size: 16px; list-style: none; }
 .ip-faq summary::-webkit-details-marker { display: none; }
-.ip-faq summary:hover { color: var(--green); }
-.ip-faq summary::before { content: 'Q'; font-family: var(--serif); font-size: 22px; font-weight: 400; line-height: 1; color: var(--green); }
-.ip-faq summary::after { content: ''; width: 14px; height: 14px; background: linear-gradient(var(--green),var(--green)) center/100% 2px no-repeat, linear-gradient(var(--green),var(--green)) center/2px 100% no-repeat; transition: transform .25s; }
+.ip-faq summary::before { content: 'Q'; font-family: var(--serif); font-size: 20px; line-height: 1; color: var(--color-text); }
+.ip-faq summary::after { content: '＋'; font-size: 16px; line-height: 1; text-align: center; color: var(--color-text); transition: transform 160ms var(--ease); }
 .ip-faq details[open] summary::after { transform: rotate(45deg); }
-.ip-faq-a { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 0 4px 24px; }
-.ip-faq-a::before { content: 'A'; font-family: var(--serif); font-size: 22px; line-height: 1.3; color: var(--ink); }
-.ip-faq-a p { padding: 0; font-size: 14px; line-height: 2; color: var(--muted); }
-.ip-faq-a a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
-
-/* 部品どうしの間隔 */
-.ip-heading+.ip-links { margin-top: 0; }
-.ip-stack>.ip-steps+* { margin-top: 26px; }
-.schedule-wrapper+.ip-panel { margin-top: 32px; }
-.ip-intro { margin-bottom: 40px; }
-.ip-logo-card p { font-size: 13px; color: var(--muted); }
+.ip-faq-a { display: grid; grid-template-columns: 24px minmax(0,1fr); gap: 12px; padding-bottom: 20px; }
+.ip-faq-a::before { content: 'A'; font-family: var(--serif); font-size: 20px; line-height: 1.5; color: var(--color-text); }
+.ip-faq-a p { padding: 0; font-size: 15px; line-height: 2; color: var(--color-text); }
+.ip-faq-a a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 /* ページ末尾の関連リンク */
-.ip-links { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 0 24px; max-width: 820px; margin: 36px auto 0; }
-.ip-links a { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 64px; padding: 12px 10px; border-block: 1px solid var(--line); font-weight: 500; }
-.ip-links a span { font-size: 20px; }
-
-/* 年間行事：季節ごとの行 */
-.ip-season { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 40px; padding-block: 44px; border-top: 1px solid var(--line); }
-.ip-season:first-child { border-top: 0; padding-top: 0; }
-.ip-season-label { display: flex; flex-direction: column; gap: 6px; }
-.ip-season-label h2 { font-size: 52px; line-height: 1.3; }
-.ip-season-label p { font-size: 11px; font-weight: 700; letter-spacing: .17em; color: var(--green); }
-.ip-season-label::after { content: ''; width: 40px; height: 4px; margin-top: 10px; border-radius: 2px; background: #e1eadb; }
-.ip-season.spring .ip-season-label::after { background: #e8c7c2; }
-.ip-season.summer .ip-season-label::after { background: #b9cfb0; }
-.ip-season.autumn .ip-season-label::after { background: #dfc98f; }
-.ip-season.winter .ip-season-label::after { background: #b3cbd0; }
-.ip-season .calendar-grid { gap: 20px; }
-.schedule-hint { display: none; }
+.ip-links { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 0 24px; }
+.ip-links a { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; padding-block: 8px; border-block: 1px solid var(--line); }
 
 /* ===== 入園案内ページ（admission.html）専用 ===== */
-.adm-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 34px; margin-top: 28px; }
-.adm-hero-tel { display: grid; font-family: var(--serif); font-size: 26px; letter-spacing: .06em; line-height: 1.45; color: var(--green); }
-.adm-hero-tel small { font-family: var(--round); font-size: 11px; letter-spacing: .08em; color: var(--muted); }
-.adm-fees { display: grid; grid-template-columns: minmax(0,1.35fr) repeat(3,minmax(0,1fr)); gap: 20px; }
-.adm-fee { min-width: 0; background: var(--color-surface); border: 1px solid var(--line); border-radius: 8px; padding: 28px 26px; }
-.adm-fee h3 { font-size: 14px; color: var(--green); padding-bottom: 14px; margin-bottom: 18px; border-bottom: 1px solid var(--line); }
-.adm-fee-main { background: var(--color-surface); border-color: var(--color-surface); }
-.adm-fee-main h3 { border-bottom-color: var(--line); }
-.adm-fee-main p { font-size: 15px; }
-.adm-fee-main .adm-fee-tag { display: inline-block; margin-top: 16px; padding: 8px 12px; background: var(--paper); border-radius: 4px; font-size: 13px; }
-.adm-fee-amount { font-family: var(--serif); font-size: 40px; line-height: 1.3; letter-spacing: .02em; }
-.adm-fee-amount small { display: block; margin-bottom: 6px; font-family: var(--round); font-size: 13px; letter-spacing: 0; color: var(--muted); }
-.adm-fee-amount span { margin-left: 4px; font-family: var(--round); font-size: 14px; letter-spacing: 0; }
-.adm-contact-grid { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr); gap: 36px; align-items: start; }
-.adm-form { padding: 10px; background: var(--color-surface); border: 1px solid var(--line); border-radius: 8px; }
-.adm-form iframe { display: block; width: 100%; height: 800px; border: 0; border-radius: 6px; }
-.adm-contact-aside { display: grid; gap: 20px; }
-.adm-privacy { padding: 26px; background: var(--color-surface); border: 1px solid var(--line); border-radius: 8px; font-size: 12px; line-height: 1.9; color: var(--muted); }
-.adm-privacy h3 { margin-bottom: 10px; font-size: 14px; line-height: 1.7; color: var(--ink); }
-.adm-privacy ul { display: grid; gap: 6px; margin: 12px 0; }
-.adm-privacy li { position: relative; padding-left: 14px; }
-.adm-privacy li::before { content: ''; position: absolute; left: 0; top: .8em; width: 5px; height: 5px; border-radius: 50%; background: var(--color-accent); }
+.adm-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; margin-top: 24px; }
+.adm-hero-tel { display: grid; font-size: 24px; font-variant-numeric: tabular-nums; line-height: 1.5; letter-spacing: .02em; }
+.adm-hero-tel small { font-size: 13px; letter-spacing: 0; color: var(--color-text); }
+.adm-contact-grid { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr); gap: 32px; align-items: start; }
+.adm-form { padding: 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; }
+.adm-form iframe { display: block; width: 100%; height: 800px; border: 0; border-radius: 8px; }
+.adm-contact-aside { display: grid; gap: 16px; }
+.adm-privacy { padding: 24px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; font-size: 13px; line-height: 1.9; color: var(--color-text); }
+.adm-privacy h3 { margin-bottom: 8px; font-size: 16px; color: var(--ink); }
+.adm-privacy ul { display: grid; gap: 4px; margin-block: 12px; }
+.adm-privacy li { position: relative; padding-left: 12px; }
+.adm-privacy li::before { content: ''; position: absolute; left: 0; top: .8em; width: 4px; height: 4px; background: var(--color-accent); border-radius: 50%; }
 .adm-privacy strong { color: var(--ink); }
 
-@media(max-width: 1100px) {
-  .card-grid .ip-contact-card .ip-tel { font-size: 27px; }
-}
 @media(max-width: 1000px) {
-  .ip-split { grid-template-columns: 230px minmax(0,1fr); gap: 40px; }
-  .ip-split>.ip-heading h2 { font-size: 28px; }
+  .ip-split { grid-template-columns: 224px minmax(0,1fr); gap: 40px; }
   .ip-duo { gap: 40px; }
-  .ip-tel { font-size: 28px; }
-  .ip-stat { gap: 20px 36px; padding: 34px 36px; }
-  .ip-stat-figure strong { font-size: 54px; }
-  .inner-page .card-grid>.ip-contact-card { grid-column: 1/-1; }
-  .ip-season { grid-template-columns: 130px minmax(0,1fr); gap: 28px; }
+  .ip-stat { gap: 16px 32px; padding: 32px; }
+  .inner-page .card-grid>.ip-contact-card { grid-column: 1 / -1; }
+  .ip-season { grid-template-columns: 96px minmax(0,1fr); gap: 24px; }
   .ip-season .calendar-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .adm-fees { grid-template-columns: repeat(3,minmax(0,1fr)); }
-  .adm-fee-main { grid-column: 1/-1; }
 }
 @media(max-width: 900px) {
-  .ip-duo { grid-template-columns: minmax(0,1fr); gap: 30px; }
-  .ip-duo>.ip-panel .button { justify-self: start; min-width: 300px; }
-  .ip-contact-wide { grid-template-columns: minmax(0,1fr); padding: 30px; }
+  .ip-duo { grid-template-columns: minmax(0,1fr); gap: 32px; }
+  .ip-duo>.ip-panel .button { justify-self: start; min-width: 280px; }
+  .ip-contact-wide { grid-template-columns: minmax(0,1fr); padding: 32px; }
   .ip-contact-wide .button { justify-self: start; }
   .adm-contact-grid { grid-template-columns: minmax(0,1fr); gap: 24px; }
   .adm-contact-aside { grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start; }
@@ -321,78 +269,50 @@
   .schedule-hint { display: block; }
 }
 @media(max-width: 800px) {
-  .ip-split,.adm-contact-grid,.adm-contact-aside { grid-template-columns: minmax(0,1fr); gap: 30px; }
-  .adm-contact-aside { gap: 20px; }
+  .ip-split,.adm-contact-grid,.adm-contact-aside { grid-template-columns: minmax(0,1fr); gap: 32px; }
+  .adm-contact-aside { gap: 16px; }
   .ip-split>.ip-heading { position: static; }
-  .ip-split>.ip-heading h2 { font-size: 32px; }
   .ip-stat { grid-template-columns: minmax(0,1fr); }
-  .ip-steps { grid-auto-flow: row; grid-template-columns: minmax(0,1fr); gap: 0; max-width: 560px; margin-inline: auto; }
-  .ip-steps li { display: grid; grid-template-columns: 72px minmax(0,1fr); column-gap: 20px; align-content: start; padding-bottom: 28px; text-align: left; }
-  .ip-steps li:last-child { padding-bottom: 0; }
-  .ip-steps li:not(:last-child)::after { top: 80px; bottom: 8px; left: 36px; width: 0; border-top: 0; border-left: 1px dashed var(--line); }
-  .ip-step-num { grid-row: 1/3; width: 72px; height: 72px; margin: 0; font-size: 26px; }
-  .ip-steps h3 { margin: 10px 0 6px; }
-  .ip-season { grid-template-columns: minmax(0,1fr); gap: 20px; padding-block: 36px; }
-  .ip-season-label { flex-direction: row; align-items: baseline; gap: 16px; }
-  .ip-season-label h2 { font-size: 40px; }
-  .ip-season-label::after { align-self: center; margin: 0 0 0 auto; }
+  .ip-steps { grid-auto-flow: row; grid-template-columns: minmax(0,1fr); gap: 0; }
+  .ip-steps li { display: grid; grid-template-columns: 40px minmax(0,1fr); column-gap: 8px; align-content: start; padding-block: 16px; }
+  .ip-step-num { grid-row: 1 / 3; margin: 0; font-size: 24px; }
+  .ip-steps li h3 { margin-bottom: 4px; }
+  .ip-season { grid-template-columns: minmax(0,1fr); gap: 16px; padding-block: 32px; }
 }
 @media(max-width: 600px) {
-  .ip-block>.wrap { padding-block: 50px; }
-  .ip-band { border-radius: 28px; padding-block: 50px; }
-  .ip-closing { border-radius: 28px 28px 0 0; padding-block: 50px 60px; }
-  .ip-heading>.eyebrow { font-size: 10px; margin-bottom: 12px; }
-  .ip-heading h2,.ip-split>.ip-heading h2 { font-size: 26px; }
-  .ip-heading>p { font-size: 13px; }
-  .ip-heading>.ip-lead,.ip-intro { font-size: 14px; }
-  .ip-heading:not(:last-child) { margin-bottom: 28px; }
+  .ip-block>.wrap { padding-block: 48px; }
+  .ip-band,.ip-closing { padding-block: 48px; }
+  .ip-heading>p { font-size: 14px; }
+  .ip-heading>.ip-lead,.ip-intro { font-size: 15px; }
+  .ip-heading:not(:last-child) { margin-bottom: 24px; }
   .ip-split>.ip-heading,.ip-duo>.ip-heading { margin-bottom: 0; }
-  .ip-checks li { font-size: 13px; }
-  .ip-panel,.ip-contact-card,.ip-contact-wide { padding: 26px 22px; }
+  .ip-checks li { font-size: 14px; }
+  .ip-panel,.ip-contact-card,.ip-contact-wide { padding: 24px 20px; }
   .ip-duo>.ip-panel .button { justify-self: stretch; min-width: 0; }
   .ip-contact-wide .button { justify-self: stretch; }
-  .ip-tel,.ip-contact-card .ip-tel,.card-grid .ip-contact-card .ip-tel { font-size: clamp(22px, 7.4vw, 28px); }
+  .ip-tel { font-size: 24px; }
   .ip-card-place { font-size: 16px; }
-  .inner-page .card.ip-card-row { grid-template-columns: 55px minmax(0,1fr); column-gap: 16px; }
-  .ip-statement { padding: 28px 22px; }
-  .ip-statement h3 { font-size: 21px; }
+  .ip-statement { padding: 24px 20px; }
+  .ip-statement h3 { font-size: 20px; }
   .ip-statement p { font-size: 14px; }
-  .ip-stat { padding: 28px 22px; }
+  .ip-stat { padding: 24px 20px; }
   .ip-stat-figure strong { font-size: 48px; }
   .ip-stat p { font-size: 14px; }
-  .ip-logo-card { padding: 28px 22px; }
-  .ip-list>div { grid-template-columns: 82px minmax(0,1fr); gap: 12px; padding: 16px 2px; }
+  .ip-logo-card { padding: 24px 20px; }
+  .ip-list>div { grid-template-columns: 88px minmax(0,1fr); gap: 12px; padding-block: 12px; }
   .ip-list dt { font-size: 13px; }
   .ip-list dd { font-size: 14px; }
-  .ip-numbered li { font-size: 13px; }
-  .ip-icon-list { grid-template-columns: minmax(0,1fr); gap: 10px; }
-  .ip-icon-list li { font-size: 13px; }
-  .ip-steps li { grid-template-columns: 60px minmax(0,1fr); column-gap: 16px; }
-  .ip-steps li:not(:last-child)::after { top: 68px; left: 30px; }
-  .ip-step-num { width: 60px; height: 60px; font-size: 22px; }
-  .ip-step-num small { font-size: 9px; margin-bottom: 3px; }
-  .ip-steps h3 { font-size: 16px; margin-top: 6px; }
-  .ip-faq summary { grid-template-columns: 26px minmax(0,1fr) 14px; gap: 10px; padding: 18px 2px; font-size: 14px; }
-  .ip-faq summary::before,.ip-faq-a::before { font-size: 19px; }
-  .ip-faq-a { grid-template-columns: 26px minmax(0,1fr); gap: 10px; padding: 0 2px 20px; }
-  .ip-faq-a p { font-size: 13px; }
-  .ip-links { grid-template-columns: minmax(0,1fr); margin-top: 28px; }
-  .ip-links a { min-height: 58px; font-size: 14px; }
+  .ip-numbered li { font-size: 14px; }
+  .ip-steps h3 { font-size: 16px; }
+  .ip-steps p { font-size: 14px; }
+  .ip-faq summary { padding-block: 16px; font-size: 15px; }
+  .ip-faq-a p { font-size: 14px; }
+  .ip-links { grid-template-columns: minmax(0,1fr); }
   .ip-links a:not(:first-child) { border-top: 0; }
-  .ip-season { padding-block: 30px; }
-  .ip-season-label h2 { font-size: 34px; }
-  .ip-season .calendar-grid { grid-template-columns: minmax(0,1fr); gap: 14px; }
-  .adm-hero-actions { gap: 16px; margin-top: 22px; }
+  .ip-season-label h2 { font-size: 32px; }
+  .ip-season .calendar-grid { grid-template-columns: minmax(0,1fr); gap: 12px; }
   .adm-hero-actions .button { width: 100%; }
-  .adm-hero-tel { font-size: 23px; }
-  .adm-fees { grid-template-columns: minmax(0,1fr); gap: 12px; }
-  .adm-fee { padding: 22px 20px; }
-  .adm-fee:not(.adm-fee-main) { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 12px; }
-  .adm-fee:not(.adm-fee-main) h3 { padding: 0; margin: 0; border: 0; }
-  .adm-fee-amount { font-size: 30px; text-align: right; }
-  .adm-fee-amount small { font-size: 11px; margin-bottom: 2px; }
-  .adm-fee-main p { font-size: 14px; }
-  .adm-contact-grid { gap: 20px; }
-  .adm-form { padding: 6px; }
-  .adm-privacy { padding: 22px 18px; }
+  .adm-hero-tel { font-size: 22px; }
+  .adm-form { padding: 4px; }
+  .adm-privacy { padding: 20px 16px; }
 }

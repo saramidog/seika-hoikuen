@@ -9,12 +9,18 @@
   --color-on-surface: var(--color-text);
   --color-on-accent: #202520;
 
+  /* 上の色から作る役割。広い面の淡い色、罫線、文字の3段階をここで決める。 */
+  --color-band: #EEF8F8;
+  --color-line: rgba(43, 98, 126, 0.2);
+  --color-ink: #1F4A60;
+  --color-muted: #44748B;
+
   /* 現行ページとブログの既存トークンを、同じ色の役割につなぐ。 */
   --paper: var(--color-background);
-  --ink: var(--color-text);
+  --ink: var(--color-ink);
   --green: var(--color-text);
-  --muted: var(--color-text);
-  --line: var(--color-primary);
+  --muted: var(--color-muted);
+  --line: var(--color-line);
   --pink: var(--color-accent);
   --terracotta: var(--color-accent);
   --main: var(--color-primary);
