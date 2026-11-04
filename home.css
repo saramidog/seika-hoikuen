@@ -277,6 +277,8 @@ details p { padding-bottom: 16px; font-size: 15px; color: var(--color-text); }
 .schedule-table th,.schedule-table td { padding: 12px 16px 12px 0; border-bottom: 1px solid var(--line); }
 .schedule-table td:first-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .schedule-table .time-cell { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.open-garden .schedule-table th:first-child { width: 150px; }
+.open-garden .schedule-table th:last-child { width: 130px; }
 .schedule-table small { font-size: 13px; color: var(--color-text); }
 .open-garden .fine-print { margin-top: 24px; font-size: 14px; }
 .open-garden .fine-print a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }

@@ -9,4 +9,4 @@ Google Fonts 配布の M PLUS Rounded 1c（400 / 700）、Kaisei Decol（400）�
 
 500 の文字は 400、700 の文字は 700 の実フォントを使用しています。
 
-更新用スクリプト: `python3 tools/update-display-fonts.py`（Google Fontsへの読み取り通信と、フォント・home.cssの更新を行います）。
+更新用スクリプト（`tools/update-display-fonts.py`）はこのリポジトリに含まれていません。文字を追加した場合は、配布元の `text=` 指定で必要な文字を含むサブセットを再取得し、`home.css` の `BEGIN LOCAL FONTS`〜`END LOCAL FONTS` の範囲とこのフォルダーのWOFF2を置き換えてください。
