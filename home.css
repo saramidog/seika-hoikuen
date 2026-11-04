@@ -155,6 +155,10 @@ h2 { font-size: 32px; }
 h3 { font-size: 20px; }
 ul,ol { margin: 0; padding: 0; list-style: none; }
 .ip-nowrap { display: inline-block; }
+/* 日本語の行末：最終行が1〜2文字だけにならないよう整える（対応ブラウザのみ）。見出しは文節で折り返す（Chrome・Edge）。 */
+p,li,dt,dd,td,th,caption,summary,h1,h2,h3 { text-wrap: pretty; }
+h1,h2,h3,summary { word-break: auto-phrase; }
+.news-item a .ip-nowrap { text-decoration: inherit; }
 a,button,summary { -webkit-tap-highlight-color: transparent; }
 a:focus-visible,button:focus-visible,summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; border-radius: 4px; }
 ::selection { background: var(--color-primary); color: var(--color-on-primary); }
@@ -368,7 +372,7 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
   .value-grid { margin-block: 24px; }
   .value-grid p { font-size: 14px; }
   .day-path { gap: 4px; margin-top: 24px; }
-  .day-path button { grid-template-columns: minmax(0,1fr); justify-items: center; row-gap: 4px; min-height: 88px; padding: 12px 4px; text-align: center; }
+  .day-path button { grid-template-columns: minmax(0,1fr); justify-items: center; row-gap: 4px; min-height: 88px; padding: 12px 2px; text-align: center; }
   .day-path img { grid-row: auto; }
   .day-path small { font-size: 12px; }
   .day-path button>span { font-size: 12px; }

@@ -85,6 +85,7 @@ Every page `<head>` has the Google Analytics tag (G-J6V6DL9J5M), description, OG
 - Layout: `.ip-split` (two columns), `.ip-duo` (text + panel), `.ip-stack`, `.ip-rule`.
 - Panels and lists: `.ip-panel`, `.ip-checks`, `.ip-steps` / `.ip-step-num`, `.ip-faq` (`details`), `.ip-links`.
 - `.ip-nowrap` — wrap a phrase so Japanese line breaks fall at sensible points (used heavily in headings and buttons).
+- Line endings: `home.css` sets `text-wrap: pretty` on text blocks and `word-break: auto-phrase` on headings/`summary`, but browser support varies (auto-phrase is Chrome/Edge only). For short text (headings, leads under `h2`, list items, `dt`/`dd`, `summary`), still group the last phrase with `.ip-nowrap` so no line ends with only 1–2 characters at 360–1280px. Inside `summary`, wrap the spans in one outer `<span>` (the summary is a grid). Inside `.news-item a`, `.ip-nowrap` keeps the link underline.
 
 Other shared pieces: `.card-grid` > `.card` (`.card-icon` img + h3 + p), `.news-list` > `.news-item` (`.news-date`, `.news-tag`, then a link or text span), `.schedule-table` (`th scope="col"`; widths live in CSS, not inline styles).
 
