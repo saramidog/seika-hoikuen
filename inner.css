@@ -248,6 +248,7 @@
 .adm-privacy li { position: relative; padding-left: 12px; }
 .adm-privacy li::before { content: ''; position: absolute; left: 0; top: .8em; width: 4px; height: 4px; background: var(--color-accent); border-radius: 50%; }
 .adm-privacy strong { color: var(--ink); }
+.adm-privacy a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
 @media(max-width: 1000px) {
   .ip-split { grid-template-columns: 224px minmax(0,1fr); gap: 40px; }

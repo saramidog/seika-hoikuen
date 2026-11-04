@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,10 +21,25 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      # 公式ActionsはコミットSHAで固定。更新は Dependabot のPRで確認する。
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
-          path: .
+          persist-credentials: false
+
+      # 公開するのはサイトの表示に使うファイルだけ。
+      # _work/（作業用の元画像）、docs/（園内資料）、CLAUDE.md などは公開しない。
+      - name: Collect public files
+        run: |
+          mkdir _site
+          cp -- *.html *.css *.js CNAME robots.txt sitemap.xml _site/
+          cp -R -- images fonts _site/
+
+      - name: Check links in public files
+        run: python3 .github/scripts/check-site.py _site
+
+      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        with:
+          path: _site
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
