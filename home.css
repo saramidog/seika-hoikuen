@@ -263,6 +263,7 @@ html:not(.has-js) .day-path,html:not(.has-js) .day-instruction { display: none; 
 details { border-top: 1px solid var(--line); }
 summary { padding-block: 12px; font-size: 15px; cursor: pointer; }
 details p { padding-bottom: 16px; font-size: 15px; color: var(--color-text); }
+details p a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 /* 地域の方へ */
 .community { padding-block: 96px; border-top: 1px solid var(--line); }
