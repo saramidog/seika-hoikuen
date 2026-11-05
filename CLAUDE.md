@@ -79,6 +79,13 @@ Inner pages (`<body class="inner-page page-<name>">`):
 
 Every page `<head>` has the Google Analytics tag (G-J6V6DL9J5M), description, OGP (`og:url`, `og:image` = `images/og-image.jpg` 1200×630), `twitter:card`, and `<link rel="canonical">`. Keep `og:url` and `canonical` equal to the page's sitemap URL.
 
+SEO conventions:
+
+- `<title>` / `og:title` on inner pages: `ページ名｜清華保育園（岩国市由宇町）`. Home: `清華保育園｜岩国市由宇町の認可保育所` (home `og:title` keeps its own catchphrase).
+- Descriptions start with or include 岩国市由宇町 and summarize what the page actually says (no claims the page doesn't support).
+- Structured data (JSON-LD): `index.html` has `WebSite` + `ChildCare` (name, address, phone/FAX, opening hours, founding year). If the address, phone, or hours change, update it together with `.access` and the footers. Inner pages each have a two-step `BreadcrumbList` (ホーム > the page's `<h1>`); add one when adding a page.
+- `sitemap.xml` has `<lastmod>`; update the date for pages whose content changes.
+
 ## Inner-page components (`ip-*` in `inner.css`)
 
 - Section frames: `section.ip-block` (plain), `.ip-band` (pale band), `.ip-closing` (pale band at page end), each wrapping `.wrap`.
