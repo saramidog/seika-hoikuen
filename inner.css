@@ -207,6 +207,7 @@
 .ip-numbered li:last-child { padding-bottom: 0; border-bottom: 0; }
 .ip-numbered li>span:first-child { font-variant-numeric: tabular-nums; color: var(--color-text); }
 .ip-notes { display: grid; gap: 4px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--color-text); }
+.ip-notes a,.ip-card-text a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 /* ステップ（件数に関係なく横並び。狭い画面では縦の流れ） */
 .ip-steps { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0,1fr); gap: 24px; }

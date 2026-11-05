@@ -49,6 +49,15 @@
 @font-face {
   font-family: 'M PLUS Rounded 1c';
   font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url(fonts/mplus-rounded-400-5.woff2) format('woff2');
+  unicode-range: U+4ef0, U+52e2, U+5438, U+547c, U+6ce3, U+6e21, U+7642, U+77ed, U+786c, U+843d, U+85ac, U+88dc, U+8907;
+}
+
+@font-face {
+  font-family: 'M PLUS Rounded 1c';
+  font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url(fonts/mplus-rounded-700-0.woff2) format('woff2');
@@ -89,6 +98,15 @@
   font-display: swap;
   src: url(fonts/mplus-rounded-700-4.woff2) format('woff2');
   unicode-range: U+8349, U+83d3, U+83dc, U+83ef, U+8584, U+866b, U+878d, U+884c, U+8857, U+8863, U+8868, U+888b, U+88c5, U+8981, U+898b, U+898f, U+8996, U+89a7, U+89aa, U+89b3, U+89e6, U+8a02, U+8a08, U+8a0e, U+8a13, U+8a18, U+8a2d, U+8a31, U+8a3a, U+8a3c, U+8a66, U+8a70-8a71, U+8a73, U+8a8d, U+8a95, U+8a9e, U+8aac-8aad, U+8ab0, U+8ab2, U+8abf, U+8ac7, U+8acb, U+8aed, U+8b1b, U+8b1d, U+8b58, U+8b70, U+8b77, U+8c4a, U+8c61, U+8ca0, U+8cb7, U+8cbb, U+8cc7, U+8cde, U+8cea, U+8cfc, U+8d77, U+8d8a, U+8db3, U+8eab, U+8eca, U+8efd, U+8f03, U+8f2a, U+8fb2, U+8fbc, U+8fce, U+8fd1, U+8fd4, U+8ffd, U+9000-9001, U+9014, U+901a, U+901f, U+9023, U+9031-9032, U+9045, U+904a-904b, U+904e, U+9054, U+9060, U+9069, U+9078, U+907f, U+914d, U+91a4, U+91cd-91ce, U+91d1, U+91dd, U+9326, U+9332, U+9577, U+9580, U+958b, U+9593, U+95a2, U+9632, U+964d, U+9650, U+9664, U+967a, U+968e-968f, U+969b, U+96c6-96c7, U+96e2-96e3, U+96f0, U+96fb, U+975e, U+9762, U+9774, U+9805, U+9810-9811, U+983c, U+984d, U+9854, U+9858, U+985e, U+98df, U+98ef, U+98f2, U+98fe, U+990a, U+99d0, U+9a13, U+9ad8, U+9b54, U+9b5a, U+9bae, U+9ce5, U+9eba, U+9f62, U+ff01, U+ff08-ff09, U+ff0b, U+ff0f, U+ff13-ff14, U+ff1a, U+ff1f;
+}
+
+@font-face {
+  font-family: 'M PLUS Rounded 1c';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/mplus-rounded-700-5.woff2) format('woff2');
+  unicode-range: U+4ef0, U+52e2, U+5438, U+547c, U+6ce3, U+6e21, U+7642, U+77ed, U+786c, U+843d, U+85ac, U+88dc, U+8907;
 }
 
 @font-face {
@@ -283,7 +301,7 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
 .community { padding-block: 96px; border-top: 1px solid var(--line); }
 .community .section-heading { margin-bottom: 32px; }
 .open-garden { padding: 32px; border: 1px solid var(--line); border-radius: 16px; }
-/* こども誰でも通園制度：冒頭のお知らせからのリンク先。淡い面で園庭開放と区別する */
+/* こども誰でも通園制度の概要（詳しくは daremo-tsuen.html）。淡い面で園庭開放と区別する */
 .tsuen { margin-bottom: 16px; padding: 32px; background: var(--color-band); border-radius: 16px; }
 .tsuen .community-title p,.tsuen-lead { font-size: 15px; color: var(--color-text); }
 .tsuen-facts { margin: 24px 0 0; }
@@ -291,13 +309,7 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
 .tsuen-facts div:first-child { border-top: 1px solid var(--line); }
 .tsuen-facts dt { font-weight: 700; }
 .tsuen-facts dd { margin: 0; }
-.tsuen-facts a,.tsuen .fine-print a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-.tsuen-label { margin-top: 24px; font-size: 14px; font-weight: 700; }
-.tsuen-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 8px; }
-.tsuen-steps li { display: flex; align-items: baseline; gap: 12px; padding: 16px; background: var(--paper); border-radius: 12px; font-size: 15px; line-height: 1.7; }
-.tsuen-step-num { flex-shrink: 0; font-size: 14px; font-variant-numeric: tabular-nums; color: var(--muted); }
-.tsuen .fine-print { margin-top: 16px; font-size: 14px; color: var(--color-text); }
-.tsuen .text-link { margin-top: 4px; }
+.tsuen .text-link { margin-top: 16px; }
 .community-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 8px; }
 .community-title h3 { font-size: 24px; }
 .community-title p,.open-garden>p { font-size: 15px; color: var(--color-text); }
@@ -371,7 +383,6 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
   .news { grid-template-columns: minmax(0,1fr); gap: 16px; }
   .spotlight-link { grid-template-columns: minmax(0,1fr); justify-items: start; gap: 8px; padding: 20px 24px; }
   .spotlight-more { min-height: 36px; }
-  .tsuen-steps { grid-template-columns: minmax(0,1fr); gap: 8px; }
   .value-grid { grid-template-columns: minmax(0,1fr); gap: 24px; }
   .day-story { grid-template-columns: minmax(0,1fr); min-height: 0; }
 }
@@ -424,9 +435,6 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
   .open-garden,.tsuen { padding: 24px 16px; }
   .tsuen .community-title p,.tsuen-lead { font-size: 14px; }
   .tsuen-facts div { grid-template-columns: minmax(0,1fr); gap: 2px; font-size: 14px; }
-  .tsuen-steps li { padding: 12px 16px; font-size: 14px; }
-  .tsuen-step-num { font-size: 13px; }
-  .tsuen .fine-print { font-size: 13px; }
   .community-title h3 { font-size: 20px; }
   .community-title p,.open-garden>p { font-size: 14px; }
   /* 園庭開放：スマホでは日付と時間を1行目、内容を2行目に並べる */
