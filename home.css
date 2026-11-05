@@ -208,8 +208,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 2px solid 
 /* 冒頭のお知らせ：新しく始めた取り組みを、ページの最初に目立たせる */
 .spotlight { margin-top: 24px; }
 .spotlight-link { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 12px 28px; padding: 20px 28px 20px 20px; background: var(--color-surface); border-radius: 16px; color: var(--ink); }
-/* 公式ロゴは形・色を変えず、白に近い面に余白をとって置く */
-.spotlight-logo { display: block; width: 176px; padding: 14px 16px; background: var(--paper); border-radius: 12px; }
+/* 公式ロゴ（こども家庭庁ロゴマニュアル準拠）：形・色を変えず、白に近い面に置く。
+   保護エリアはロゴ幅の1/7（= a）以上。枠の幅 9a・余白 a で、ロゴ幅が 7a になる。最小はロゴ幅50px。 */
+.spotlight-logo { --a: 20px; display: block; width: calc(var(--a) * 9); padding: var(--a); background: var(--paper); border-radius: 12px; }
 .spotlight-logo img { width: 100%; height: auto; }
 .spotlight-label { display: inline-block; margin-bottom: 6px; padding: 2px 12px; background: var(--paper); border-radius: 999px; font-size: 13px; font-weight: 700; line-height: 1.6; white-space: nowrap; }
 .spotlight-title { display: block; font-family: var(--serif); font-size: 21px; line-height: 1.5; letter-spacing: .02em; text-decoration-thickness: 1px; text-underline-offset: 6px; }
@@ -409,7 +410,7 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
   .intro .button { width: 100%; }
   .spotlight { margin-top: 16px; }
   .spotlight-link { grid-template-columns: minmax(0,1fr); gap: 12px; padding: 16px 20px 12px; }
-  .spotlight-logo { width: 152px; padding: 10px 12px; }
+  .spotlight-logo { --a: 16px; }
   .spotlight-title { font-size: 18px; }
   .spotlight-text { font-size: 13px; }
   .spotlight + .intro { padding-top: 32px; }
