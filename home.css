@@ -52,7 +52,7 @@
   font-weight: 400 500;
   font-display: swap;
   src: url(fonts/mplus-rounded-400-5.woff2) format('woff2');
-  unicode-range: U+4ef0, U+52e2, U+5438, U+547c, U+6ce3, U+6e21, U+7642, U+76c6, U+77ed, U+786c, U+843d, U+85ac, U+88dc, U+8907;
+  unicode-range: U+4ef0, U+52e2, U+5438, U+547c, U+5e81, U+6ce3, U+6e21, U+7642, U+76c6, U+77ed, U+786c, U+843d, U+85ac, U+88dc, U+8907;
 }
 
 @font-face {
@@ -106,7 +106,7 @@
   font-weight: 700;
   font-display: swap;
   src: url(fonts/mplus-rounded-700-5.woff2) format('woff2');
-  unicode-range: U+4ef0, U+52e2, U+5438, U+547c, U+6ce3, U+6e21, U+7642, U+76c6, U+77ed, U+786c, U+843d, U+85ac, U+88dc, U+8907;
+  unicode-range: U+4ef0, U+52e2, U+5438, U+547c, U+5e81, U+6ce3, U+6e21, U+7642, U+76c6, U+77ed, U+786c, U+843d, U+85ac, U+88dc, U+8907;
 }
 
 @font-face {
@@ -207,8 +207,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 2px solid 
 
 /* 冒頭のお知らせ：新しく始めた取り組みを、ページの最初に目立たせる */
 .spotlight { margin-top: 24px; }
-.spotlight-link { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 8px 24px; padding: 20px 28px; background: var(--color-surface); border-radius: 16px; color: var(--ink); }
-.spotlight-label { padding: 4px 12px; background: var(--paper); border-radius: 999px; font-size: 13px; font-weight: 700; line-height: 1.6; white-space: nowrap; }
+.spotlight-link { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 12px 28px; padding: 20px 28px 20px 20px; background: var(--color-surface); border-radius: 16px; color: var(--ink); }
+/* 公式ロゴは形・色を変えず、白に近い面に余白をとって置く */
+.spotlight-logo { display: block; width: 176px; padding: 14px 16px; background: var(--paper); border-radius: 12px; }
+.spotlight-logo img { width: 100%; height: auto; }
+.spotlight-label { display: inline-block; margin-bottom: 6px; padding: 2px 12px; background: var(--paper); border-radius: 999px; font-size: 13px; font-weight: 700; line-height: 1.6; white-space: nowrap; }
 .spotlight-title { display: block; font-family: var(--serif); font-size: 21px; line-height: 1.5; letter-spacing: .02em; text-decoration-thickness: 1px; text-underline-offset: 6px; }
 .spotlight-link:hover .spotlight-title { text-decoration-line: underline; }
 .spotlight-text { display: block; margin-top: 4px; font-size: 14px; line-height: 1.7; color: var(--color-text); }
@@ -381,7 +384,8 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
   .intro { padding-block: 48px; }
   #intro-title { font-size: clamp(28px,6vw,40px); }
   .news { grid-template-columns: minmax(0,1fr); gap: 16px; }
-  .spotlight-link { grid-template-columns: minmax(0,1fr); justify-items: start; gap: 8px; padding: 20px 24px; }
+  .spotlight-link { grid-template-columns: auto minmax(0,1fr); justify-items: start; gap: 12px 20px; padding: 20px 24px 16px 20px; }
+  .spotlight-more { grid-column: 1 / -1; }
   .spotlight-more { min-height: 36px; }
   .value-grid { grid-template-columns: minmax(0,1fr); gap: 24px; }
   .day-story { grid-template-columns: minmax(0,1fr); min-height: 0; }
@@ -404,7 +408,8 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
   .intro-age { margin-bottom: 24px; font-size: 13px; }
   .intro .button { width: 100%; }
   .spotlight { margin-top: 16px; }
-  .spotlight-link { padding: 16px 20px 12px; }
+  .spotlight-link { grid-template-columns: minmax(0,1fr); gap: 12px; padding: 16px 20px 12px; }
+  .spotlight-logo { width: 152px; padding: 10px 12px; }
   .spotlight-title { font-size: 18px; }
   .spotlight-text { font-size: 13px; }
   .spotlight + .intro { padding-top: 32px; }

@@ -235,6 +235,13 @@
 .ip-links { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 0 24px; }
 .ip-links a { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; padding-block: 8px; border-block: 1px solid var(--line); }
 
+/* ===== こども誰でも通園制度ページ（daremo-tsuen.html）専用 =====
+   公式ロゴは形・色を変えず、白に近い面に余白をとって置く */
+.page-daremo-tsuen .page-hero-layout { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 24px 48px; }
+.tsuen-hero-logo { width: 320px; padding: 24px 28px; background: var(--paper); border-radius: 16px; }
+.tsuen-hero-logo img { width: 100%; height: auto; }
+.tsuen-logo-credit { margin-block: 24px 12px; font-size: 12px; color: var(--muted); }
+
 /* ===== 入園案内ページ（admission.html）専用 ===== */
 .adm-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; margin-top: 24px; }
 .adm-hero-tel { display: grid; font-size: 24px; font-variant-numeric: tabular-nums; line-height: 1.5; letter-spacing: .02em; }
@@ -271,6 +278,8 @@
   .schedule-hint { display: block; }
 }
 @media(max-width: 800px) {
+  .page-daremo-tsuen .page-hero-layout { grid-template-columns: minmax(0,1fr); }
+  .tsuen-hero-logo { width: 240px; padding: 16px 20px; }
   .ip-split,.adm-contact-grid,.adm-contact-aside { grid-template-columns: minmax(0,1fr); gap: 32px; }
   .adm-contact-aside { gap: 16px; }
   .ip-split>.ip-heading { position: static; }

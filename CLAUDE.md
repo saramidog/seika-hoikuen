@@ -104,6 +104,7 @@ images/
   seika-building(-small).webp  Home hero photo (srcset)
   og-image.jpg              Social share image (1200×630)
   fb-yamaguchi-logo.png     Food bank page logo
+  daretsuu-logo.svg         こども誰でも通園制度 official logo (こども家庭庁; converted from the distributed PDF, shape/colors unchanged). Place on a light panel with padding.
 _work/                      Originals, not published (high-res logos, 清華保育園正面.jpg, class illustrations)
 ```
 
