@@ -236,9 +236,10 @@
 .ip-links a { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; padding-block: 8px; border-block: 1px solid var(--line); }
 
 /* ===== こども誰でも通園制度ページ（daremo-tsuen.html）専用 =====
-   公式ロゴは形・色を変えず、白に近い面に余白をとって置く */
+   公式ロゴ（こども家庭庁ロゴマニュアル準拠）：形・色を変えず、白に近い面に置く。
+   保護エリアはロゴ幅の1/7（= a）以上。枠の幅 9a・余白 a で、ロゴ幅が 7a になる。 */
 .page-daremo-tsuen .page-hero-layout { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 24px 48px; }
-.tsuen-hero-logo { width: 320px; padding: 24px 28px; background: var(--paper); border-radius: 16px; }
+.tsuen-hero-logo { --a: 36px; width: calc(var(--a) * 9); padding: var(--a); background: var(--paper); border-radius: 16px; }
 .tsuen-hero-logo img { width: 100%; height: auto; }
 .tsuen-logo-credit { margin-block: 24px 12px; font-size: 12px; color: var(--muted); }
 
@@ -279,7 +280,7 @@
 }
 @media(max-width: 800px) {
   .page-daremo-tsuen .page-hero-layout { grid-template-columns: minmax(0,1fr); }
-  .tsuen-hero-logo { width: 240px; padding: 16px 20px; }
+  .tsuen-hero-logo { --a: 28px; }
   .ip-split,.adm-contact-grid,.adm-contact-aside { grid-template-columns: minmax(0,1fr); gap: 32px; }
   .adm-contact-aside { gap: 16px; }
   .ip-split>.ip-heading { position: static; }
