@@ -49,6 +49,7 @@ Consequences:
 | `recruit.html` | 職員募集（停止中） | `inner.css` |
 | `hoikushi-shien.html` | 保育士支援情報 | `inner.css` |
 | `foodbank.html` | フードバンクの取り組み | `inner.css` |
+| `daremo-tsuen.html` | こども誰でも通園制度（条件・費用・利用の流れ・当日の過ごし方・お問い合わせ） | `inner.css` |
 
 ### Stylesheets
 
@@ -64,7 +65,7 @@ Consequences:
 
 ## Page Architecture
 
-Home (`<body class="home-page">`): `.site-header` → `main#main` with `.spotlight` (optional highlighted notice above the intro; delete the whole `aside` when no longer needed), `.intro`, `.news`, `.values`, `#life`, `.admission`, `#community` (`#daremo-tsuen` こども誰でも通園制度, 園庭開放 tables, foodbank link), `.access`, `.contact-band` → `.site-footer` → `.mobile-actions`.
+Home (`<body class="home-page">`): `.site-header` → `main#main` with `.spotlight` (optional highlighted notice above the intro; delete the whole `aside` when no longer needed), `.intro`, `.news`, `.values`, `#life`, `.admission`, `#community` (`#daremo-tsuen` summary of こども誰でも通園制度 linking to `daremo-tsuen.html`, 園庭開放 tables, foodbank link), `.access`, `.contact-band` → `.site-footer` → `.mobile-actions`.
 
 Inner pages (`<body class="inner-page page-<name>">`):
 
@@ -110,5 +111,6 @@ _work/                      Originals, not published (high-res logos, 清華保�
 
 - 園庭開放 schedule lives in `index.html#niwa-kaiho` (one table per period). Remove past dates and add a matching `.news-item` when publishing a new period. Always double-check that the weekday in `（曜）` matches the date.
 - News items: newest first, date format `YYYY.MM.DD`.
+- こども誰でも通園制度: the hours/fee facts appear in both `daremo-tsuen.html#conditions` and the home summary `index.html#daremo-tsuen` (and the `.spotlight` text), so update them together. Source is an internal staff guide; publish only parent-facing facts (no staffing, capacity, portal operations, or staff names).
 - Adding a page: copy an inner page, update `<title>`, description, OGP/canonical URLs, `aria-current` in the footer, link it from `.inner-footer-nav` on all inner pages, and add it to `sitemap.xml`.
 - The privacy policy (`admission.html#privacy`) is linked from every footer. Update it if new tracking or third-party embeds are added.
