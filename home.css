@@ -191,7 +191,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 2px solid 
 .brand span { font-size: 20px; font-weight: 700; letter-spacing: .06em; line-height: 1.4; }
 .brand small { display: block; font-size: 12px; font-weight: 400; letter-spacing: 0; }
 .site-header nav { display: flex; align-items: center; gap: 24px; font-size: 14px; }
-.site-header nav>a:not(.button) { padding-block: 8px; text-decoration-thickness: 1px; text-underline-offset: 8px; }
+.site-header nav>a:not(.button) { padding-block: 8px; white-space: nowrap; text-decoration-thickness: 1px; text-underline-offset: 8px; }
 .site-header nav>a:not(.button):hover,.site-header nav>a[aria-current] { text-decoration-line: underline; }
 .menu-toggle { display: none; }
 
@@ -365,6 +365,12 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
   .intro,.admission,.access { gap: 48px; }
   .value-grid { gap: 24px; }
   .day-story { gap: 32px; padding: 32px; }
+}
+
+/* メニュー7項目が1行に収まるよう、ボタン表示に切り替わる直前の幅で間隔を詰める */
+@media(max-width:1000px) {
+  .site-header { padding-inline: 32px; }
+  .site-header nav { gap: 12px; }
 }
 
 @media(max-width:900px) {
