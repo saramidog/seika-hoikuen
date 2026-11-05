@@ -70,11 +70,11 @@ Home (`<body class="home-page">`): `.site-header` → `main#main` with `.spotlig
 Inner pages (`<body class="inner-page page-<name>">`):
 
 1. `.skip-link` to `#main`
-2. `<header class="site-header">` — same markup on all pages (brand, `.menu-toggle`, `nav#main-nav`)
+2. `<header class="site-header">` — same markup on all pages (brand, `.menu-toggle`, `nav#main-nav`). The header nav lists the parent-facing pages in this order: 園の特色 · 一日の流れ · クラス紹介 · 年間行事 · 入園案内 · 誰でも通園 · 地域の方へ (`index.html#community`) + the 見学・相談 button. Set `aria-current="page"` on the current page's header link. Seven items fit on one line down to 901px (spacing tightens below 1000px); check that before adding another.
 3. `<section class="page-hero"><div class="wrap page-hero-layout">` with the page `<h1>` and `.hero-subtitle`
 4. `<nav class="breadcrumb">` inside `.container`
 5. Content sections built from `ip-*` components (see below)
-6. `<footer class="footer inner-footer">` — address/hours/page links. Set `aria-current="page"` on the current page's link in `.inner-footer-nav`.
+6. `<footer class="footer inner-footer">` — address/hours/page links. `.inner-footer-nav` follows the header order, then 園庭開放 · フードバンク · 保育士支援情報 · 職員募集（停止中） · 個人情報保護方針. Set `aria-current="page"` on the current page's link.
 7. `.mobile-actions` (fixed bottom bar on phones) and `<script src="navigation.js" defer>`
 
 Every page `<head>` has the Google Analytics tag (G-J6V6DL9J5M), description, OGP (`og:url`, `og:image` = `images/og-image.jpg` 1200×630), `twitter:card`, and `<link rel="canonical">`. Keep `og:url` and `canonical` equal to the page's sitemap URL.
