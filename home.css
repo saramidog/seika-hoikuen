@@ -184,8 +184,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 2px solid 
 .button.small { min-height: 40px; padding: 4px 16px; border-radius: 10px; font-size: 14px; }
 .text-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding-block: 8px; border-bottom: 1px solid var(--color-text); font-size: 15px; transition: border-color 160ms var(--ease); }
 .text-link:hover { border-color: var(--color-accent); }
-.text-link span[aria-hidden],.page-links span,.community-link>span:last-child,.ip-links a span { display: inline-block; transition: transform 160ms var(--ease); }
-.text-link:hover span[aria-hidden],.page-links a:hover span,.community-link:hover>span:last-child,.ip-links a:hover span { transform: translateX(2px); }
+.text-link span[aria-hidden],.page-links span,.community-link>span:last-child,.ip-links a span,.spotlight-more span { display: inline-block; transition: transform 160ms var(--ease); }
+.text-link:hover span[aria-hidden],.page-links a:hover span,.community-link:hover>span:last-child,.ip-links a:hover span,.spotlight-link:hover .spotlight-more span { transform: translateX(2px); }
+
+/* 冒頭のお知らせ：新しく始めた取り組みを、ページの最初に目立たせる */
+.spotlight { margin-top: 24px; }
+.spotlight-link { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 8px 24px; padding: 20px 28px; background: var(--color-surface); border-radius: 16px; color: var(--ink); }
+.spotlight-label { padding: 4px 12px; background: var(--paper); border-radius: 999px; font-size: 13px; font-weight: 700; line-height: 1.6; white-space: nowrap; }
+.spotlight-title { display: block; font-family: var(--serif); font-size: 21px; line-height: 1.5; letter-spacing: .02em; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+.spotlight-link:hover .spotlight-title { text-decoration-line: underline; }
+.spotlight-text { display: block; margin-top: 4px; font-size: 14px; line-height: 1.7; color: var(--color-text); }
+.spotlight-more { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; border-bottom: 1px solid currentColor; font-size: 14px; font-weight: 700; white-space: nowrap; }
+.spotlight + .intro { padding-top: 48px; }
 
 /* 冒頭 */
 .intro { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 64px; align-items: center; padding-block: 64px; }
@@ -273,6 +283,21 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
 .community { padding-block: 96px; border-top: 1px solid var(--line); }
 .community .section-heading { margin-bottom: 32px; }
 .open-garden { padding: 32px; border: 1px solid var(--line); border-radius: 16px; }
+/* こども誰でも通園制度：冒頭のお知らせからのリンク先。淡い面で園庭開放と区別する */
+.tsuen { margin-bottom: 16px; padding: 32px; background: var(--color-band); border-radius: 16px; }
+.tsuen .community-title p,.tsuen-lead { font-size: 15px; color: var(--color-text); }
+.tsuen-facts { margin: 24px 0 0; }
+.tsuen-facts div { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 16px; padding-block: 12px; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.7; }
+.tsuen-facts div:first-child { border-top: 1px solid var(--line); }
+.tsuen-facts dt { font-weight: 700; }
+.tsuen-facts dd { margin: 0; }
+.tsuen-facts a,.tsuen .fine-print a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.tsuen-label { margin-top: 24px; font-size: 14px; font-weight: 700; }
+.tsuen-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 8px; }
+.tsuen-steps li { display: flex; align-items: baseline; gap: 12px; padding: 16px; background: var(--paper); border-radius: 12px; font-size: 15px; line-height: 1.7; }
+.tsuen-step-num { flex-shrink: 0; font-size: 14px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.tsuen .fine-print { margin-top: 16px; font-size: 14px; color: var(--color-text); }
+.tsuen .text-link { margin-top: 4px; }
 .community-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 8px; }
 .community-title h3 { font-size: 24px; }
 .community-title p,.open-garden>p { font-size: 15px; color: var(--color-text); }
@@ -344,6 +369,9 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
   .intro { padding-block: 48px; }
   #intro-title { font-size: clamp(28px,6vw,40px); }
   .news { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .spotlight-link { grid-template-columns: minmax(0,1fr); justify-items: start; gap: 8px; padding: 20px 24px; }
+  .spotlight-more { min-height: 36px; }
+  .tsuen-steps { grid-template-columns: minmax(0,1fr); gap: 8px; }
   .value-grid { grid-template-columns: minmax(0,1fr); gap: 24px; }
   .day-story { grid-template-columns: minmax(0,1fr); min-height: 0; }
 }
@@ -364,6 +392,11 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
   .intro-description { margin-block: 16px 8px; line-height: 1.9; }
   .intro-age { margin-bottom: 24px; font-size: 13px; }
   .intro .button { width: 100%; }
+  .spotlight { margin-top: 16px; }
+  .spotlight-link { padding: 16px 20px 12px; }
+  .spotlight-title { font-size: 18px; }
+  .spotlight-text { font-size: 13px; }
+  .spotlight + .intro { padding-top: 32px; }
   .news { padding-block: 32px; }
   .news h2 { font-size: 20px; }
   .news-item { grid-template-columns: auto minmax(0,1fr); gap: 0 12px; }
@@ -388,7 +421,12 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
   .entry-steps { gap: 0 16px; }
   .entry-steps li { gap: 8px; font-size: 14px; }
   .entry-steps span { font-size: 13px; }
-  .open-garden { padding: 24px 16px; }
+  .open-garden,.tsuen { padding: 24px 16px; }
+  .tsuen .community-title p,.tsuen-lead { font-size: 14px; }
+  .tsuen-facts div { grid-template-columns: minmax(0,1fr); gap: 2px; font-size: 14px; }
+  .tsuen-steps li { padding: 12px 16px; font-size: 14px; }
+  .tsuen-step-num { font-size: 13px; }
+  .tsuen .fine-print { font-size: 13px; }
   .community-title h3 { font-size: 20px; }
   .community-title p,.open-garden>p { font-size: 14px; }
   /* 園庭開放：スマホでは日付と時間を1行目、内容を2行目に並べる */

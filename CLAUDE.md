@@ -64,7 +64,7 @@ Consequences:
 
 ## Page Architecture
 
-Home (`<body class="home-page">`): `.site-header` → `main#main` with `.intro`, `.news`, `.values`, `#life`, `.admission`, `#community` (園庭開放 tables + foodbank link), `.access`, `.contact-band` → `.site-footer` → `.mobile-actions`.
+Home (`<body class="home-page">`): `.site-header` → `main#main` with `.spotlight` (optional highlighted notice above the intro; delete the whole `aside` when no longer needed), `.intro`, `.news`, `.values`, `#life`, `.admission`, `#community` (`#daremo-tsuen` こども誰でも通園制度, 園庭開放 tables, foodbank link), `.access`, `.contact-band` → `.site-footer` → `.mobile-actions`.
 
 Inner pages (`<body class="inner-page page-<name>">`):
 
