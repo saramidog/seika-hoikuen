@@ -1,5 +1,7 @@
 (() => {
   document.documentElement.classList.add('has-js');
+  // iOS Safari は touchstart の受け手がないと :active（押したときの見た目）を出さない。
+  document.addEventListener('touchstart', () => {}, { passive: true });
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#main-nav');
   const header = document.querySelector('.site-header');

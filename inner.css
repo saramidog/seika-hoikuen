@@ -164,8 +164,7 @@
 .ip-contact-card { display: grid; gap: 4px; align-content: start; min-width: 0; padding: 32px; background: var(--color-surface); border-radius: 16px; color: var(--ink); }
 .ip-contact-card .ip-tel,.ip-contact-card .ip-card-note { color: var(--ink); }
 .ip-contact-card .ip-tel:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-.ip-contact-card .button { margin-top: 16px; background: var(--paper); color: var(--ink); }
-.ip-contact-card .button:hover { background: var(--color-band); color: var(--ink); }
+.ip-contact-card .button { margin-top: 16px; } /* 白いボタンの色は home.css の .button.light と同じ指定 */
 .ip-contact-wide { grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 16px 48px; margin-top: 48px; padding: 32px 40px; }
 .ip-contact-wide>div { display: grid; gap: 4px; min-width: 0; }
 .ip-contact-wide .button { margin-top: 8px; }
@@ -221,11 +220,21 @@
 /* よくあるご質問（home.css の details 既定値を上書き） */
 .ip-faq details { border-top: 0; border-bottom: 1px solid var(--line); }
 .ip-faq details:first-child { border-top: 1px solid var(--line); }
-.ip-faq summary { display: grid; grid-template-columns: 24px minmax(0,1fr) 16px; align-items: center; gap: 12px; padding-block: 16px; font-size: 16px; list-style: none; }
+.ip-faq summary { display: grid; grid-template-columns: 24px minmax(0,1fr) 28px; align-items: center; gap: 12px; padding-block: 16px; font-size: 16px; list-style: none; }
 .ip-faq summary::-webkit-details-marker { display: none; }
 .ip-faq summary::before { content: 'Q'; font-family: var(--serif); font-size: 20px; line-height: 1; color: var(--color-text); }
-.ip-faq summary::after { content: '＋'; font-size: 16px; line-height: 1; text-align: center; color: var(--color-text); transition: transform 160ms var(--ease); }
-.ip-faq details[open] summary::after { transform: rotate(45deg); }
+/* 開閉の印は丸い台に載せ、ホバーと押下で台の色を変える。開くと45度回って「×」になる。 */
+.ip-faq summary::after { content: '＋'; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; font-size: 16px; line-height: 1; color: var(--color-text); rotate: 0deg; transition: background-color 160ms var(--ease); }
+.ip-faq details[open] summary::after { rotate: 45deg; }
+@media (hover: hover) { .ip-faq summary:hover::after { background-color: var(--color-surface); } }
+.ip-faq summary:active::after { background-color: var(--color-primary); }
+/* 開閉の動き：対応ブラウザだけ高さをなめらかに変える。非対応ではこれまでどおりすぐに開閉する。 */
+.ip-faq details::details-content { interpolate-size: allow-keywords; overflow: clip; contain: layout; }
+.ip-faq details:not([open])::details-content { block-size: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .ip-faq summary::after { transition: background-color 160ms var(--ease), rotate 200ms var(--ease); }
+  .ip-faq details::details-content { transition: block-size, content-visibility, display; transition-duration: 280ms; transition-timing-function: var(--ease); transition-behavior: allow-discrete; }
+}
 .ip-faq-a { display: grid; grid-template-columns: 24px minmax(0,1fr); gap: 12px; padding-bottom: 20px; }
 .ip-faq-a::before { content: 'A'; font-family: var(--serif); font-size: 20px; line-height: 1.5; color: var(--color-text); }
 .ip-faq-a p { padding: 0; font-size: 15px; line-height: 2; color: var(--color-text); }
@@ -233,7 +242,7 @@
 
 /* ページ末尾の関連リンク */
 .ip-links { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 0 24px; }
-.ip-links a { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; padding-block: 8px; border-block: 1px solid var(--line); }
+.ip-links a { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; padding-block: 8px; border-block: 1px solid var(--line); transition: border-color 160ms var(--ease), opacity 160ms var(--ease); }
 
 /* ===== こども誰でも通園制度ページ（daremo-tsuen.html）専用 =====
    公式ロゴ（こども家庭庁ロゴマニュアル準拠）：形・色を変えず、白に近い面に置く。
