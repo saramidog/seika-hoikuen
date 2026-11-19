@@ -25,6 +25,8 @@ Open any `.html` file directly in a browser, or use a local static server:
 python3 -m http.server 8000
 ```
 
+Links to the home page are written `./` (or `./#section`), never `index.html`, so Google sees `https://seikahoiku.com/` as the only home URL (Search Console counted `/index.html` separately). Opened via `file://`, `./` shows a folder listing, so preview with the local server.
+
 No build step, no linting, no unit tests. Before pushing, check that every referenced file and `#anchor` exists:
 
 ```sh
@@ -79,7 +81,7 @@ Home (`<body class="home-page">`): `.site-header` → `main#main` with `.spotlig
 Inner pages (`<body class="inner-page page-<name>">`):
 
 1. `.skip-link` to `#main`
-2. `<header class="site-header">` — same markup on all pages (brand, `.menu-toggle`, `nav#main-nav`). The header nav lists the parent-facing pages in this order: 園の特色 · 一日の流れ · クラス紹介 · 年間行事 · 入園案内 · 誰でも通園 · 地域の方へ (`index.html#community`) + the 見学・相談 button. Set `aria-current="page"` on the current page's header link. Seven items fit on one line down to 901px (spacing tightens below 1000px); check that before adding another.
+2. `<header class="site-header">` — same markup on all pages (brand, `.menu-toggle`, `nav#main-nav`). The header nav lists the parent-facing pages in this order: 園の特色 · 一日の流れ · クラス紹介 · 年間行事 · 入園案内 · 誰でも通園 · 地域の方へ (`./#community`) + the 見学・相談 button. Set `aria-current="page"` on the current page's header link. Seven items fit on one line down to 901px (spacing tightens below 1000px); check that before adding another.
 3. `<section class="page-hero"><div class="wrap page-hero-layout">` with the page `<h1>` and `.hero-subtitle`
 4. `<nav class="breadcrumb">` inside `.container`
 5. Content sections built from `ip-*` components (see below)
@@ -92,7 +94,7 @@ SEO conventions:
 
 - `<title>` / `og:title` on inner pages: `ページ名｜清華保育園（岩国市由宇町）`. Home: `清華保育園｜岩国市由宇町の認可保育所` (home `og:title` keeps its own catchphrase).
 - Descriptions start with or include 岩国市由宇町 and summarize what the page actually says (no claims the page doesn't support).
-- Structured data (JSON-LD): `index.html` has `WebSite` + `ChildCare` (name, address, phone/FAX, opening hours, founding year). If the address, phone, or hours change, update it together with `.access` and the footers. Inner pages each have a two-step `BreadcrumbList` (ホーム > the page's `<h1>`); add one when adding a page.
+- Structured data (JSON-LD): `index.html` has `WebSite` + `ChildCare` (name, reading as `alternateName`, address, phone/FAX, opening hours, founding year). The reading せいかほいくえん also appears in the home description and under the `.access` heading, because people search 「せいか保育園」. If the address, phone, or hours change, update it together with `.access` and the footers. Inner pages each have a two-step `BreadcrumbList` (ホーム > the page's `<h1>`); add one when adding a page.
 - `sitemap.xml` has `<lastmod>`; update the date for pages whose content changes.
 
 ## Inner-page components (`ip-*` in `inner.css`)

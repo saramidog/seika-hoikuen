@@ -366,6 +366,7 @@ details p a { text-decoration: underline; text-decoration-thickness: 1px; text-u
 /* アクセス */
 .access { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.1fr); gap: 64px; padding-block: 96px; border-top: 1px solid var(--line); }
 .access p { margin-block: 12px 16px; color: var(--color-text); }
+.access .access-kana { margin-block: 2px 0; font-size: 13px; letter-spacing: .12em; color: var(--muted); }
 .hours { margin: 0; }
 .hours div { display: grid; grid-template-columns: 136px minmax(0,1fr); gap: 16px; padding-block: 16px; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.7; }
 .hours div:first-child { border-top: 1px solid var(--line); }
