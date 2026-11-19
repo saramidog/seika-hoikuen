@@ -52,6 +52,8 @@ for name, collector in pages.items():
             continue
         parts = urlsplit(ref)
         target = unquote(parts.path)
+        if target in ('./', '/'):
+            target = 'index.html'
         if not (ROOT / target).exists():
             problems.append(f'{name}: ファイルがありません {ref}')
         elif parts.fragment and target in pages and parts.fragment not in pages[target].ids:
